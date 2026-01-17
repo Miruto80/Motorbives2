@@ -1,0 +1,81 @@
+.custom-navbar {
+  background-color: #000;
+  padding: 16px 24px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  /* Neon yellow shadow abajo */
+  box-shadow:
+  0 0 10px rgba(255, 221, 0, 0.8),
+  0 0 30px rgba(255, 221, 0, 0.6);
+
+}
+
+/* Logo perfectamente centrado */
+.logo-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Links */
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffdd00 !important;
+}
+
+/* Selector de idioma */
+.language-select {
+  background: transparent;
+  color: #ffdd00;
+  border: 1px solid #ffdd00;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.language-select option {
+  background: #000;
+  color: #ffdd00;
+}
+
+.offcanvas {
+  box-shadow: -6px 0 25px rgba(255, 221, 0, 0.45);
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.offcanvas-custom {
+  width: 300px !important; /* puedes probar 260 / 300 */
+  max-width: 85%;
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 360px) {
+  .offcanvas-custom {
+    width: 240px !important;
+  }
+}
+
+
+/* Mobile fix */
+@media (max-width: 991px) {
+  .logo-center {
+    position: static;
+    transform: none;
+    margin-right: auto;
+  }
+  .nav-item:focus{
+    border: 1px solid #ffdd00;
+    
+  }
+}
