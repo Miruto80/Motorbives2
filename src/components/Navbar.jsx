@@ -16,7 +16,7 @@ export default function Navbar() {
         {/* Logo centrado */}
         <div className="logo-center">
           <Link className="navbar-brand" to="/">
-            <img src="/img/logo.webp" alt="Logo" height="130" />
+            <img src="/img/Logo.png" alt="Logo" height="130" />
           </Link>
         </div>
 

@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
-import '../assets/css/Reservation.css';
+import '../assets/css/Contact.css';
+import Title from './Title';
 
 export default function ContactSection() {
-  const [groupSize, setGroupSize] = useState('2');
+  const [name, setName] = useState('');
+  const [number, setNumber] = useState('');
+  const [email, setEmail] = useState('');
   const [date, setDate] = useState('');
-  const [time, setTime] = useState('');
 
  const handleSubmit = (e) => {
   e.preventDefault();
 
-  const message = `Hola, quiero reservar una mesa para ${groupSize} personas el ${date} a las ${time}.`;
+  const message = `Hola, soy ${name}. Mi número: ${number}. Mi correo: ${email}. Quiero reservar una mesa el ${date}.`;
   const encodedMessage = encodeURIComponent(message);
   const phone = "16824804614";
 
@@ -35,31 +37,29 @@ export default function ContactSection() {
 
   return (
     <section className="reservation-section">
+     <Title text='Schedule a test drive'/>
       <div className="reservation-form">
-        <h2>Reserva una mesa</h2>
         <form onSubmit={handleSubmit}>
           <label>
-            Tamaño del grupo:
-            <select value={groupSize} onChange={(e) => setGroupSize(e.target.value)}>
-              <option value="2">2 personas</option>
-              <option value="3">3 personas</option>
-              <option value="4">4 personas</option>
-              <option value="5">5 personas</option>
-              <option value="6+">6 o más</option>
-            </select>
+            Name:
+            <input type="text" placeholder='Put your name here' value={name} onChange={(e) => setName(e.target.value)} required />
           </label>
 
           <label>
-            Fecha:
+            Number:
+            <input type="tel"  placeholder='Put your number here' value={number} onChange={(e) => setNumber(e.target.value)} required />
+          </label>
+
+          <label>
+            Email:
+            <input type="email"  placeholder='Put your email here' value={email} onChange={(e) => setEmail(e.target.value)} required />
+          </label>
+
+          <label>
+            Date:
             <input type="date" value={date} onChange={(e) => setDate(e.target.value)} required />
           </label>
-
-          <label>
-            Horario:
-            <input type="time" value={time} onChange={(e) => setTime(e.target.value)} required />
-          </label>
-
-          <button type="submit">Buscar una mesa</button>
+          <button type="submit">Schedule Your Test Drive</button>
         </form>
       </div>
 
@@ -72,6 +72,23 @@ export default function ContactSection() {
           allowFullScreen=""
           loading="lazy"
         ></iframe>
+      </div>
+ <Title text='Social Media'/>
+      <div className="reservation-socials">
+        <div className="socials">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i className="fab fa-facebook-f" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i className="fab fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <i className="fab fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="https://wa.me/16824804614" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <i className="fab fa-whatsapp" aria-hidden="true"></i>
+          </a>
+        </div>
       </div>
     </section>
   );
