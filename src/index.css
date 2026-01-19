@@ -17,6 +17,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  background-color: #1a1a1a !important;
+  padding-top: 80px; /* Altura del navbar */
+}
+@media (max-width: 991px) {
+  body {
+    padding-top: 100px; /* Altura del navbar en móvil */
+  }
+}
 
 a {
   font-weight: 500;

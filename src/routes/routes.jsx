@@ -5,6 +5,7 @@ import Preapproval from "../pages/Preapproval.jsx";
 import Inventory from "../pages/Inventory.jsx";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import ScrollToTop from "../components/ScrollToTop.jsx";
+import MoreInfo from "../pages/MoreInfo.jsx";
 
 
 
@@ -18,6 +19,7 @@ function AppRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="Preapproval" element={<Preapproval />} />
         <Route path="Inventory" element={<Inventory />} />
+        <Route path="MoreInfo" element={<MoreInfo />} />
         </Routes>
      <FloatingWhatsApp
       phoneNumber="16822406838"   // Número de tu empresa en formato internacional

@@ -1,0 +1,73 @@
+/* Suaviza el desplazamiento al ancla */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Panel móvil como overlay ligero anclado abajo a la izquierda */
+.mobile-filter-panel {
+  position: fixed;
+  bottom: 64px; /* deja espacio para el botón */
+  left: 12px;
+  right: 12px;
+  max-height: 60vh;
+  overflow-y: auto;
+  z-index: 1050; /* sobre el contenido */
+  border-radius: 12px;
+}
+
+/* Asegura que el botón flotante esté por encima */
+.btn.position-fixed.bottom-0.start-0 {
+  z-index: 1060;
+}
+
+/* Fondo negro difuminado para el panel */
+.mobile-filter-panel,
+.card {
+  background: rgba(0, 0, 0, 0.6); /* negro con transparencia */
+  color: #fff; /* texto blanco */
+  border: none; /* elimina bordes grises */
+}
+
+/* Encabezado del card */
+.card-header {
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Ítems de la lista */
+/* Ítems de la lista */
+.list-group-item {
+  background: transparent; /* deja ver el fondo difuminado */
+  color: #fff;
+  border: none; /* elimina bordes */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Links dentro de la lista */
+.list-group-item a {
+  color: #fff;
+  display: block; /* ocupa todo el ancho del li */
+  text-decoration: none;
+  padding: 0.5rem 1rem; /* da espacio interno */
+}
+
+/* Hover sobre el ítem completo */
+.list-group-item:hover {
+  border: 1px solid #ffc107; /* borde amarillo en todo el recuadro */
+  font-weight: bold;
+  border-radius: 8px; /* opcional: suaviza esquinas */
+  background: rgba(255, 193, 7, 0.1); /* opcional: leve fondo amarillo */
+}
+
+.btn-naranja{
+  background-color: #DAAB43 !important;
+  color: black !important;
+}
+
+@media (max-width: 768px) {
+  .mobile-filter-panel,
+  .card {
+    background: rgba(0, 0, 0, 0.9); /* más intenso en móvil */
+  }
+}

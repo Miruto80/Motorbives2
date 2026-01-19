@@ -1,0 +1,40 @@
+.car-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e6c86e;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(230, 200, 110, 0.45);
+}
+
+/* Imagen */
+.car-card img {
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Texto */
+.car-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #111;
+  text-transform: uppercase;
+}
+
+.car-price {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+/* Botón */
+.car-card .btn-primary {
+  background: #0d6efd;
+  border: none;
+  border-radius: 6px;
+}

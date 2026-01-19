@@ -5,8 +5,9 @@ import Timer from './Timer';
 
 export default function Navbar() {
   return (
+    <header>
     <nav className="navbar navbar-dark custom-navbar">
-      <div className="container-fluid position-relative">
+      <div className="container-fluid">
 
         {/* Timer */}
         <div className="nav-timer">
@@ -94,5 +95,6 @@ export default function Navbar() {
 
       </div>
     </nav>
+    </header>
   );
 }
