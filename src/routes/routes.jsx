@@ -19,7 +19,7 @@ function AppRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="Preapproval" element={<Preapproval />} />
         <Route path="Inventory" element={<Inventory />} />
-        <Route path="MoreInfo" element={<MoreInfo />} />
+        <Route path="MoreInfo/:id" element={<MoreInfo />} />
         </Routes>
      <FloatingWhatsApp
       phoneNumber="16822406838"   // Número de tu empresa en formato internacional

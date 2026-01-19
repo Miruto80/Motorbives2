@@ -1,19 +1,34 @@
 import React from 'react'
+import { useLocation, useParams } from 'react-router-dom'
 
-export default function MoreInfo({id, name, year, downpayment, financingprice, cashprice, mileage, description, images}) {
-  return (
-    <div>
-      <h1>More Info Page</h1>
-      <h1>{id}</h1>
-      <p>{name} - {year}</p>
-      <p>{description}</p>
-      <p>Downpayment: ${downpayment.toLocaleString()}</p>
-      <p>Financing Price: ${financingprice.toLocaleString()}</p>
-      <p>Cash Price: ${cashprice.toLocaleString()}</p>
-      <p>Mileage: {mileage.toLocaleString()} miles</p>
+export default function MoreInfo() {
+  const { state } = useLocation();
+  const { id } = useParams();
+  const car = state || null;
+
+  if (!car) {
+    return (
       <div>
-        {images.map((imgUrl, index) => (
-          <img key={index} src={imgUrl} alt={`${name} image ${index + 1}`} style={{maxWidth: '300px', margin: '10px'}} />
+        <h1>More Info Page</h1>
+        <p>No car data was passed via navigation state.</p>
+        <p>Requested id: {id}</p>
+      </div>
+    )
+  }
+
+  return (
+    <div style={{color: 'white'}}>
+      <h1>More Info Page</h1>
+      <h1>{car.id}</h1>
+      <p>{car.name} - {car.year}</p>
+      <p>{car.description}</p>
+      <p>Downpayment: ${car.downpayment.toLocaleString()}</p>
+      <p>Financing Price: ${car.financingprice.toLocaleString()}</p>
+      <p>Cash Price: ${car.cashprice.toLocaleString()}</p>
+      <p>Mileage: {car.mileage.toLocaleString()} miles</p>
+      <div>
+        {car.images.map((imgUrl, index) => (
+          <img key={index} src={imgUrl} alt={`${car.name} image ${index + 1}`} style={{maxWidth: '300px', margin: '10px'}} />
         ))}
       </div>
     </div>

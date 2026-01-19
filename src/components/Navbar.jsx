@@ -1,9 +1,50 @@
 import React from 'react';
 import '../assets/css/Navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Timer from './Timer';
 
 export default function Navbar() {
+  const navigate = useNavigate();
+
+  function handleMobileLink(e, path) {
+    if (e && e.preventDefault) e.preventDefault();
+    const offcanvasEl = document.getElementById('mobileMenu');
+    // Primary: use Bootstrap Offcanvas API when available
+    if (window.bootstrap && offcanvasEl) {
+      try {
+        const bsOff =
+          window.bootstrap.Offcanvas.getInstance(offcanvasEl) ||
+          new window.bootstrap.Offcanvas(offcanvasEl);
+        bsOff.hide();
+        setTimeout(() => navigate(path), 220);
+        return;
+      } catch (err) {
+        // fallthrough to other methods
+      }
+    }
+
+    // Fallback 1: trigger an element with data-bs-dismiss inside the offcanvas
+    if (offcanvasEl) {
+      const dismissBtn = offcanvasEl.querySelector('[data-bs-dismiss="offcanvas"]');
+      if (dismissBtn) {
+        dismissBtn.click();
+        setTimeout(() => navigate(path), 220);
+        return;
+      }
+
+      // Fallback 2: remove classes/backdrop manually (best effort)
+      offcanvasEl.classList.remove('show');
+      document.querySelectorAll('.offcanvas-backdrop').forEach((n) => n.remove());
+      document.body.classList.remove('offcanvas-open');
+      document.body.style.removeProperty('overflow');
+      setTimeout(() => navigate(path), 60);
+      return;
+    }
+
+    // Last resort: just navigate
+    navigate(path);
+  }
+
   return (
     <header>
     <nav className="navbar navbar-dark custom-navbar">
@@ -68,17 +109,29 @@ export default function Navbar() {
           <div className="offcanvas-body">
             <ul className="navbar-nav gap-3">
               <li className="nav-item">
-                <Link className="nav-link" to="/" data-bs-dismiss="offcanvas">
+                <Link
+                  className="nav-link"
+                  to="/"
+                  onClick={(e) => handleMobileLink(e, '/')}
+                >
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/Preapproval" data-bs-dismiss="offcanvas">
+                <Link
+                  className="nav-link"
+                  to="/Preapproval"
+                  onClick={(e) => handleMobileLink(e, '/Preapproval')}
+                >
                   Pre-approval
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/Inventory" data-bs-dismiss="offcanvas">
+                <Link
+                  className="nav-link"
+                  to="/Inventory"
+                  onClick={(e) => handleMobileLink(e, '/Inventory')}
+                >
                   Inventory
                 </Link>
               </li>
