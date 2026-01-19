@@ -65,9 +65,63 @@ html {
   color: black !important;
 }
 
+/* details / summary styling */
+details {
+  margin: 0.25rem 0;
+}
+
+summary {
+  cursor: pointer;
+  list-style: none;
+  outline: none;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:before {
+  content: '\25B6'; /* triangle */
+  display: inline-block;
+  margin-right: 0.5rem;
+  transform: rotate(0deg);
+  transition: transform 0.15s ease-in-out;
+}
+
+details[open] > summary:before {
+  transform: rotate(90deg);
+}
+
+/* make buttons inline and easier to click */
+.list-group-item .btn-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.list-group-item .btn-link:hover {
+  color: #DAAB43;
+  text-decoration: underline;
+}
+
+/* selected state for filters */
+.filter-selected {
+  color: #DAAB43 !important;
+  font-weight: 700 !important;
+}
+
 @media (max-width: 768px) {
   .mobile-filter-panel,
   .card {
     background: rgba(0, 0, 0, 0.9); /* más intenso en móvil */
   }
 }
+
+/* ensure the aside stays readable on desktop */
+.d-none.d-lg-flex aside .card {
+  background: transparent;
+}
+
+/* ensure mobile button sits above other elements */
+.z-999 { z-index: 1200 !important; }

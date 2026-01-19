@@ -24,11 +24,11 @@ export default function Cards({ cars }) {
               {/* Body */}
               <div className="card-body">
                 <h6 className="car-title">
-                  {car.name} {car.year}
+                  {car.year} {car.make} {car.name}
                 </h6>
 
                 <p className="car-price">
-                  Price: ${car.financingprice.toLocaleString()} financing
+                  Price: ${car.financingprice.toLocaleString()}
                 </p>
 
                 <button className="btn btn-primary w-100">

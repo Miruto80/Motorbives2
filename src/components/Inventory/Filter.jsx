@@ -3,22 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../assets/css/Filter.css';
 import Collapse from 'bootstrap/js/dist/collapse';
 
-const categories = [
-  { name: 'Frituras', id: 'frituras' },
-  { name: 'Almuerzos', id: 'almuerzos' },
-  { name: 'Parrillas', id: 'parrillas' },
-  { name: 'Sopas', id: 'sopas' },
-  { name: 'Contornos', id: 'contornos' },
-  { name: 'Arepas', id: 'arepas' },
-  { name: 'Combos', id: 'combos' },
-  { name: 'Modernas', id: 'modernas' },
-  { name: 'Hamburguesas', id: 'hamburguesas' },
-  { name: 'Patacones', id: 'patacones' },
-  { name: 'Cachapas', id: 'cachapas' },
-];
-
-export default function Filter() {
-     const handleLinkClick = () => {
+export default function Filter({ cars = [], onFilterChange = () => {}, currentFilters = {} }) {
+  const handleLinkClick = () => {
     const collapseEl = document.getElementById('categoryFilterMobile');
     if (!collapseEl) return;
 
@@ -53,12 +39,35 @@ export default function Filter() {
     const toggler = document.querySelector('[data-bs-target="#categoryFilterMobile"]');
     if (toggler) toggler.setAttribute('aria-expanded', 'false');
   };
+  // Build category -> makes map from cars data
+  const typeMap = cars.reduce((acc, car) => {
+    const t = car.type || 'Other';
+    if (!acc[t]) acc[t] = new Set();
+    if (car.make) acc[t].add(car.make);
+    return acc;
+  }, {});
+
+  const categories = Object.keys(typeMap).map((t) => ({
+    name: t,
+    id: t.toLowerCase().replace(/\s+/g, '-'),
+    makes: Array.from(typeMap[t]).sort(),
+  }));
+
+  const handleSelect = (type, make) => {
+    onFilterChange({ type, make });
+    // close mobile panel if open
+    handleLinkClick();
+  };
+
+  const clearFilters = () => {
+    onFilterChange(null);
+    handleLinkClick();
+  };
 
   return (
     <>
-      {/* Botón móvil: fijo abajo a la izquierda */}
       <button
-        className="btn btn-naranja position-fixed bottom-0 start-0 m-3 d-lg-none"
+        className="btn btn-naranja position-fixed bottom-0 start-0 m-3 d-lg-none z-999"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#categoryFilterMobile"
@@ -68,7 +77,6 @@ export default function Filter() {
         ☰ Categories
       </button>
 
-      {/* Panel móvil: colapsable y oculto por defecto en móvil; no se muestra en desktop */}
       <div className="collapse d-lg-none" id="categoryFilterMobile">
         <div className="card shadow-lg mobile-filter-panel">
           <div className="card-header d-flex justify-content-between align-items-center">
@@ -78,16 +86,34 @@ export default function Filter() {
               type="button"
               onClick={handleLinkClick}
             >
-              <i className="fa-solid fa-x"></i>            
-           </button>
+              <i className="fa-solid fa-x"></i>
+            </button>
           </div>
           <div className="card-body p-0">
             <ul className="list-group list-group-flush">
-              {categories.map(cat => (
+              <li className="list-group-item">
+                <button className="btn btn-link p-0" onClick={clearFilters}>All types / makes</button>
+              </li>
+              {categories.map((cat) => (
                 <li key={cat.id} className="list-group-item">
-                  <a href={`#${cat.id}`} className="text-decoration-none d-block py-1" onClick={handleLinkClick}>
-                    {cat.name}
-                  </a>
+                  <details>
+                    <summary className="mb-2">{cat.name}</summary>
+                    <div className="mb-2">
+                      <button
+                        className={`btn btn-link p-0 ${currentFilters.type === cat.name && !currentFilters.make ? 'text-primary fw-bold filter-selected' : ''}`}
+                        onClick={() => handleSelect(cat.name, null)}
+                      >
+                        All {cat.name}
+                      </button>
+                    </div>
+                    <ul className="ps-3">
+                      {cat.makes.map((mk) => (
+                        <li key={mk}>
+                          <button className={`btn btn-link p-0 ${currentFilters.type === cat.name && currentFilters.make === mk ? 'text-primary fw-bold filter-selected' : ''}`} onClick={() => handleSelect(cat.name, mk)}>{mk}</button>
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
                 </li>
               ))}
             </ul>
@@ -95,23 +121,46 @@ export default function Filter() {
         </div>
       </div>
 
-   <div className="d-none d-lg-flex align-items-center justify-content-center position-sticky" style={{ top: '100px', height: 'calc(100vh - 100px)' }}>
-  <aside className="w-100">
-    <div className="card">
-      <div className="card-body">
-        <ul className="list-group list-group-flush">
-          {categories.map(cat => (
-            <li key={cat.id} className="list-group-item">
-              <a href={`#${cat.id}`} className="text-decoration-none">
-                {cat.name}
-              </a>
-            </li>
-          ))}
-        </ul>
+      <div className="d-none d-lg-flex align-items-center justify-content-center position-sticky" style={{ top: '100px', height: 'calc(100vh - 100px)' }}>
+        <aside className="w-100">
+          <div className="card">
+            <div className="card-body">
+              <ul className="list-group list-group-flush">
+                <li className="list-group-item">
+                  <button className="btn btn-link p-0" onClick={clearFilters}>All types / makes</button>
+                </li>
+                {categories.map((cat) => (
+                  <li key={cat.id} className="list-group-item">
+                    <details>
+                      <summary className="mb-2">{cat.name}</summary>
+                      <div className="mb-2">
+                        <button
+                          className={`btn btn-link p-0 ${currentFilters.type === cat.name && !currentFilters.make ? 'text-primary fw-bold filter-selected' : ''}`}
+                          onClick={() => handleSelect(cat.name, null)}
+                        >
+                          All {cat.name}
+                        </button>
+                      </div>
+                      <ul className="ps-3 mb-0">
+                        {cat.makes.map((mk) => (
+                          <li key={mk}>
+                            <button
+                              className={`btn btn-link p-0 ${currentFilters.type === cat.name && currentFilters.make === mk ? 'text-primary fw-bold filter-selected' : ''}`}
+                              onClick={() => handleSelect(cat.name, mk)}
+                            >
+                              {mk}
+                            </button>
+                          </li>
+                        ))}
+                      </ul>
+                    </details>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </aside>
       </div>
-    </div>
-  </aside>
-</div>
     </>
   );
 }

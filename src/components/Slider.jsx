@@ -1,0 +1,60 @@
+import React from 'react';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css';
+import { Link } from 'react-router-dom';
+import Title from './Title';
+
+export default function Slider({ cars = [], title = 'Our vehicles', options = {} }) {
+  const defaultOptions = {
+    type: 'loop',
+    perPage: 3,
+    gap: '1rem',
+    arrows: true,
+    pagination: false,
+    breakpoints: {
+      992: { perPage: 2 },
+      600: { perPage: 1 },
+    },
+  };
+
+  const opts = { ...defaultOptions, ...options };
+
+  return (
+    <div className="container mt-5">
+      <div className="mb-5">
+        
+        <Title text={title} />
+
+        <Splide options={opts} aria-label={title} style={{ borderRadius: '18px', padding: '1.5rem' }}>
+          {cars.map((car, idx) => (
+            <SplideSlide key={`${car.id}-${idx}`}>
+              <div className="d-flex flex-column align-items-center">
+                <img
+                  src={car.images?.[0] || ''}
+                  alt={`${car.make} ${car.name}`}
+                  style={{ width: '100%', maxWidth: '340px', height: '200px', objectFit: 'cover', borderRadius: '12px', marginBottom: '1rem' }}
+                />
+                <div className="text-center">
+                  <h5 className="mb-1">{car.year} {car.make} {car.name}</h5>
+                  <div className="small text-secondary mb-1">Year: {car.year} | {car.type}</div>
+                  <div className="fw-bold text-success mb-1">${car.financingprice?.toLocaleString?.() ?? car.price ?? ''}</div>
+                  <div className="text-secondary" style={{ fontSize: '0.95rem' }}>
+                  </div>
+                  <div className="mt-2">
+                    <Link to={`/Moreinfo/${car.id}`} state={car} className="btn btn-sm btn-primary">More</Link>
+                  </div>
+                </div>
+              </div>
+            </SplideSlide>
+          ))}
+        </Splide>
+
+        <div className="d-flex justify-content-center mb-3 mt-3">
+          <Link to="/inventory" className="btn btn-gradient-green btn-lg px-4 py-2 fw-bold shadow" style={{ background: 'linear-gradient(90deg, #0782fa 60%, #21d4fd 100%)', color: '#fff', border: 'none', borderRadius: '30px', fontSize: '1.15rem', letterSpacing: '1px', transition: 'background 0.2s, transform 0.2s', boxShadow: '0 2px 12px rgba(7,130,250,0.12)' }}>
+            More vehicles
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
