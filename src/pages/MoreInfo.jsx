@@ -2,11 +2,17 @@ import React, { useMemo } from 'react'
 import { useLocation, useParams } from 'react-router-dom'
 import Slider from '../components/Slider'
 import cars from '../assets/data/cars.js'
+import CarSplide from '../components/Moreinfo/CarSplide.jsx'
 
 export default function MoreInfo() {
   const { state } = useLocation();
   const { id } = useParams();
   const car = state || null;
+  const handleRequestInfo = (carObj) => {
+    // hook for parent to open contact/request flow
+    // implement as needed
+    console.log('Request info for', carObj?.id);
+  };
 
   if (!car) {
     return (
@@ -47,22 +53,21 @@ export default function MoreInfo() {
 
   return (
     <div style={{color: 'white'}}>
-      <h1>More Info Page</h1>
-      <p>{car.name} - {car.year}</p>
+      <div>
+        <CarSplide car={car} initialIndex={0} onRequestInfo={handleRequestInfo} />
+      </div>
+      <p>{car.year} {car.make} {car.name}</p>
       <p>{car.description}</p>
       <p>Down payment: ${car.downpayment.toLocaleString()}</p>
       <p>Financing Price: ${car.financingprice.toLocaleString()}</p>
       <p>Cash Price: ${car.cashprice.toLocaleString()}</p>
       <p>Mileage: {car.mileage.toLocaleString()} miles</p>
-      <div>
-        {car.images.map((imgUrl, index) => (
-          <img key={index} src={imgUrl} alt={`${car.name} image ${index + 1}`} style={{maxWidth: '300px', margin: '10px'}} />
-        ))}
-      </div>
 
       {related.length > 0 && (
         <Slider cars={related} title="Related vehicles" />
       )}
+
+      
     </div>
   )
 }
