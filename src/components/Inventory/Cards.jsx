@@ -27,7 +27,7 @@ export default function Cards({ cars }) {
                   {car.year} {car.make} {car.name}
                 </h6>
 
-                <p className="car-price">
+                <p className="car-prices">
                   Price: ${car.financingprice.toLocaleString()}
                 </p>
 

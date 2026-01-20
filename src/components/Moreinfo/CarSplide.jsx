@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 
-export default function CarSplide({ car = null, initialIndex = 0, onRequestInfo = () => {} }) {
+export default function CarSplide({ car = null, initialIndex = 0,}) {
   const mainRef = useRef(null);
   const thumbsRef = useRef(null);
 
@@ -29,14 +29,17 @@ export default function CarSplide({ car = null, initialIndex = 0, onRequestInfo 
   };
 
   const thumbsOptions = {
-    rewind: true,
-    gap: '0.25rem',
-    perPage: 5,
-    focus: 'center',
-    pagination: false,
-    isNavigation: true,
-    breakpoints: { 600: { perPage: 3 } },
-  };
+  rewind: true,
+  gap: '0.1rem',
+  perPage: 6,
+  pagination: false,
+  isNavigation: true,
+  arrows: false,
+  breakpoints: {
+    768: { perPage: 4 }
+  }
+};
+
 
   return (
     <div className="car-splide">
@@ -65,24 +68,21 @@ export default function CarSplide({ car = null, initialIndex = 0, onRequestInfo 
           {(car.images || []).map((img, idx) => (
             <SplideSlide key={idx} style={{ padding: '0.12rem' }}>
               <img
-                src={img}
-                alt={`Thumbnail ${idx + 1}`}
-                style={{ width: '84px', height: '52px', objectFit: 'cover', borderRadius: '8px', cursor: 'pointer', display: 'block', margin: '0 auto' }}
+               src={img}
+               alt={`Thumbnail ${idx + 1}`}
+               style={{
+               width: '80px',
+               height: '50px',
+               objectFit: 'cover',
+               borderRadius: '6px',
+               cursor: 'pointer'
+               }}
               />
             </SplideSlide>
           ))}
         </Splide>
       </div>
 
-      <div className="d-flex flex-column justify-content-center align-items-center w-100 mt-4">
-        <button
-          className="btn btn-success btn-lg px-5 py-2 fw-bold"
-          style={{ fontSize: '1.1rem', borderRadius: '2rem', height: '60px' }}
-          onClick={() => onRequestInfo(car)}
-        >
-          Request information
-        </button>
       </div>
-    </div>
   );
 }

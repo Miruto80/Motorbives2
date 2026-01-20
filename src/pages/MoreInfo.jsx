@@ -3,6 +3,7 @@ import { useLocation, useParams } from 'react-router-dom'
 import Slider from '../components/Slider'
 import cars from '../assets/data/cars.js'
 import CarSplide from '../components/Moreinfo/CarSplide.jsx'
+import '../assets/css/MoreInfo.css'
 
 export default function MoreInfo() {
   const { state } = useLocation();
@@ -52,22 +53,62 @@ export default function MoreInfo() {
   }, [car]);
 
   return (
-    <div style={{color: 'white'}}>
-      <div>
-        <CarSplide car={car} initialIndex={0} onRequestInfo={handleRequestInfo} />
-      </div>
-      <p>{car.year} {car.make} {car.name}</p>
-      <p>{car.description}</p>
-      <p>Down payment: ${car.downpayment.toLocaleString()}</p>
-      <p>Financing Price: ${car.financingprice.toLocaleString()}</p>
-      <p>Cash Price: ${car.cashprice.toLocaleString()}</p>
-      <p>Mileage: {car.mileage.toLocaleString()} miles</p>
+  <div className="container my-5 text-white">
+  <div className="row g-4 align-items-start">
 
-      {related.length > 0 && (
-        <Slider cars={related} title="Related vehicles" />
-      )}
-
-      
+    {/* COLUMNA IZQUIERDA: SLIDER */}
+    <div className="col-lg-7">
+      <CarSplide
+        car={car}
+        initialIndex={0}
+        onRequestInfo={handleRequestInfo}
+        hideButton
+      />
     </div>
+
+    {/* COLUMNA DERECHA: INFO */}
+    <div className="col-lg-5">
+      <div className="car-info-box">
+        <h3 className="car-title">
+          {car.year} {car.make} {car.name}
+        </h3>
+
+        <p className="car-price">
+          ${car.financingprice.toLocaleString()} <span>Financing</span>
+        </p>
+
+        <ul className="car-specs">
+          <li><strong>Mileage:</strong> {car.mileage.toLocaleString()} miles</li>
+          <li><strong>Down Payment:</strong> ${car.downpayment.toLocaleString()}</li>
+          <li><strong>Cash Price:</strong> ${car.cashprice.toLocaleString()}</li>
+        </ul>
+
+        <p className="car-description">
+          {car.description}
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  {/* BOTÓN ABAJO */}
+  <div className="row mt-4">
+    <div className="col text-center">
+      <button
+        className="btn btn-success btn-lg px-5 py-3 fw-bold request-btn"
+        onClick={() => handleRequestInfo(car)}
+      >
+        Request information
+      </button>
+    </div>
+  </div>
+
+  {/* RELATED */}
+  {related.length > 0 && (
+    <div className="mt-5">
+      <Slider cars={related} title="Related vehicles" />
+    </div>
+  )}
+</div>
   )
 }
