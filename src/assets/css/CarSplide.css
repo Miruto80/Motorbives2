@@ -1,0 +1,12 @@
+.car-main-image {
+  width: 100%;
+  height: 550px;      /* 👈 ajusta aquí */
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+@media (max-width: 991px) {
+  .car-main-image {
+    height: 300px;
+  }
+}

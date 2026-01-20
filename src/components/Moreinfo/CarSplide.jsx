@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
+import '../../assets/css/CarSplide.css';
 
 export default function CarSplide({ car = null, initialIndex = 0,}) {
   const mainRef = useRef(null);
@@ -51,7 +52,7 @@ export default function CarSplide({ car = null, initialIndex = 0,}) {
                 <img
                   src={img}
                   alt={`${car.name} image ${idx + 1}`}
-                  style={{ width: '100%', height: 'auto', maxHeight: '45vw', objectFit: 'cover', borderRadius: '12px' }}
+                  className="car-main-image"
                 />
               </a>
             </SplideSlide>
