@@ -12,7 +12,7 @@
 
 /* Imagen */
 .car-card img {
-  height: 220px;
+  height: 280px;
   object-fit: cover;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
