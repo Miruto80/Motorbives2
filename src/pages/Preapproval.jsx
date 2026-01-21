@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import Swal from 'sweetalert2';
 import { useForm } from '@formspree/react';
-import '../assets/css/FormWrapper.css'
+import '../assets/css/Preapproval.css'
 
 export default function Preapproval() {
   const [step, setStep] = useState(1);
@@ -63,6 +63,15 @@ export default function Preapproval() {
           style={{ width: `${progress}%` }}
         ></div>
       </div>
+
+      {/* Steps intro */}
+      <div className="preapproval-steps">
+        <div className={step >= 1 ? 'step active' : 'step'}>📝 Personal</div>
+        <div className={step >= 2 ? 'step active' : 'step'}>🏠 Residence</div>
+        <div className={step >= 3 ? 'step active' : 'step'}>💼 Employment</div>
+        <div className={step >= 4 ? 'step active' : 'step'}>🚗 Vehicle</div>
+      </div>
+
       <form ref={formRef} onSubmit={submitForm}>
         {/* STEP 1 */}
         {step === 1 && (

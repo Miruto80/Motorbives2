@@ -1,0 +1,53 @@
+.form-wrapper {
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 1100px;
+  margin: auto;
+  box-shadow: 0 20px 40px rgba(0,0,0,.08);
+}
+
+.progress {
+  height: 8px;
+  border-radius: 6px;
+  background: #e9ecef;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #0d6efd, #198754);
+}
+
+.preapproval-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  background: #f1f3f5;
+  border-radius: 10px;
+  margin: 0 5px;
+  font-size: 0.9rem;
+}
+
+.step.active {
+  background: #0d6efd;
+  color: white;
+}
+
+.form-section h4 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+@media (max-width: 768px) {
+  .preapproval-steps {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
