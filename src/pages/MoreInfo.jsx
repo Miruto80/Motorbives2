@@ -86,20 +86,17 @@ export default function MoreInfo() {
         <p className="car-description">
           {car.description}
         </p>
-      </div>
-    </div>
-
-  </div>
-
-  {/* BOTÓN ABAJO */}
-  <div className="row mt-4">
+        <div className="row mt-4">
     <div className="col text-center">
       <button
         className="btn btn-success btn-lg px-5 py-3 fw-bold request-btn"
         onClick={() => handleRequestInfo(car)}
       >
-        Request information
+        Get Pre-Approved
       </button>
+    </div>
+  </div>
+      </div>
     </div>
   </div>
 
