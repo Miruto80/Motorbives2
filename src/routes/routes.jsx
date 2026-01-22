@@ -6,6 +6,7 @@ import Inventory from "../pages/Inventory.jsx";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import ScrollToTop from "../components/ScrollToTop.jsx";
 import MoreInfo from "../pages/MoreInfo.jsx";
+import Footer from "../components/Footer.jsx";
 
 
 
@@ -30,7 +31,7 @@ function AppRoutes() {
       darkMode={true}               // Opcional: modo oscuro
       avatar="/img/Logo en negro.jpeg"
     />
-
+    <Footer />
     </>
   );
 }
