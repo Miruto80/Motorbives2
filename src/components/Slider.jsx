@@ -35,7 +35,7 @@ export default function Slider({ cars = [], title = 'Our vehicles', options = {}
                   style={{ width: '100%', maxWidth: '340px', height: '200px', objectFit: 'cover', borderRadius: '12px', marginBottom: '1rem' }}
                 />
                 <div className="text-center">
-                  <h5 className="mb-1">{car.year} {car.make} {car.name}</h5>
+                  <h5 className="mb-1 text-white">{car.year} {car.make} {car.name}</h5>
                   <div className="small text-secondary mb-1">Year: {car.year} | {car.type}</div>
                   <div className="fw-bold text-success mb-1">${car.financingprice?.toLocaleString?.() ?? car.price ?? ''}</div>
                   <div className="text-secondary" style={{ fontSize: '0.95rem' }}>
