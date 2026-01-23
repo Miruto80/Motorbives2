@@ -44,4 +44,6 @@
 .request-btn {
   border-radius: 40px;
   min-width: 260px;
+  background-color: #DAAB43;
+  color: black;
 }

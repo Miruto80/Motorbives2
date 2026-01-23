@@ -37,11 +37,24 @@ export default function Slider({ cars = [], title = 'Our vehicles', options = {}
                 <div className="text-center">
                   <h5 className="mb-1 text-white">{car.year} {car.make} {car.name}</h5>
                   <div className="small text-secondary mb-1">Year: {car.year} | {car.type}</div>
-                  <div className="fw-bold text-success mb-1">${car.financingprice?.toLocaleString?.() ?? car.price ?? ''}</div>
+                  <div className="fw-bold text-white mb-1">${car.financingprice?.toLocaleString?.() ?? car.price ?? ''}</div>
                   <div className="text-secondary" style={{ fontSize: '0.95rem' }}>
                   </div>
                   <div className="mt-2">
-                    <Link to={`/Moreinfo/${car.id}`} state={car} className="btn btn-sm btn-primary">More</Link>
+                    <Link
+                      to={`/Moreinfo/${car.id}`}
+                      state={car}
+                      className="btn btn-sm btn-primary"
+                      style={{
+                        backgroundImage: 'linear-gradient(90deg, #DAAB43 0%, #ecc238 100%)',
+                        color: '#000',
+                        border: 'none',
+                        borderRadius: '6px',
+                        padding: '0.35rem 0.6rem',
+                      }}
+                    >
+                      More-info
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -50,7 +63,20 @@ export default function Slider({ cars = [], title = 'Our vehicles', options = {}
         </Splide>
 
         <div className="d-flex justify-content-center mb-3 mt-3">
-          <Link to="/inventory" className="btn btn-gradient-green btn-lg px-4 py-2 fw-bold shadow" style={{ background: 'linear-gradient(90deg, #0782fa 60%, #21d4fd 100%)', color: '#fff', border: 'none', borderRadius: '30px', fontSize: '1.15rem', letterSpacing: '1px', transition: 'background 0.2s, transform 0.2s', boxShadow: '0 2px 12px rgba(7,130,250,0.12)' }}>
+          <Link
+            to="/inventory"
+            className="btn btn-lg px-4 py-2 fw-bold shadow"
+            style={{
+              backgroundImage: 'linear-gradient(90deg, #DAAB43 0%, #ecc238 100%)',
+              color: '#000',
+              border: 'none',
+              borderRadius: '30px',
+              fontSize: '1.15rem',
+              letterSpacing: '1px',
+              transition: 'filter 0.18s, transform 0.18s',
+              boxShadow: '0 8px 26px rgba(218,171,67,0.12)',
+            }}
+          >
             More vehicles
           </Link>
         </div>

@@ -89,7 +89,7 @@ export default function MoreInfo() {
         <div className="row mt-4">
     <div className="col text-center">
       <button
-        className="btn btn-success btn-lg px-5 py-3 fw-bold request-btn"
+        className="btn btn-lg px-5 py-3 fw-bold request-btn"
         onClick={() => handleRequestInfo(car)}
       >
         Get Pre-Approved
