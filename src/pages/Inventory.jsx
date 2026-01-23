@@ -4,7 +4,7 @@ import Filter from '../components/Inventory/Filter.jsx';
 import Pagination from '../components/Inventory/Pagination.jsx';
 import cars from '../assets/data/cars.js';
 
-const ITEMS_PER_PAGE = 3;
+const ITEMS_PER_PAGE = 12;
 
 export default function Inventory() {
   const [filters, setFilters] = useState({ type: null, make: null });

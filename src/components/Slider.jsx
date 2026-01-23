@@ -32,7 +32,7 @@ export default function Slider({ cars = [], title = 'Our vehicles', options = {}
                 <img
                   src={car.images?.[0] || ''}
                   alt={`${car.make} ${car.name}`}
-                  style={{ width: '100%', maxWidth: '340px', height: '200px', objectFit: 'cover', borderRadius: '12px', marginBottom: '1rem' }}
+                  style={{ width: '100%', maxWidth: '360px', height: '300px', objectFit: 'cover', borderRadius: '12px', marginBottom: '1rem' }}
                 />
                 <div className="text-center">
                   <h5 className="mb-1 text-white">{car.year} {car.make} {car.name}</h5>
