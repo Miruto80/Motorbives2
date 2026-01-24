@@ -12,9 +12,8 @@ export default function Home() {
 
   return (
     <div>
-      <About />
       <Slider cars={latestCars} title="Latest vehicles" />
-
+      <About />
       <ContactSection />
     </div>
   )
