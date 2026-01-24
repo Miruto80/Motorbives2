@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react'
 import ContactSection from '../components/Contact'
 import Slider from '../components/Slider'
+import About from '../components/About.jsx'
 import cars from '../assets/data/cars.js'
 
 export default function Home() {
@@ -11,10 +12,7 @@ export default function Home() {
 
   return (
     <div>
-      <section className="hero position-relative">
-        <div className="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
-      </section>
-
+      <About />
       <Slider cars={latestCars} title="Latest vehicles" />
 
       <ContactSection />
