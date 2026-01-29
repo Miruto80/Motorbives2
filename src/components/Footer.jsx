@@ -8,21 +8,12 @@ export default function Footer() {
     <footer className="custom-footer">
       <div className="container py-5">
         <div className="row align-items-center">
-          <div className="col-md-4 text-center text-md-start mb-3 mb-md-0">
+          <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
             <h5 className="footer-logo">MotorVibes</h5>
             <p className="mb-0 footer-tagline">Encuentra tu próximo vehículo con estilo.</p>
           </div>
 
-          <div className="col-md-4 text-center mb-3 mb-md-0">
-            <ul className="footer-links list-unstyled mb-0">
-              <li><Link className="footer-link" to="/">Home</Link></li>
-              <li><Link className="footer-link" to="/inventory">Inventory</Link></li>
-              <li><Link className="footer-link" to="/preapproval">Preapproval</Link></li>
-              <li><Link className="footer-link" to="/contact">Contact</Link></li>
-            </ul>
-          </div>
-
-          <div className="col-md-4 text-center text-md-end">
+          <div className="col-md-6 text-center text-md-end">
             <div className="social-icons">
              <a href="https://www.facebook.com" className='social-link' target="_blank" aria-label="Facebook">
             <i className="fab fa-facebook-f" aria-hidden="true"></i>
