@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../../assets/css/Cards.css';
 
 export default function Cards({ cars }) {
+  const navigate = useNavigate();
   return (
     <div className="row g-4">
       {cars.map((car) => (
@@ -31,7 +32,15 @@ export default function Cards({ cars }) {
                   Price: ${car.financingprice.toLocaleString()}
                 </p>
 
-                <button className="btn btn-primary w-100">
+                <button
+                  type="button"
+                  className="btn btn-primary w-100 btn-preapproval"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    navigate('/Preapproval', { state: car });
+                  }}
+                >
                   Get Pre-Approval
                 </button>
               </div>

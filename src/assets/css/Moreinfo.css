@@ -47,3 +47,8 @@
   background-color: #DAAB43;
   color: black;
 }
+
+.request-btn:hover {
+  background-color: #ecc238;
+  color: black;
+}

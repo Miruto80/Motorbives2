@@ -2,12 +2,14 @@ import React, { useMemo } from 'react'
 import { useLocation, useParams } from 'react-router-dom'
 import Slider from '../components/Slider'
 import cars from '../assets/data/cars.js'
+import { useNavigate } from 'react-router-dom';
 import CarSplide from '../components/Moreinfo/CarSplide.jsx'
 import '../assets/css/MoreInfo.css'
 
 export default function MoreInfo() {
   const { state } = useLocation();
   const { id } = useParams();
+  const navigate = useNavigate();
   const car = state || null;
   const handleRequestInfo = (carObj) => {
     // hook for parent to open contact/request flow
@@ -86,16 +88,20 @@ export default function MoreInfo() {
         <p className="car-description">
           {car.description}
         </p>
-        <div className="row mt-4">
-    <div className="col text-center">
-      <button
-        className="btn btn-lg px-5 py-3 fw-bold request-btn"
-        onClick={() => handleRequestInfo(car)}
-      >
-        Get Pre-Approved
-      </button>
-    </div>
-  </div>
+          <div className="row mt-4">
+            <div className="col text-center">
+              <button
+                type="button"
+                className="btn btn-lg px-5 py-3 fw-bold request-btn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate('/Preapproval', { state: car });
+                }}
+              >
+                Get Pre-Approved
+              </button>
+            </div>
+          </div>
       </div>
     </div>
   </div>

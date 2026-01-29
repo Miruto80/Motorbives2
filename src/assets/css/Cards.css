@@ -45,3 +45,14 @@
   background: #ecc238;
   color: black;
 }
+
+/* Botón que sobresale un poco para facilitar el click */
+.car-card .btn-preapproval {
+  position: relative;
+  transform: translateY(6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  z-index: 2;
+}
+.car-card .btn-preapproval:active {
+  transform: translateY(8px);
+}
