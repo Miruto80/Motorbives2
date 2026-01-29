@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="row align-items-center">
           <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
             <h5 className="footer-logo">MotorVibes</h5>
-            <p className="mb-0 footer-tagline">Encuentra tu próximo vehículo con estilo.</p>
+            <p className="mb-0 footer-tagline">Find your next vehicle with style.</p>
           </div>
 
           <div className="col-md-6 text-center text-md-end">
