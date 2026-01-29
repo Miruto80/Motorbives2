@@ -74,3 +74,52 @@
   .custom-footer .text-md-start { text-align: center !important; }
   .custom-footer .text-md-end { text-align: center !important; margin-top: 12px; }
 }
+
+/* LEGAL BAR */
+.footer-legal {
+  border-top: 1px solid rgba(255,221,0,0.08);
+  background: linear-gradient(180deg, #000, #050505);
+  padding: 14px 0;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.footer-legal .legal-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.footer-legal .legal-links a {
+  color: rgba(255,221,0,0.85);
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.15s ease;
+}
+
+.footer-legal .legal-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background: #ffdd00;
+  transition: width 0.2s ease;
+}
+
+.footer-legal .legal-links a:hover {
+  color: #ffdd00;
+}
+
+.footer-legal .legal-links a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .footer-legal {
+    text-align: center;
+  }
+}
+

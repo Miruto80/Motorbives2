@@ -23,7 +23,7 @@ body{
 }
 @media (max-width: 991px) {
   body {
-    padding-top: 100px; /* Altura del navbar en móvil */
+    padding-top: 150px; /* Altura del navbar en móvil */
   }
 }
 
