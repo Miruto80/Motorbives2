@@ -5,6 +5,14 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* Make cards use a column flex layout so body and button align, and keep uniform height */
+.car-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
 .car-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 30px rgba(230, 200, 110, 0.45);
@@ -18,12 +26,27 @@
   border-top-right-radius: 12px;
 }
 
+/* Ensure image doesn't flex and stays fixed height */
+.car-card .card-img-top {
+  flex: 0 0 auto;
+}
+
 /* Texto */
 .car-title {
   font-weight: 900;
   font-size: 1.3rem;
   color: #fff;
   text-transform: uppercase;
+}
+
+/* Make title area fixed-height-ish and truncate long titles to keep cards uniform */
+.car-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 3.2rem; /* reserve space for up to 2 lines */
 }
 
 .car-prices {
@@ -55,4 +78,12 @@
 }
 .car-card .btn-preapproval:active {
   transform: translateY(8px);
+}
+
+/* Make card body expand so the button sits at the bottom consistently */
+.car-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 auto;
 }
