@@ -31,21 +31,62 @@ export default function Preapproval() {
 
   const [formData, setFormData] = useState(initialData);
   const [errors, setErrors] = useState({});
+  const [validatedFields, setValidatedFields] = useState(new Set()); // Para rastrear campos validados exitosamente
 
   /* ================= HANDLERS ================= */
+  const validators = {
+    email: value =>
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
+        ? 'Invalid email format'
+        : '',
+
+    phone: value =>
+      value.length < 10 ? 'Phone must be at least 10 digits' : '',
+
+    income: value =>
+      value <= 0 ? 'Income must be greater than 0' : '',
+  };
+
+  const validateField = (name, value) => {
+    if (!value.trim()) return 'This field is required';
+    if (validators[name]) return validators[name](value);
+    return '';
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    setFormData(prev => ({
-      ...prev,
-      [name]: value,
-    }));
+    // Campos que no permiten números
+    const noNumbersFields = ['firstName', 'middleName', 'lastName', 'suffix', 'address', 'city', 'state', 'employer', 'occupation'];
 
-    setErrors(prev => ({
-      ...prev,
-      [name]: '',
-    }));
+    let updatedValue = value;
+    if (noNumbersFields.includes(name)) {
+      updatedValue = value.replace(/\d/g, ''); // Remover dígitos
+    } else if (name === 'phone') {
+      updatedValue = value.replace(/\D/g, ''); // Solo números
+    }
+
+    setFormData(prev => ({ ...prev, [name]: updatedValue }));
+
+    // Validar en tiempo real para campos requeridos
+    const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'dob', 'address', 'city', 'state', 'zip', 'employer', 'occupation', 'income'];
+    if (requiredFields.includes(name)) {
+      const error = validateField(name, updatedValue);
+      setErrors(prev => ({
+        ...prev,
+        [name]: error,
+      }));
+
+      if (!error) {
+        setValidatedFields(prev => new Set(prev).add(name));
+      } else {
+        setValidatedFields(prev => {
+          const newSet = new Set(prev);
+          newSet.delete(name);
+          return newSet;
+        });
+      }
+    }
   };
 
   const validateStep = () => {
@@ -107,6 +148,8 @@ export default function Preapproval() {
 
     setFormData(initialData);
     setStep(1);
+    setErrors({});
+    setValidatedFields(new Set()); // Resetear también los campos validados
   };
 
   const progress = (step / 4) * 100;
@@ -143,9 +186,9 @@ export default function Preapproval() {
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleChange}
-                  className={`form-control ${errors.firstName ? 'is-invalid' : ''}`}
+                  className={`form-control ${errors.firstName ? 'is-invalid' : validatedFields.has('firstName') ? 'is-valid' : ''}`}
                 />
-                <div className="invalid-feedback">{errors.firstName}</div>
+                {errors.firstName && <span className="text-danger">{errors.firstName}</span>}
               </div>
 
               <div className="col-md-3 mb-3">
@@ -164,9 +207,9 @@ export default function Preapproval() {
                   name="lastName"
                   value={formData.lastName}
                   onChange={handleChange}
-                  className={`form-control ${errors.lastName ? 'is-invalid' : ''}`}
+                  className={`form-control ${errors.lastName ? 'is-invalid' : validatedFields.has('lastName') ? 'is-valid' : ''}`}
                 />
-                <div className="invalid-feedback">{errors.lastName}</div>
+                {errors.lastName && <span className="text-danger">{errors.lastName}</span>}
               </div>
 
               <div className="col-md-3 mb-3">
@@ -188,9 +231,9 @@ export default function Preapproval() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`form-control ${errors.email ? 'is-invalid' : ''}`}
+                  className={`form-control ${errors.email ? 'is-invalid' : validatedFields.has('email') ? 'is-valid' : ''}`}
                 />
-                <div className="invalid-feedback">{errors.email}</div>
+                {errors.email && <span className="text-danger">{errors.email}</span>}
               </div>
 
               <div className="col-md-4 mb-3">
@@ -200,9 +243,9 @@ export default function Preapproval() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className={`form-control ${errors.phone ? 'is-invalid' : ''}`}
+                  className={`form-control ${errors.phone ? 'is-invalid' : validatedFields.has('phone') ? 'is-valid' : ''}`}
                 />
-                <div className="invalid-feedback">{errors.phone}</div>
+                {errors.phone && <span className="text-danger">{errors.phone}</span>}
               </div>
 
               <div className="col-md-4 mb-3">
@@ -212,9 +255,9 @@ export default function Preapproval() {
                   name="dob"
                   value={formData.dob}
                   onChange={handleChange}
-                  className={`form-control ${errors.dob ? 'is-invalid' : ''}`}
+                  className={`form-control ${errors.dob ? 'is-invalid' : validatedFields.has('dob') ? 'is-valid' : ''}`}
                 />
-                <div className="invalid-feedback">{errors.dob}</div>
+                {errors.dob && <span className="text-danger">{errors.dob}</span>}
               </div>
             </div>
           </div>
@@ -231,9 +274,9 @@ export default function Preapproval() {
                 name="address"
                 value={formData.address}
                 onChange={handleChange}
-                className={`form-control ${errors.address ? 'is-invalid' : ''}`}
+                className={`form-control ${errors.address ? 'is-invalid' : validatedFields.has('address') ? 'is-valid' : ''}`}
               />
-              <div className="invalid-feedback">{errors.address}</div>
+              {errors.address && <span className="text-danger">{errors.address}</span>}
             </div>
 
             <div className="row">
@@ -243,8 +286,9 @@ export default function Preapproval() {
                   name="city"
                   value={formData.city}
                   onChange={handleChange}
-                  className={`form-control ${errors.city ? 'is-invalid' : ''}`}
+                  className={`form-control ${errors.city ? 'is-invalid' : validatedFields.has('city') ? 'is-valid' : ''}`}
                 />
+                {errors.city && <span className="text-danger">{errors.city}</span>}
               </div>
 
               <div className="col-md-4 mb-3">
@@ -253,8 +297,9 @@ export default function Preapproval() {
                   name="state"
                   value={formData.state}
                   onChange={handleChange}
-                  className={`form-control ${errors.state ? 'is-invalid' : ''}`}
+                  className={`form-control ${errors.state ? 'is-invalid' : validatedFields.has('state') ? 'is-valid' : ''}`}
                 />
+                {errors.state && <span className="text-danger">{errors.state}</span>}
               </div>
 
               <div className="col-md-4 mb-3">
@@ -263,8 +308,9 @@ export default function Preapproval() {
                   name="zip"
                   value={formData.zip}
                   onChange={handleChange}
-                  className={`form-control ${errors.zip ? 'is-invalid' : ''}`}
+                  className={`form-control ${errors.zip ? 'is-invalid' : validatedFields.has('zip') ? 'is-valid' : ''}`}
                 />
+                {errors.zip && <span className="text-danger">{errors.zip}</span>}
               </div>
             </div>
           </div>
@@ -282,8 +328,9 @@ export default function Preapproval() {
                   name="employer"
                   value={formData.employer}
                   onChange={handleChange}
-                  className={`form-control ${errors.employer ? 'is-invalid' : ''}`}
+                  className={`form-control ${errors.employer ? 'is-invalid' : validatedFields.has('employer') ? 'is-valid' : ''}`}
                 />
+                {errors.employer && <span className="text-danger">{errors.employer}</span>}
               </div>
 
               <div className="col-md-6 mb-3">
@@ -292,8 +339,9 @@ export default function Preapproval() {
                   name="occupation"
                   value={formData.occupation}
                   onChange={handleChange}
-                  className={`form-control ${errors.occupation ? 'is-invalid' : ''}`}
+                  className={`form-control ${errors.occupation ? 'is-invalid' : validatedFields.has('occupation') ? 'is-valid' : ''}`}
                 />
+                {errors.occupation && <span className="text-danger">{errors.occupation}</span>}
               </div>
             </div>
 
@@ -305,8 +353,9 @@ export default function Preapproval() {
                   name="income"
                   value={formData.income}
                   onChange={handleChange}
-                  className={`form-control ${errors.income ? 'is-invalid' : ''}`}
+                  className={`form-control ${errors.income ? 'is-invalid' : validatedFields.has('income') ? 'is-valid' : ''}`}
                 />
+                {errors.income && <span className="text-danger">{errors.income}</span>}
               </div>
 
               <div className="col-md-6 mb-3">
