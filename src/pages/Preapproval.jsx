@@ -1,12 +1,84 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import { useForm } from '@formspree/react';
-import '../assets/css/Preapproval.css'
+import '../assets/css/Preapproval.css';
 
 export default function Preapproval() {
   const [step, setStep] = useState(1);
-  const [state, handleSubmit] = useForm("xgvyrkoo");
-  const formRef = useRef(null);
+  const [state, handleSubmit] = useForm("mldgwnda");
+
+  const initialData = {
+    firstName: '',
+    middleName: '',
+    lastName: '',
+    suffix: '',
+    email: '',
+    phone: '',
+    dob: '',
+    address: '',
+    city: '',
+    state: '',
+    zip: '',
+    timeAtAddress: '',
+    housing: '',
+    employer: '',
+    occupation: '',
+    income: '',
+    additionalIncome: '',
+    carType: '',
+    downPayment: '',
+  };
+
+  const [formData, setFormData] = useState(initialData);
+  const [errors, setErrors] = useState({});
+
+  /* ================= HANDLERS ================= */
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData(prev => ({
+      ...prev,
+      [name]: value,
+    }));
+
+    setErrors(prev => ({
+      ...prev,
+      [name]: '',
+    }));
+  };
+
+  const validateStep = () => {
+    const stepFields = {
+      1: ['firstName', 'lastName', 'email', 'phone', 'dob'],
+      2: ['address', 'city', 'state', 'zip'],
+      3: ['employer', 'occupation', 'income'],
+    };
+
+    const currentFields = stepFields[step] || [];
+    let newErrors = {};
+    let hasError = false;
+
+    currentFields.forEach(field => {
+      if (!formData[field]?.toString().trim()) {
+        newErrors[field] = 'This field is required';
+        hasError = true;
+      }
+    });
+
+    setErrors(newErrors);
+
+    if (hasError) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Missing information',
+        text: 'Please complete all required fields before continuing.',
+      });
+      return false;
+    }
+
+    return true;
+  };
 
   const nextStep = () => {
     if (validateStep()) setStep(step + 1);
@@ -14,43 +86,32 @@ export default function Preapproval() {
 
   const prevStep = () => setStep(step - 1);
 
-  const validateStep = () => {
-    const fields = formRef.current.querySelectorAll(
-      `[data-step="${step}"] input[required]`
-    );
-
-    for (let field of fields) {
-      if (!field.value.trim()) {
-        Swal.fire({
-          icon: 'warning',
-          title: 'Missing information',
-          text: 'Please complete all required fields before continuing.',
-        });
-        field.focus();
-        return false;
-      }
-    }
-    return true;
-  };
-
   const submitForm = async (e) => {
     e.preventDefault();
     if (!validateStep()) return;
 
-    await handleSubmit(e);
+    await handleSubmit({
+      target: {
+        elements: Object.entries(formData).map(([name, value]) => ({
+          name,
+          value,
+        })),
+      },
+    });
 
-    if (state.succeeded) {
-      Swal.fire({
-        icon: 'success',
-        title: 'Application Submitted',
-        text: 'A specialist will contact you shortly.',
-      });
-      formRef.current.reset();
-      setStep(1);
-    }
+    Swal.fire({
+      icon: 'success',
+      title: 'Application Submitted',
+      text: 'A Motor Vibes specialist will contact you shortly.',
+    });
+
+    setFormData(initialData);
+    setStep(1);
   };
 
   const progress = (step / 4) * 100;
+
+  /* ================= UI ================= */
 
   return (
     <div className="form-wrapper">
@@ -58,57 +119,102 @@ export default function Preapproval() {
 
       {/* Progress bar */}
       <div className="progress mb-4">
-        <div
-          className="progress-bar"
-          style={{ width: `${progress}%` }}
-        ></div>
+        <div className="progress-bar" style={{ width: `${progress}%` }}></div>
       </div>
 
-      {/* Steps intro */}
-      <div className="preapproval-steps">
+      {/* Steps */}
+      <div className="preapproval-steps mb-4">
         <div className={step >= 1 ? 'step active' : 'step'}>📝 Personal</div>
         <div className={step >= 2 ? 'step active' : 'step'}>🏠 Residence</div>
         <div className={step >= 3 ? 'step active' : 'step'}>💼 Employment</div>
         <div className={step >= 4 ? 'step active' : 'step'}>🚗 Vehicle</div>
       </div>
 
-      <form ref={formRef} onSubmit={submitForm}>
+      <form onSubmit={submitForm}>
         {/* STEP 1 */}
         {step === 1 && (
-          <div className="form-section" data-step="1">
+          <div className="form-section">
             <h4>Step 1: Personal Information</h4>
 
             <div className="row">
               <div className="col-md-3 mb-3">
                 <label>First Name *</label>
-                <input name="firstName" className="form-control" required />
+                <input
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  className={`form-control ${errors.firstName ? 'is-invalid' : ''}`}
+                />
+                <div className="invalid-feedback">{errors.firstName}</div>
               </div>
+
               <div className="col-md-3 mb-3">
                 <label>Middle Name</label>
-                <input name="middleName" className="form-control" />
+                <input
+                  name="middleName"
+                  value={formData.middleName}
+                  onChange={handleChange}
+                  className="form-control"
+                />
               </div>
+
               <div className="col-md-3 mb-3">
                 <label>Last Name *</label>
-                <input name="lastName" className="form-control" required />
+                <input
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  className={`form-control ${errors.lastName ? 'is-invalid' : ''}`}
+                />
+                <div className="invalid-feedback">{errors.lastName}</div>
               </div>
+
               <div className="col-md-3 mb-3">
                 <label>Suffix</label>
-                <input name="suffix" className="form-control" />
+                <input
+                  name="suffix"
+                  value={formData.suffix}
+                  onChange={handleChange}
+                  className="form-control"
+                />
               </div>
             </div>
 
             <div className="row">
               <div className="col-md-4 mb-3">
                 <label>Email *</label>
-                <input type="email" name="email" className="form-control" required />
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className={`form-control ${errors.email ? 'is-invalid' : ''}`}
+                />
+                <div className="invalid-feedback">{errors.email}</div>
               </div>
+
               <div className="col-md-4 mb-3">
                 <label>Phone *</label>
-                <input type="tel" name="phone" className="form-control" required />
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className={`form-control ${errors.phone ? 'is-invalid' : ''}`}
+                />
+                <div className="invalid-feedback">{errors.phone}</div>
               </div>
+
               <div className="col-md-4 mb-3">
                 <label>Date of Birth *</label>
-                <input name="dob" className="form-control" placeholder="MM/DD/YYYY" required />
+                <input
+                  type="date"
+                  name="dob"
+                  value={formData.dob}
+                  onChange={handleChange}
+                  className={`form-control ${errors.dob ? 'is-invalid' : ''}`}
+                />
+                <div className="invalid-feedback">{errors.dob}</div>
               </div>
             </div>
           </div>
@@ -116,37 +222,49 @@ export default function Preapproval() {
 
         {/* STEP 2 */}
         {step === 2 && (
-          <div className="form-section" data-step="2">
+          <div className="form-section">
             <h4>Step 2: Current Residence</h4>
 
             <div className="mb-3">
               <label>Street Address *</label>
-              <input name="address" className="form-control" required />
+              <input
+                name="address"
+                value={formData.address}
+                onChange={handleChange}
+                className={`form-control ${errors.address ? 'is-invalid' : ''}`}
+              />
+              <div className="invalid-feedback">{errors.address}</div>
             </div>
 
             <div className="row">
               <div className="col-md-4 mb-3">
                 <label>City *</label>
-                <input name="city" className="form-control" required />
+                <input
+                  name="city"
+                  value={formData.city}
+                  onChange={handleChange}
+                  className={`form-control ${errors.city ? 'is-invalid' : ''}`}
+                />
               </div>
+
               <div className="col-md-4 mb-3">
                 <label>State *</label>
-                <input name="state" className="form-control" required />
+                <input
+                  name="state"
+                  value={formData.state}
+                  onChange={handleChange}
+                  className={`form-control ${errors.state ? 'is-invalid' : ''}`}
+                />
               </div>
+
               <div className="col-md-4 mb-3">
                 <label>Zip Code *</label>
-                <input name="zip" className="form-control" required />
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col-md-6 mb-3">
-                <label>How long have you lived here?</label>
-                <input name="timeAtAddress" className="form-control" />
-              </div>
-              <div className="col-md-6 mb-3">
-                <label>Rent or Own?</label>
-                <input name="housing" className="form-control" />
+                <input
+                  name="zip"
+                  value={formData.zip}
+                  onChange={handleChange}
+                  className={`form-control ${errors.zip ? 'is-invalid' : ''}`}
+                />
               </div>
             </div>
           </div>
@@ -154,28 +272,52 @@ export default function Preapproval() {
 
         {/* STEP 3 */}
         {step === 3 && (
-          <div className="form-section" data-step="3">
+          <div className="form-section">
             <h4>Step 3: Employment & Income</h4>
 
             <div className="row">
               <div className="col-md-6 mb-3">
                 <label>Employer *</label>
-                <input name="employer" className="form-control" required />
+                <input
+                  name="employer"
+                  value={formData.employer}
+                  onChange={handleChange}
+                  className={`form-control ${errors.employer ? 'is-invalid' : ''}`}
+                />
               </div>
+
               <div className="col-md-6 mb-3">
                 <label>Occupation *</label>
-                <input name="occupation" className="form-control" required />
+                <input
+                  name="occupation"
+                  value={formData.occupation}
+                  onChange={handleChange}
+                  className={`form-control ${errors.occupation ? 'is-invalid' : ''}`}
+                />
               </div>
             </div>
 
             <div className="row">
               <div className="col-md-6 mb-3">
                 <label>Monthly Income *</label>
-                <input type="number" name="income" className="form-control" required />
+                <input
+                  type="number"
+                  name="income"
+                  value={formData.income}
+                  onChange={handleChange}
+                  className={`form-control ${errors.income ? 'is-invalid' : ''}`}
+                />
               </div>
+
               <div className="col-md-6 mb-3">
                 <label>Additional Income</label>
-                <input type="number" name="additionalIncome" className="form-control" />
+                <input
+                  type="number"
+                  name="additionalIncome"
+                  value={formData.additionalIncome}
+                  onChange={handleChange}
+                  className="form-control"
+                />
               </div>
             </div>
           </div>
@@ -183,17 +325,29 @@ export default function Preapproval() {
 
         {/* STEP 4 */}
         {step === 4 && (
-          <div className="form-section" data-step="4">
+          <div className="form-section">
             <h4>Step 4: Vehicle Interest</h4>
 
             <div className="row">
               <div className="col-md-6 mb-3">
                 <label>Vehicle of Interest</label>
-                <input name="carType" className="form-control" />
+                <input
+                  name="carType"
+                  value={formData.carType}
+                  onChange={handleChange}
+                  className="form-control"
+                />
               </div>
+
               <div className="col-md-6 mb-3">
                 <label>Estimated Down Payment</label>
-                <input type="number" name="downPayment" className="form-control" />
+                <input
+                  type="number"
+                  name="downPayment"
+                  value={formData.downPayment}
+                  onChange={handleChange}
+                  className="form-control"
+                />
               </div>
             </div>
           </div>
