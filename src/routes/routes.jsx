@@ -7,6 +7,7 @@ import { FloatingWhatsApp } from "react-floating-whatsapp";
 import ScrollToTop from "../components/ScrollToTop.jsx";
 import MoreInfo from "../pages/MoreInfo.jsx";
 import Footer from "../components/Footer.jsx";
+import ChatBot from "../components/ChatBot.jsx";
 
 
 
@@ -22,6 +23,7 @@ function AppRoutes() {
         <Route path="Inventory" element={<Inventory />} />
         <Route path="MoreInfo/:id" element={<MoreInfo />} />
         </Routes>
+        <ChatBot />
      <FloatingWhatsApp
       phoneNumber="16822406838"   // Número de tu empresa en formato internacional
       accountName="MotorVibes" // Nombre de tu empresa
