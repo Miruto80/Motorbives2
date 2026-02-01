@@ -3,6 +3,7 @@ import ContactSection from '../components/Contact'
 import Slider from '../components/Slider'
 import About from '../components/About.jsx'
 import cars from '../assets/data/cars.js'
+import Hero from '../components/Hero.jsx'
 
 export default function Home() {
   const latestCars = useMemo(() => {
@@ -12,6 +13,7 @@ export default function Home() {
 
   return (
     <div>
+      <Hero />
       <Slider cars={latestCars} title="Latest vehicles" />
       <About />
       <ContactSection />
