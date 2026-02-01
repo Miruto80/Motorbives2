@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react'; // Agregado useEffect
 import '../assets/css/Contact.css';
 import Title from './Title';
+import { useForm } from '@formspree/react';
+import Swal from 'sweetalert2';
 
 export default function ContactSection() {
   const [name, setName] = useState('');
@@ -8,58 +10,215 @@ export default function ContactSection() {
   const [email, setEmail] = useState('');
   const [date, setDate] = useState('');
 
- const handleSubmit = (e) => {
-  e.preventDefault();
+  // Estados para validaciones
+  const [errors, setErrors] = useState({});
+  const [validatedFields, setValidatedFields] = useState(new Set());
 
-  const message = `Hola, soy ${name}. Mi número: ${number}. Mi correo: ${email}. Quiero reservar una mesa el ${date}.`;
-  const encodedMessage = encodeURIComponent(message);
-  const phone = "16824804614";
+  // Estado y handler de Formspree
+  const [state, handleSubmit] = useForm("xzdvprqk");
 
-  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  // Validadores para cada campo
+  const validators = {
+    name: value => {
+      if (!value.trim()) return 'Name is required';
+      if (!/^[a-zA-Z\s]+$/.test(value)) return 'Name must contain only letters and spaces';
+      return '';
+    },
+    number: value => {
+      if (!value.trim()) return 'Number is required';
+      if (value.length < 10) return 'Number must be at least 10 digits';
+      if (!/^\d+$/.test(value)) return 'Number must contain only digits';
+      return '';
+    },
+    email: value => {
+      if (!value.trim()) return 'Email is required';
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return 'Invalid email format';
+      return '';
+    },
+    date: value => {
+      if (!value.trim()) return 'Date is required';
+      const selectedDate = new Date(value);
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      if (selectedDate < today) return 'Date must be today or in the future';
+      return '';
+    },
+  };
 
-  // Móvil usa wa.me (no usar _blank)
-  const mobileURL = `https://wa.me/${phone}?text=${encodedMessage}`;
+  // Función para validar un campo individual
+  const validateField = (name, value) => {
+    if (validators[name]) return validators[name](value);
+    return '';
+  };
 
-  // Escritorio usa api.whatsapp.com (sí usar _blank)
-  const desktopURL = `https://api.whatsapp.com/send?phone=${phone}&text=${encodedMessage}`;
+  // Handler actualizado para cambios en inputs con validación en tiempo real
+  const handleChange = (e) => {
+    const { name, value } = e.target;
 
-  if (isMobile) {
-    // Abre WhatsApp app directamente
-    window.location.href = mobileURL;
-  } else {
-    // Abre WhatsApp Web en pestaña nueva sin sacar al usuario de tu web
-    window.open(desktopURL, "_blank");
-  }
-};
+    // Actualizar el estado del campo
+    if (name === 'name') setName(value);
+    else if (name === 'number') setNumber(value.replace(/\D/g, '')); // Solo números
+    else if (name === 'email') setEmail(value);
+    else if (name === 'date') setDate(value);
 
+    // Validar en tiempo real
+    const error = validateField(name, value);
+    setErrors(prev => ({
+      ...prev,
+      [name]: error,
+    }));
 
+    if (!error) {
+      setValidatedFields(prev => new Set(prev).add(name));
+    } else {
+      setValidatedFields(prev => {
+        const newSet = new Set(prev);
+        newSet.delete(name);
+        return newSet;
+      });
+    }
+  };
 
+  // Validación completa antes de enviar
+  const validateForm = () => {
+    const fields = ['name', 'number', 'email', 'date'];
+    let newErrors = {};
+    let hasError = false;
+
+    fields.forEach(field => {
+      const value = field === 'name' ? name : field === 'number' ? number : field === 'email' ? email : date;
+      const error = validateField(field, value);
+      if (error) {
+        newErrors[field] = error;
+        hasError = true;
+      }
+    });
+
+    setErrors(newErrors);
+
+    if (hasError) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Missing or invalid information',
+        text: 'Please correct the errors before submitting.',
+      });
+      return false;
+    }
+
+    return true;
+  };
+
+  // useEffect para manejar el estado de Formspree (éxito o error)
+  useEffect(() => {
+    if (state.succeeded) {
+      Swal.fire({
+        icon: 'success',
+        title: 'Reservation Submitted',
+        text: 'Thank you! We will contact you soon to confirm your test drive.',
+      });
+
+      // Resetear los campos después del envío
+      setName('');
+      setNumber('');
+      setEmail('');
+      setDate('');
+      setErrors({});
+      setValidatedFields(new Set());
+    }
+
+    if (state.errors && state.errors.length > 0) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Something went wrong. Please try again.',
+      });
+    }
+  }, [state.succeeded, state.errors]);
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    if (!validateForm()) return; // Validar antes de enviar
+
+    try {
+      // Enviar los datos a Formspree
+      await handleSubmit({
+        name,
+        number,
+        email,
+        date,
+      });
+    } catch (error) {
+      console.error('Formspree error:', error);
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Failed to send. Please check your connection.',
+      });
+    }
+  };
 
   return (
     <section className="reservation-section">
-     <Title text='Schedule a test drive'/>
+      <Title text='Schedule a test drive'/>
       <div className="reservation-form">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={onSubmit}>
           <label>
             Name:
-            <input type="text" placeholder='Put your name here' value={name} onChange={(e) => setName(e.target.value)} required />
+            <input 
+              type="text" 
+              placeholder='Put your name here' 
+              value={name} 
+              onChange={handleChange} 
+              name="name"
+              className={` ${errors.name ? 'is-invalid' : validatedFields.has('name') ? 'is-valid' : ''}`}
+              required 
+            />
+            {errors.name && <span className="text-danger">{errors.name}</span>}
           </label>
 
           <label>
             Number:
-            <input type="tel"  placeholder='Put your number here' value={number} onChange={(e) => setNumber(e.target.value)} required />
+            <input 
+              type="tel"  
+              placeholder='Put your number here' 
+              value={number} 
+              onChange={handleChange} 
+              name="number"
+              className={` ${errors.number ? 'is-invalid' : validatedFields.has('number') ? 'is-valid' : ''}`}
+              required 
+            />
+            {errors.number && <span className="text-danger">{errors.number}</span>}
           </label>
 
           <label>
             Email:
-            <input type="email"  placeholder='Put your email here' value={email} onChange={(e) => setEmail(e.target.value)} required />
+            <input 
+              type="email"  
+              placeholder='Put your email here' 
+              value={email} 
+              onChange={handleChange} 
+              name="email"
+              className={` ${errors.email ? 'is-invalid' : validatedFields.has('email') ? 'is-valid' : ''}`}
+              required 
+            />
+            {errors.email && <span className="text-danger">{errors.email}</span>}
           </label>
 
           <label>
             Date:
-            <input type="date" value={date} onChange={(e) => setDate(e.target.value)} required />
+            <input 
+              type="date" 
+              value={date} 
+              onChange={handleChange} 
+              name="date"
+              className={` ${errors.date ? 'is-invalid' : validatedFields.has('date') ? 'is-valid' : ''}`}
+              required 
+            />
+            {errors.date && <span className="text-danger">{errors.date}</span>}
           </label>
-          <button type="submit">Schedule Your Test Drive</button>
+          <button type="submit" disabled={state.submitting}>
+            {state.submitting ? 'Sending...' : 'Schedule Your Test Drive'}
+          </button>
         </form>
       </div>
 
@@ -73,7 +232,7 @@ export default function ContactSection() {
           loading="lazy"
         ></iframe>
       </div>
- <Title text='Social Media'/>
+      <Title text='Social Media'/>
       <div className="reservation-socials">
         <div className="socials">
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
@@ -93,4 +252,3 @@ export default function ContactSection() {
     </section>
   );
 }
-

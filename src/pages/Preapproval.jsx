@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
 import { useForm } from '@formspree/react';
+import axios from 'axios'; // Instala con: npm install axios
 import '../assets/css/Preapproval.css';
 
 export default function Preapproval() {
   const [step, setStep] = useState(1);
-  const [state, handleSubmit] = useForm("mldgwnda");
+  const [state, handleSubmit] = useForm("mnjzadvz");
 
   const initialData = {
     firstName: '',
@@ -33,6 +34,69 @@ export default function Preapproval() {
   const [errors, setErrors] = useState({});
   const [validatedFields, setValidatedFields] = useState(new Set()); // Para rastrear campos validados exitosamente
 
+  // Nuevos estados para la API
+  const [statesList, setStatesList] = useState([]);
+  const [citiesList, setCitiesList] = useState([]);
+  const [selectedState, setSelectedState] = useState('');
+  const [loadingStates, setLoadingStates] = useState(true);
+  const [loadingCities, setLoadingCities] = useState(false);
+
+  const API_KEY = 'fcd4726fc4858a2b59f737afc60ef270377d2be3cc24c87c653f6106b8529c68'; // Reemplaza con tu clave de countrystatecity.in
+  const API_BASE_URL = 'https://api.countrystatecity.in/v1/countries/US';
+
+  // Cargar estados al montar el componente
+  useEffect(() => {
+    const fetchStates = async () => {
+      try {
+        const response = await axios.get(`${API_BASE_URL}/states`, {
+          headers: {
+            'X-CSCAPI-KEY': API_KEY,
+          },
+        });
+        setStatesList(response.data);
+      } catch (error) {
+        console.error('Error fetching states:', error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Failed to load states. Please try again.',
+        });
+      } finally {
+        setLoadingStates(false);
+      }
+    };
+    fetchStates();
+  }, []);
+
+  // Cargar ciudades cuando cambie el estado seleccionado
+  useEffect(() => {
+    if (selectedState) {
+      const fetchCities = async () => {
+        setLoadingCities(true);
+        try {
+          const response = await axios.get(`${API_BASE_URL}/states/${selectedState}/cities`, {
+            headers: {
+              'X-CSCAPI-KEY': API_KEY,
+            },
+          });
+          setCitiesList(response.data);
+        } catch (error) {
+          console.error('Error fetching cities:', error);
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Failed to load cities. Please try again.',
+          });
+        } finally {
+          setLoadingCities(false);
+        }
+      };
+      fetchCities();
+    } else {
+      setCitiesList([]);
+    }
+  }, [selectedState]);
+
   /* ================= HANDLERS ================= */
   const validators = {
     email: value =>
@@ -57,7 +121,7 @@ export default function Preapproval() {
     const { name, value } = e.target;
 
     // Campos que no permiten números
-    const noNumbersFields = ['firstName', 'middleName', 'lastName', 'suffix', 'address', 'city', 'state', 'employer', 'occupation'];
+    const noNumbersFields = ['firstName', 'middleName', 'lastName', 'suffix', 'employer', 'occupation'];
 
     let updatedValue = value;
     if (noNumbersFields.includes(name)) {
@@ -68,8 +132,12 @@ export default function Preapproval() {
 
     setFormData(prev => ({ ...prev, [name]: updatedValue }));
 
+      if (name === 'state') {
+      setSelectedState(value); // Actualizar estado seleccionado para cargar ciudades
+    }
+
     // Validar en tiempo real para campos requeridos
-    const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'dob', 'address', 'city', 'state', 'zip', 'employer', 'occupation', 'income'];
+    const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'dob', 'address', 'zip', 'employer', 'occupation', 'income'];
     if (requiredFields.includes(name)) {
       const error = validateField(name, updatedValue);
       setErrors(prev => ({
@@ -128,29 +196,26 @@ export default function Preapproval() {
   const prevStep = () => setStep(step - 1);
 
   const submitForm = async (e) => {
-    e.preventDefault();
-    if (!validateStep()) return;
+  e.preventDefault();
+  if (!validateStep()) return;
 
-    await handleSubmit({
-      target: {
-        elements: Object.entries(formData).map(([name, value]) => ({
-          name,
-          value,
-        })),
-      },
-    });
+  // Cambia esto: pasa formData directamente
+  await handleSubmit(formData);
 
-    Swal.fire({
-      icon: 'success',
-      title: 'Application Submitted',
-      text: 'A Motor Vibes specialist will contact you shortly.',
-    });
+  Swal.fire({
+    icon: 'success',
+    title: 'Application Submitted',
+    text: 'A Motor Vibes specialist will contact you shortly.',
+  });
 
-    setFormData(initialData);
-    setStep(1);
-    setErrors({});
-    setValidatedFields(new Set()); // Resetear también los campos validados
-  };
+  // Resetear el formulario y estados
+  setFormData(initialData);
+  setStep(1);
+  setErrors({});
+  setValidatedFields(new Set());
+  setSelectedState(''); // Resetear también el estado seleccionado para los selects
+  setCitiesList([]); // Limpiar ciudades
+};
 
   const progress = (step / 4) * 100;
 
@@ -264,7 +329,7 @@ export default function Preapproval() {
         )}
 
         {/* STEP 2 */}
-        {step === 2 && (
+       {step === 2 && (
           <div className="form-section">
             <h4>Step 2: Current Residence</h4>
 
@@ -280,26 +345,39 @@ export default function Preapproval() {
             </div>
 
             <div className="row">
-              <div className="col-md-4 mb-3">
-                <label>City *</label>
-                <input
-                  name="city"
-                  value={formData.city}
-                  onChange={handleChange}
-                  className={`form-control ${errors.city ? 'is-invalid' : validatedFields.has('city') ? 'is-valid' : ''}`}
-                />
-                {errors.city && <span className="text-danger">{errors.city}</span>}
-              </div>
 
               <div className="col-md-4 mb-3">
                 <label>State *</label>
-                <input
+                <select
                   name="state"
                   value={formData.state}
                   onChange={handleChange}
-                  className={`form-control ${errors.state ? 'is-invalid' : validatedFields.has('state') ? 'is-valid' : ''}`}
-                />
+                  className={`form-select ${errors.state ? 'is-invalid' : validatedFields.has('state') ? 'is-valid' : ''}`}
+                  disabled={loadingStates}
+                >
+                  <option value="">{loadingStates ? 'Loading states...' : 'Select a state'}</option>
+                  {statesList.map(stateItem => (
+                    <option key={stateItem.id} value={stateItem.iso2}>{stateItem.name}</option>
+                  ))}
+                </select>
                 {errors.state && <span className="text-danger">{errors.state}</span>}
+              </div>
+
+              <div className="col-md-4 mb-3">
+                <label>City *</label>
+                <select
+                  name="city"
+                  value={formData.city}
+                  onChange={handleChange}
+                  className={`form-select ${errors.city ? 'is-invalid' : validatedFields.has('city') ? 'is-valid' : ''}`}
+                  disabled={loadingCities || !selectedState}
+                >
+                  <option value="">{loadingCities ? 'Loading cities...' : 'Select a city'}</option>
+                  {citiesList.map(city => (
+                    <option key={city.id} value={city.name}>{city.name}</option>
+                  ))}
+                </select>
+                {errors.city && <span className="text-danger">{errors.city}</span>}
               </div>
 
               <div className="col-md-4 mb-3">
@@ -410,15 +488,15 @@ export default function Preapproval() {
             </button>
           )}
 
-          {step < 4 ? (
-            <button type="button" className="btn btn-primary ms-auto" onClick={nextStep}>
-              Next →
-            </button>
-          ) : (
-            <button type="submit" className="btn btn-success ms-auto">
-              Submit Application
-            </button>
-          )}
+         {step < 4 ? (
+  <button type="button" className="btn btn-primary ms-auto" onClick={nextStep}>
+    Next →
+  </button>
+) : (
+  <button type="button" className="btn btn-success ms-auto" onClick={submitForm}>
+    Submit Application
+  </button>
+)}
         </div>
       </form>
     </div>
