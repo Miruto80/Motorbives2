@@ -38,7 +38,7 @@ export default function Inventory() {
   return (
     <div className="row g-4">
       {/* Sidebar */}
-      <div className="col-lg-3 d-none d-lg-block">
+      <div className="col-lg-3 d-lg-block">
         <Filter
           cars={cars}
           onFilterChange={handleFilterChange}
