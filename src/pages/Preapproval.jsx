@@ -3,6 +3,7 @@ import Swal from 'sweetalert2';
 import { useForm } from '@formspree/react';
 import axios from 'axios'; // Instala con: npm install axios
 import '../assets/css/Preapproval.css';
+import SEO from '../components/SEO.jsx';
 
 export default function Preapproval() {
   const [step, setStep] = useState(1);
@@ -242,6 +243,12 @@ export default function Preapproval() {
 
   return (
     <div className="form-wrapper">
+      <SEO 
+        title="Pre-Approval" 
+        description="Get pre-approved for car financing at Motorvibes. Fill out our easy online form to check your eligibility and secure the best deals on new and used cars." 
+        url="https://www.motorvibesllc.com/Preapproval"
+        image="/img/logo.webp" 
+      />
       <h2 className="text-center mb-4">Get Pre-Approved</h2>
 
       {/* Progress bar */}

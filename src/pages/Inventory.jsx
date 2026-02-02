@@ -3,6 +3,7 @@ import Cards from '../components/Inventory/Cards.jsx';
 import Filter from '../components/Inventory/Filter.jsx';
 import Pagination from '../components/Inventory/Pagination.jsx';
 import cars from '../assets/data/cars.js';
+import SEO from '../components/SEO.jsx';
 
 const ITEMS_PER_PAGE = 12;
 
@@ -37,6 +38,12 @@ export default function Inventory() {
 
   return (
     <div className="row g-4">
+      <SEO 
+        title="Inventory" 
+        description="Browse our extensive inventory of new and used cars at Motorvibes. Find your perfect vehicle with easy filters and financing options." 
+        url="https://www.motorvibesllc.com/inventory"
+        image="/img/logo.webp"
+      />
       {/* Sidebar */}
       <div className="col-lg-3 d-lg-block">
         <Filter
