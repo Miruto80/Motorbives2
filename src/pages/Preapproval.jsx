@@ -12,20 +12,24 @@ export default function Preapproval() {
     firstName: '',
     middleName: '',
     lastName: '',
-    suffix: '',
     email: '',
     phone: '',
+    socialOrItin: '', 
+    licenseNumber: '', 
+    licenseState: '',
     dob: '',
     address: '',
     city: '',
     state: '',
     zip: '',
-    timeAtAddress: '',
+    timeAtAddress: '', 
     housing: '',
-    employer: '',
+    employmentType: '', 
+    CompanyName: '', 
     occupation: '',
     income: '',
     additionalIncome: '',
+    timeAtJob: '',
     carType: '',
     downPayment: '',
   };
@@ -100,7 +104,7 @@ export default function Preapproval() {
   /* ================= HANDLERS ================= */
   const validators = {
     email: value =>
-      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
+      value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
         ? 'Invalid email format'
         : '',
 
@@ -121,24 +125,27 @@ export default function Preapproval() {
     const { name, value } = e.target;
 
     // Campos que no permiten números
-    const noNumbersFields = ['firstName', 'middleName', 'lastName', 'suffix', 'employer', 'occupation'];
+    const noNumbersFields = ['firstName', 'middleName', 'lastName', 'CompanyName', 'occupation', 'licenseState'];
+
+
+     // Campos que no permiten letras (solo números)
+    const noLettersFields = ['phone', 'zip', 'income', 'additionalIncome', 'downPayment', 'socialOrItin', 'licenseNumber'];
 
     let updatedValue = value;
     if (noNumbersFields.includes(name)) {
       updatedValue = value.replace(/\d/g, ''); // Remover dígitos
-    } else if (name === 'phone') {
-      updatedValue = value.replace(/\D/g, ''); // Solo números
+    } else if (noLettersFields.includes(name)) {
+      updatedValue = value.replace(/\D/g, ''); // Remover no-dígitos (solo números)
     }
 
     setFormData(prev => ({ ...prev, [name]: updatedValue }));
 
-      if (name === 'state') {
+    if (name === 'state') {
       setSelectedState(value); // Actualizar estado seleccionado para cargar ciudades
     }
 
     // Validar en tiempo real para campos requeridos
-    const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'dob', 'address', 'zip', 'employer', 'occupation', 'income'];
-    if (requiredFields.includes(name)) {
+ const requiredFields = ['firstName', 'lastName', 'phone', 'dob', 'socialOrItin', 'licenseNumber', 'licenseState', 'address', 'city', 'state', 'zip', 'timeAtAddress', 'employmentType', 'CompanyName', 'occupation', 'income', 'timeAtJob'];    if (requiredFields.includes(name)) {
       const error = validateField(name, updatedValue);
       setErrors(prev => ({
         ...prev,
@@ -159,9 +166,9 @@ export default function Preapproval() {
 
   const validateStep = () => {
     const stepFields = {
-      1: ['firstName', 'lastName', 'email', 'phone', 'dob'],
-      2: ['address', 'city', 'state', 'zip'],
-      3: ['employer', 'occupation', 'income'],
+      1: ['firstName', 'lastName', 'socialOrItin', 'licenseNumber', 'phone', 'dob'],
+      2: ['address', 'city', 'state', 'zip', 'timeAtAddress'],
+      3: ['employmentType', 'CompanyName', 'occupation', 'income', 'timeAtJob'], 
     };
 
     const currentFields = stepFields[step] || [];
@@ -196,26 +203,26 @@ export default function Preapproval() {
   const prevStep = () => setStep(step - 1);
 
   const submitForm = async (e) => {
-  e.preventDefault();
-  if (!validateStep()) return;
+    e.preventDefault();
+    if (!validateStep()) return;
 
-  // Cambia esto: pasa formData directamente
-  await handleSubmit(formData);
+    // Cambia esto: pasa formData directamente
+    await handleSubmit(formData);
 
-  Swal.fire({
-    icon: 'success',
-    title: 'Application Submitted',
-    text: 'A Motor Vibes specialist will contact you shortly.',
-  });
+    Swal.fire({
+      icon: 'success',
+      title: 'Application Submitted',
+      text: 'A Motor Vibes specialist will contact you shortly.',
+    });
 
-  // Resetear el formulario y estados
-  setFormData(initialData);
-  setStep(1);
-  setErrors({});
-  setValidatedFields(new Set());
-  setSelectedState(''); // Resetear también el estado seleccionado para los selects
-  setCitiesList([]); // Limpiar ciudades
-};
+    // Resetear el formulario y estados
+    setFormData(initialData);
+    setStep(1);
+    setErrors({});
+    setValidatedFields(new Set());
+    setSelectedState(''); // Resetear también el estado seleccionado para los selects
+    setCitiesList([]); // Limpiar ciudades
+  };
 
   const progress = (step / 4) * 100;
 
@@ -245,7 +252,7 @@ export default function Preapproval() {
             <h4>Step 1: Personal Information</h4>
 
             <div className="row">
-              <div className="col-md-3 mb-3">
+              <div className="col-md-4 mb-3">
                 <label>First Name *</label>
                 <input
                   name="firstName"
@@ -256,7 +263,7 @@ export default function Preapproval() {
                 {errors.firstName && <span className="text-danger">{errors.firstName}</span>}
               </div>
 
-              <div className="col-md-3 mb-3">
+              <div className="col-md-4 mb-3">
                 <label>Middle Name</label>
                 <input
                   name="middleName"
@@ -266,7 +273,7 @@ export default function Preapproval() {
                 />
               </div>
 
-              <div className="col-md-3 mb-3">
+              <div className="col-md-4 mb-3">
                 <label>Last Name *</label>
                 <input
                   name="lastName"
@@ -277,20 +284,11 @@ export default function Preapproval() {
                 {errors.lastName && <span className="text-danger">{errors.lastName}</span>}
               </div>
 
-              <div className="col-md-3 mb-3">
-                <label>Suffix</label>
-                <input
-                  name="suffix"
-                  value={formData.suffix}
-                  onChange={handleChange}
-                  className="form-control"
-                />
-              </div>
             </div>
 
             <div className="row">
               <div className="col-md-4 mb-3">
-                <label>Email *</label>
+                <label>Email</label>
                 <input
                   type="email"
                   name="email"
@@ -325,11 +323,51 @@ export default function Preapproval() {
                 {errors.dob && <span className="text-danger">{errors.dob}</span>}
               </div>
             </div>
+            <div className="row">
+              <div className="col-md-4 mb-3">
+                <label>Social Security Number or ITIN *</label>
+                <input
+                  name="socialOrItin"
+                  value={formData.socialOrItin}
+                  onChange={handleChange}
+                  placeholder="XXX-XX-XXXX or ITIN"
+                  className={`form-control ${errors.socialOrItin ? 'is-invalid' : validatedFields.has('socialOrItin') ? 'is-valid' : ''}`}
+                />
+                {errors.socialOrItin && <span className="text-danger">{errors.socialOrItin}</span>}
+              </div>
+
+              <div className="col-md-4 mb-3">
+                <label>Driver's License Number *</label>
+                <input
+                  name="licenseNumber"
+                  value={formData.licenseNumber}
+                  onChange={handleChange}
+                  className={`form-control ${errors.licenseNumber ? 'is-invalid' : validatedFields.has('licenseNumber') ? 'is-valid' : ''}`}
+                />
+                {errors.licenseNumber && <span className="text-danger">{errors.licenseNumber}</span>}
+              </div>
+              <div className="col-md-4 mb-3">
+                <label>Driver's License State *</label>
+                <select
+                  name="licenseState"
+                  value={formData.licenseState}
+                  onChange={handleChange}
+                  className={`form-select ${errors.licenseState ? 'is-invalid' : validatedFields.has('licenseState') ? 'is-valid' : ''}`}
+                  disabled={loadingStates}
+                >
+                  <option value="">{loadingStates ? 'Loading states...' : 'Select a state'}</option>
+                  {statesList.map(stateItem => (
+                    <option key={stateItem.id} value={stateItem.iso2}>{stateItem.name}</option>
+                  ))}
+                </select>
+                {errors.licenseState && <span className="text-danger">{errors.licenseState}</span>}
+              </div>
+            </div>
           </div>
         )}
 
         {/* STEP 2 */}
-       {step === 2 && (
+        {step === 2 && (
           <div className="form-section">
             <h4>Step 2: Current Residence</h4>
 
@@ -345,8 +383,7 @@ export default function Preapproval() {
             </div>
 
             <div className="row">
-
-              <div className="col-md-4 mb-3">
+              <div className="col-md-3 mb-3">
                 <label>State *</label>
                 <select
                   name="state"
@@ -363,7 +400,7 @@ export default function Preapproval() {
                 {errors.state && <span className="text-danger">{errors.state}</span>}
               </div>
 
-              <div className="col-md-4 mb-3">
+              <div className="col-md-3 mb-3">
                 <label>City *</label>
                 <select
                   name="city"
@@ -380,7 +417,7 @@ export default function Preapproval() {
                 {errors.city && <span className="text-danger">{errors.city}</span>}
               </div>
 
-              <div className="col-md-4 mb-3">
+              <div className="col-md-3 mb-3">
                 <label>Zip Code *</label>
                 <input
                   name="zip"
@@ -389,6 +426,18 @@ export default function Preapproval() {
                   className={`form-control ${errors.zip ? 'is-invalid' : validatedFields.has('zip') ? 'is-valid' : ''}`}
                 />
                 {errors.zip && <span className="text-danger">{errors.zip}</span>}
+              </div>
+
+              <div className="col-md-3 mb-3">
+                <label>Time at Address *</label>
+                <input
+                  name="timeAtAddress"
+                  value={formData.timeAtAddress}
+                  onChange={handleChange}
+                  placeholder="e.g., 2 years"
+                  className={`form-control ${errors.timeAtAddress ? 'is-invalid' : validatedFields.has('timeAtAddress') ? 'is-valid' : ''}`}
+                />
+                {errors.timeAtAddress && <span className="text-danger">{errors.timeAtAddress}</span>}
               </div>
             </div>
           </div>
@@ -401,16 +450,35 @@ export default function Preapproval() {
 
             <div className="row">
               <div className="col-md-6 mb-3">
-                <label>Employer *</label>
-                <input
-                  name="employer"
-                  value={formData.employer}
+                <label>Employment Type *</label>
+                <select
+                  name="employmentType"
+                  value={formData.employmentType}
                   onChange={handleChange}
-                  className={`form-control ${errors.employer ? 'is-invalid' : validatedFields.has('employer') ? 'is-valid' : ''}`}
-                />
-                {errors.employer && <span className="text-danger">{errors.employer}</span>}
+                  className={`form-select ${errors.employmentType ? 'is-invalid' : validatedFields.has('employmentType') ? 'is-valid' : ''}`}
+                >
+                  <option value="">Select employment type</option>
+                  <option value="self employed"> self employed</option>
+                  <option value="employed full time">Employed full time</option>
+                  <option value="employed part time">Employed part time</option>
+                  <option value="Other">Other</option>
+                </select>
+                {errors.employmentType && <span className="text-danger">{errors.employmentType}</span>}
               </div>
 
+              <div className="col-md-6 mb-3">
+                <label>Company Name *</label>
+                <input
+                  name="CompanyName"
+                  value={formData.CompanyName}
+                  onChange={handleChange}
+                  className={`form-control ${errors.CompanyName ? 'is-invalid' : validatedFields.has('CompanyName') ? 'is-valid' : ''}`}
+                />
+                {errors.CompanyName && <span className="text-danger">{errors.CompanyName}</span>}
+              </div>
+            </div>
+
+            <div className="row">
               <div className="col-md-6 mb-3">
                 <label>Occupation *</label>
                 <input
@@ -421,9 +489,7 @@ export default function Preapproval() {
                 />
                 {errors.occupation && <span className="text-danger">{errors.occupation}</span>}
               </div>
-            </div>
 
-            <div className="row">
               <div className="col-md-6 mb-3">
                 <label>Monthly Income *</label>
                 <input
@@ -435,18 +501,29 @@ export default function Preapproval() {
                 />
                 {errors.income && <span className="text-danger">{errors.income}</span>}
               </div>
-
-              <div className="col-md-6 mb-3">
-                <label>Additional Income</label>
-                <input
-                  type="number"
-                  name="additionalIncome"
-                  value={formData.additionalIncome}
-                  onChange={handleChange}
-                  className="form-control"
-                />
-              </div>
             </div>
+           <div className='row'> 
+            <div className="col-md-6 mb-3">
+              <label>Additional Income</label>
+              <input
+                type="number"
+                name="additionalIncome"
+                value={formData.additionalIncome}
+                onChange={handleChange}
+                className="form-control"
+                />
+            </div>
+            <div className="col-md-6 mb-3">
+              <label>Time at Job *</label>
+              <input
+                type="text"
+                name="timeAtJob"
+                value={formData.timeAtJob}
+                onChange={handleChange}
+                className={`form-control ${errors.timeAtJob ? 'is-invalid' : validatedFields.has('timeAtJob') ? 'is-valid' : ''}`}
+                />
+            </div>
+          </div>
           </div>
         )}
 
@@ -488,15 +565,15 @@ export default function Preapproval() {
             </button>
           )}
 
-         {step < 4 ? (
-  <button type="button" className="btn btn-primary ms-auto" onClick={nextStep}>
-    Next →
-  </button>
-) : (
-  <button type="button" className="btn btn-success ms-auto" onClick={submitForm}>
-    Submit Application
-  </button>
-)}
+          {step < 4 ? (
+            <button type="button" className="btn btn-primary ms-auto" onClick={nextStep}>
+              Next →
+            </button>
+          ) : (
+            <button type="button" className="btn btn-success ms-auto" onClick={submitForm}>
+              Submit Application
+            </button>
+          )}
         </div>
       </form>
     </div>
