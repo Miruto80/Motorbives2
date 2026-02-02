@@ -7,8 +7,7 @@ import '../assets/css/Preapproval.css';
 export default function Preapproval() {
   const [step, setStep] = useState(1);
   const [state, handleSubmit] = useForm("mnjzadvz");
-
-  const initialData = {
+   const initialData = {
     firstName: '',
     middleName: '',
     lastName: '',
@@ -113,6 +112,18 @@ export default function Preapproval() {
 
     income: value =>
       value <= 0 ? 'Income must be greater than 0' : '',
+  
+    dob: value => {
+      if (!value) return '';
+      const today = new Date();
+      const birthDate = new Date(value);
+      let age = today.getFullYear() - birthDate.getFullYear();
+      const monthDiff = today.getMonth() - birthDate.getMonth();
+      if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+      }
+      return age < 18 ? 'You must be at least 18 years old' : '';
+    },
   };
 
   const validateField = (name, value) => {
@@ -127,8 +138,7 @@ export default function Preapproval() {
     // Campos que no permiten números
     const noNumbersFields = ['firstName', 'middleName', 'lastName', 'CompanyName', 'occupation', 'licenseState'];
 
-
-     // Campos que no permiten letras (solo números)
+    // Campos que no permiten letras (solo números)
     const noLettersFields = ['phone', 'zip', 'income', 'additionalIncome', 'downPayment', 'socialOrItin', 'licenseNumber'];
 
     let updatedValue = value;
@@ -145,7 +155,8 @@ export default function Preapproval() {
     }
 
     // Validar en tiempo real para campos requeridos
- const requiredFields = ['firstName', 'lastName', 'phone', 'dob', 'socialOrItin', 'licenseNumber', 'licenseState', 'address', 'city', 'state', 'zip', 'timeAtAddress', 'employmentType', 'CompanyName', 'occupation', 'income', 'timeAtJob'];    if (requiredFields.includes(name)) {
+    const requiredFields = ['firstName', 'lastName', 'phone', 'dob', 'socialOrItin', 'licenseNumber', 'licenseState', 'address', 'city', 'state', 'zip', 'timeAtAddress', 'employmentType', 'CompanyName', 'occupation', 'income', 'timeAtJob'];
+    if (requiredFields.includes(name)) {
       const error = validateField(name, updatedValue);
       setErrors(prev => ({
         ...prev,
@@ -166,7 +177,7 @@ export default function Preapproval() {
 
   const validateStep = () => {
     const stepFields = {
-      1: ['firstName', 'lastName', 'socialOrItin', 'licenseNumber', 'phone', 'dob'],
+      1: ['firstName', 'lastName', 'socialOrItin', 'licenseNumber', 'licenseState', 'phone', 'dob'],
       2: ['address', 'city', 'state', 'zip', 'timeAtAddress'],
       3: ['employmentType', 'CompanyName', 'occupation', 'income', 'timeAtJob'], 
     };
@@ -176,19 +187,20 @@ export default function Preapproval() {
     let hasError = false;
 
     currentFields.forEach(field => {
-      if (!formData[field]?.toString().trim()) {
-        newErrors[field] = 'This field is required';
+      const error = validateField(field, formData[field]);
+      if (error) {
+        newErrors[field] = error;
         hasError = true;
       }
     });
 
-    setErrors(newErrors);
+    setErrors(prev => ({ ...prev, ...newErrors }));
 
     if (hasError) {
       Swal.fire({
         icon: 'warning',
-        title: 'Missing information',
-        text: 'Please complete all required fields before continuing.',
+        title: 'Missing or invalid information',
+        text: 'Please complete all required fields correctly before continuing.',
       });
       return false;
     }
