@@ -5,6 +5,7 @@ import About from '../components/About.jsx'
 import cars from '../assets/data/cars.js'
 import Hero from '../components/Hero.jsx'
 import SEO from '../components/SEO.jsx';
+import Clients from '../components/Clients.jsx'
 
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
       <Slider cars={latestCars} title="Latest vehicles" />
       <About />
       <ContactSection />
+      <Clients />
     </div>
   )
 }
