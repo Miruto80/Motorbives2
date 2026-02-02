@@ -21,26 +21,30 @@
 
 .client-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.35);
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.45);
 }
 
-/* Overlay info */
+/* Overlay */
 .client-info {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 12px;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-  color: #fff;
+  padding: 14px 12px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.3),
+    transparent
+  );
   text-align: center;
 }
 
-.client-info h6 {
-  margin: 0;
+/* CAR NAME – protagonista */
+.client-car {
+  display: block;
+  font-size: 1.05rem;
   font-weight: 700;
-}
-
-.client-info span {
-  font-size: 0.85rem;
-  color: #d4af37;
+  letter-spacing: 0.5px;
+  color: #d4af37; /* dorado dealer */
+  text-transform: uppercase;
 }

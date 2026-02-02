@@ -5,12 +5,12 @@ import Title from './Title';
 
 export default function Clients() {
   const clients = [
-    { image: '/Clients/Client1.jpeg', name: 'Carlos M.', car: '2022 international' },
-    { image: '/Clients/Client2.jpeg', name: 'Maria L.', car: 'Honda Accord' },
-    { image: '/Clients/Client3.jpeg', name: 'Jose R.', car: 'Ford F-150' },
-    { image: '/Clients/Client4.jpeg', name: 'Ana P.', car: 'Nissan Altima' },
-    { image: '/Clients/Client5.jpeg', name: 'Luis G.', car: 'Chevy Silverado' },
-    { image: '/Clients/Client6.jpeg', name: 'Emily T.', car: 'Hyundai Elantra' },
+    { image: '/Clients/Client (1).webp', car: 'International' },
+    { image: '/Clients/Client (2).webp', car: 'Honda Accord' },
+    { image: '/Clients/Client (3).webp', car: 'Ford Transit' },
+    { image: '/Clients/Client (5).webp', car: 'Ford F-150' },
+    { image: '/Clients/Client (4).webp', car: 'Ram Promaster' },
+    { image: '/Clients/Client (6).webp',  car: 'Cadillac Escalade' },
   ];
 
   return (

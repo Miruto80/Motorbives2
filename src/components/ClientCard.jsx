@@ -1,14 +1,13 @@
 import React from 'react';
 
-export default function ClientCard({ image, name, car }) {
+export default function ClientCard({ image, car }) {
   return (
     <div className="client-card">
-      <img src={image} alt={name || 'Happy client'} />
+      <img src={image} alt={car || 'Happy customer vehicle'} />
 
-      {(name || car) && (
+      {car && (
         <div className="client-info">
-          {name && <h6>{name}</h6>}
-          {car && <span>{car}</span>}
+          <span className="client-car">{car}</span>
         </div>
       )}
     </div>
