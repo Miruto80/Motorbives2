@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
 import { useForm } from '@formspree/react';
-import axios from 'axios'; // Instala con: npm install axios
+import { motion, AnimatePresence } from 'framer-motion';
+import axios from 'axios';
 import '../assets/css/Preapproval.css';
 import SEO from '../components/SEO.jsx';
+
 
 export default function Preapproval() {
   const [step, setStep] = useState(1);
   const [state, handleSubmit] = useForm("mnjzadvz");
+  const [submitting, setSubmitting] = useState(false);
    const initialData = {
     firstName: '',
     middleName: '',
@@ -216,10 +219,12 @@ export default function Preapproval() {
   const prevStep = () => setStep(step - 1);
 
   const submitForm = async (e) => {
-    e.preventDefault();
-    if (!validateStep()) return;
+  e.preventDefault();
+  if (!validateStep()) return;
 
-    // Cambia esto: pasa formData directamente
+  setSubmitting(true);
+
+  try {
     await handleSubmit(formData);
 
     Swal.fire({
@@ -228,16 +233,43 @@ export default function Preapproval() {
       text: 'A Motor Vibes specialist will contact you shortly.',
     });
 
-    // Resetear el formulario y estados
     setFormData(initialData);
     setStep(1);
     setErrors({});
     setValidatedFields(new Set());
-    setSelectedState(''); // Resetear también el estado seleccionado para los selects
-    setCitiesList([]); // Limpiar ciudades
-  };
+    setSelectedState('');
+    setCitiesList([]);
+  } catch (error) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: 'Something went wrong. Please try again.',
+    });
+  } finally {
+    setSubmitting(false);
+  }
+};
+
 
   const progress = (step / 4) * 100;
+
+  const stepVariants = {
+  initial: {
+    opacity: 0,
+    x: 60,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.4, ease: 'easeOut' },
+  },
+  exit: {
+    opacity: 0,
+    x: -40,
+    transition: { duration: 0.25, ease: 'easeIn' },
+  },
+};
+
 
   /* ================= UI ================= */
 
@@ -266,7 +298,15 @@ export default function Preapproval() {
 
       <form onSubmit={submitForm}>
         {/* STEP 1 */}
+        <AnimatePresence mode="wait">
         {step === 1 && (
+           <motion.div
+      key="step1"
+      variants={stepVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+       >
           <div className="form-section">
             <h4>Step 1: Personal Information</h4>
 
@@ -383,10 +423,18 @@ export default function Preapproval() {
               </div>
             </div>
           </div>
+        </motion.div>
         )}
 
         {/* STEP 2 */}
         {step === 2 && (
+          <motion.div
+      key="step2"
+      variants={stepVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
           <div className="form-section">
             <h4>Step 2: Current Residence</h4>
 
@@ -460,10 +508,18 @@ export default function Preapproval() {
               </div>
             </div>
           </div>
+          </motion.div >
         )}
 
         {/* STEP 3 */}
         {step === 3 && (
+          <motion.div
+      key="step3"
+      variants={stepVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
           <div className="form-section">
             <h4>Step 3: Employment & Income</h4>
 
@@ -544,10 +600,18 @@ export default function Preapproval() {
             </div>
           </div>
           </div>
+          </motion.div >
         )}
 
         {/* STEP 4 */}
         {step === 4 && (
+          <motion.div
+            key="step4"
+            variants={stepVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+          >
           <div className="form-section">
             <h4>Step 4: Vehicle Interest</h4>
 
@@ -574,6 +638,7 @@ export default function Preapproval() {
               </div>
             </div>
           </div>
+          </motion.div >
         )}
 
         {/* Buttons */}
@@ -589,11 +654,24 @@ export default function Preapproval() {
               Next →
             </button>
           ) : (
-            <button type="button" className="btn btn-success ms-auto" onClick={submitForm}>
-              Submit Application
-            </button>
+           <button
+  type="button"
+  className="btn btn-success ms-auto"
+  onClick={submitForm}
+  disabled={submitting}
+>
+  {submitting ? (
+    <>
+      <span className="spinner-border spinner-border-sm me-2"></span>
+      Submitting...
+    </>
+  ) : (
+    'Submit Application'
+  )}
+</button>
           )}
         </div>
+        </AnimatePresence>
       </form>
     </div>
   );
