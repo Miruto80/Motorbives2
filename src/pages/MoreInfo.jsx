@@ -4,7 +4,7 @@ import Slider from '../components/Slider'
 import cars from '../assets/data/cars.js'
 import { useNavigate } from 'react-router-dom';
 import CarSplide from '../components/Moreinfo/CarSplide.jsx'
-import '../assets/css/MoreInfo.css'
+import '../assets/css/Moreinfo.css'
 
 export default function MoreInfo() {
   const { state } = useLocation();
