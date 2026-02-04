@@ -10,7 +10,7 @@ export default function RevealUp({ children, delay = 0 }) {
         ease: 'easeOut',
         delay,
       }}
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.1 }}
     >
       {children}
     </motion.div>
