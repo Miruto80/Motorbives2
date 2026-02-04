@@ -290,10 +290,10 @@ export default function Preapproval() {
 
       {/* Steps */}
       <div className="preapproval-steps mb-4">
-        <div className={step >= 1 ? 'step active' : 'step'}>📝 Personal</div>
-        <div className={step >= 2 ? 'step active' : 'step'}>🏠 Residence</div>
-        <div className={step >= 3 ? 'step active' : 'step'}>💼 Employment</div>
-        <div className={step >= 4 ? 'step active' : 'step'}>🚗 Vehicle</div>
+        <div className={step >= 1 ? 'step active' : 'step'}>Personal</div>
+        <div className={step >= 2 ? 'step active' : 'step'}>Residence</div>
+        <div className={step >= 3 ? 'step active' : 'step'}>Employment</div>
+        <div className={step >= 4 ? 'step active' : 'step'}>Vehicle</div>
       </div>
 
       <form onSubmit={submitForm}>
