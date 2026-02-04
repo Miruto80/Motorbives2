@@ -7,7 +7,8 @@ import { FloatingWhatsApp } from "react-floating-whatsapp";
 import ScrollToTop from "../components/ScrollToTop.jsx";
 import MoreInfo from "../pages/MoreInfo.jsx";
 import Footer from "../components/Footer.jsx";
-import ChatBot from "../components/ChatBot.jsx";
+import ChatBot from "../components/ChatBot.jsx"; 
+import FadeWrapper from "../components/Animations/FadeWrapper.jsx";
 
 
 
@@ -18,10 +19,10 @@ function AppRoutes() {
         <Navbar />
          <ScrollToTop />
         <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
-        <Route path="Preapproval" element={<Preapproval />} />
-        <Route path="Inventory" element={<Inventory />} />
-        <Route path="MoreInfo/:id" element={<MoreInfo />} />
+        <Route path="/" element={<FadeWrapper><Home /></FadeWrapper>} />
+        <Route path="Preapproval" element={<FadeWrapper><Preapproval /></FadeWrapper>} />
+        <Route path="Inventory" element={<FadeWrapper><Inventory /></FadeWrapper>} />
+        <Route path="MoreInfo/:id" element={<FadeWrapper><MoreInfo /></FadeWrapper>} />
         </Routes>
         <ChatBot />
      <FloatingWhatsApp

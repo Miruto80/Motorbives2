@@ -1,5 +1,6 @@
 import React from 'react';
 import '../assets/css/Hero.css';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
@@ -22,13 +23,13 @@ export default function Hero() {
             </p>
 
             <div className="hero-buttons">
-              <a href="/inventory" className="btn btn-i btn-lg me-3">
+              <Link to="/inventory" className="btn btn-i btn-lg me-3">
                 View Inventory
-              </a>
+              </Link>
 
-              <a href="/preapproval" className="btn btn-outline-light btn-lg">
+              <Link to="/preapproval" className="btn btn-outline-light btn-lg">
                 Get Pre-Approved
-              </a>
+              </Link>
             </div>
           </div>
 
