@@ -1,19 +1,54 @@
 import React, { useState } from "react";
 
 const qaPairs = [
-  { keywords: ["hours", "hour", "schedule", "time"], answer: "Our operation hours are Monday to Saturday, 9am to 10pm, and Sunday, 10am to 6pm." },
-  { keywords: ["inventory", "stock"], answer: "You can see our full inventory in the 'Inventory' section of the website." },
-  { keywords: ["trade in", "trade", "exchange"], answer: "Yes, we accept your car as a trade-in towards your purchase." },
-  {keywords: ["in house financing","bank","finance","buy here pay here","lender","lenders","financing","do you offer financing"],answer: "Yes, we offer in house financing in Texas only, and lenders or banks provide financing in Florida. Nationwide shipping available. Use 'Contact' for more information."},
-  {keywords: ["requirements", "what do I need", "requirement"],answer: "Valid ID, driver’s license or passport (we work with ITIN number), proof of address, and proof of income. Want to start your application? Use 'Contact' to begin."},
-  {keywords: ["pre approval","pre approved","how I can get approved","can I do online process","online buying","can I get pre approved before go to the dealer"],answer: "Yes, we can do everything online before you walk in to the dealer. Please use 'Contact' for more information."},
-  {keywords: ["first time buyer","repo","bankruptcy","credit",],answer: "We offer financing for all credit types – good, bad, first time buyer, or no credit."},
-  {keywords: ["down","down payment","money down","starting amount","initial amount"], answer: "It really depends on what you are looking for. Please use 'Contact' for more information."},
-  {keywords: ["located", "location", "address"], answer: "We are an auto broker, not a physical dealership. I work directly with my partner dealerships in Texas and Florida to help you find the best deal and vehicle option. Use 'Contact' for more information."},
-{keywords: ["shipping", "nationwide shipping", "can you send the car to my home"],answer: "Yes, we offer nationwide shipping from our partner dealership in Florida. Use 'Contact' for more information."},
-{ keywords: ["buy a car", "purchase", "get a car", "interested in a car", "want a car", "car for sale", "car to buy"], answer: "If you want to buy a car, please browse our inventory, click on the car you like, then click the 'Request information' button and fill out the form. Our team will contact you soon!" },
-{keywords: ["talk with a representative","representative","live person","chat","talk with real person","person","human","chat with a live representative","live","sales person","customer service","customer support","support"],answer: "To talk with a live representative, say 'Contact' and follow the steps. Someone will reach out to you shortly."},
-{keywords: ["what do you offer","how you guys work","who you are","how we are","explain me how it works","works","info","information"],answer: "We’re Auto Brokers — not a traditional dealership. Our job is to help you find the right vehicle based on your budget, needs, and preferences. We work as a third party, connecting you with trusted dealerships in Texas and Florida that can best assist your specific situation. Our focus is simple: we work for you, not the dealership — to make the process easier, faster, and more personalized. For more info, feel free to use 'Contact' to have one of the representatives reach out to you shortly."},  
+  { keywords: ["hours", "hour", "schedule", "time"],
+    answer: "Our operation hours are Monday to Saturday, 10:30am to 6:30pm, and Sundays by appointment only."
+  },
+  
+  { keywords: ["inventory", "stock"], 
+    answer: "You can see our full inventory in the 'Inventory' section of the website." 
+  },
+
+  { keywords: ["trade in", "trade", "exchange"], 
+    answer: "Yes, we accept your car as a trade-in towards your purchase." 
+  },
+
+  {keywords: ["in house financing","bank","finance","buy here pay here","lender","lenders","financing","do you offer financing"],
+  answer: "We mainly offer bank financing. In some cases, in-house financing may be available for selected vehicles. We work exclusively in Texas. Please visit our Pre-Approval section for more details."  
+},
+
+  {
+  keywords: ["requirements", "what do I need", "requirement"],
+  answer: "To get approved, a minimum credit score of 550 is required. You’ll also need ID,DL or passport, Bank Statements To get started, please complete the Pre-Approval form on our website."
+},
+
+  {keywords: ["pre approval","pre approved","how I can get approved","can I do online process","online buying","can I get pre approved before go to the dealer"],
+answer: "Yes, you can complete the entire pre-approval process online before visiting the dealership. A minimum credit score of 550 is required. Please fill out the Pre-Approval form on our website."
+  },
+
+  {keywords: ["first time buyer","repo","bankruptcy","credit",],
+answer: "We work with different credit situations, including first-time buyers, past repossessions, or bankruptcies. A minimum credit score of 550 is required for approval."  
+},
+
+  {keywords: ["down","down payment","money down","starting amount","initial amount"], 
+  answer: "Down payment depends on the vehicle, your credit, and the lender’s requirements. A minimum credit score of 550 is required. You can complete the Pre-Approval form so we can review your options."
+  },
+
+  {keywords: ["located", "location", "address"], 
+    answer: "We are located at 2201 N Main St, Fort Worth, TX 76164. Use 'Contact' for more information or to schedule a visit."
+  },
+
+{ keywords: ["buy a car", "purchase", "get a car", "interested in a car", "want a car", "car for sale", "car to buy"], 
+  answer: "If you want to buy a car, please browse our inventory, click on the car you like, then click the 'Get approved' button and fill out the form. Our team will contact you soon!" 
+},
+
+{keywords: ["talk with a representative","representative","live person","chat","talk with real person","person","human","chat with a live representative","live","sales person","customer service","customer support","support"],
+  answer: "To talk with a live representative, say 'Contact' and follow the steps. Someone will reach out to you shortly."
+},
+
+{keywords: ["what do you offer","how you guys work","who you are","how we are","explain me how it works","works","info","information"],
+  answer:"We are a car dealership focused on helping customers find the right vehicle with flexible financing options. Our goal is to make the buying process simple, transparent, and stress-free.For more information, use 'Contact' and one of our representatives will reach out shortly."
+},  
 // Add more Q&A pairs as needed
 ];
 
@@ -29,7 +64,7 @@ function getAnswer(userQuestion) {
 }
 
 const welcomeText = `Hi! How can I help you? Use 'Contact' if you want to talk to us directly.`;
-const FORM_ENDPOINT = "https://formspree.io/f/xnnvzelr";
+const FORM_ENDPOINT = "https://formspree.io/f/mgolwpyw";
 
 const ChatBot = () => {
   const [messages, setMessages] = useState([
@@ -141,7 +176,7 @@ const ChatBot = () => {
 
       {open ? (
         <>
-          <div style={{ background: "#007bff", color: "#fff", padding: 12, width: "100%", cursor: "pointer" }} onClick={() => setOpen(false)}>
+          <div style={{ background: "#000", color: "#fff", padding: 12, width: "100%", cursor: "pointer" }} onClick={() => setOpen(false)}>
             ChatBot
             <span style={{ float: "right", fontWeight: "bold" }}>×</span>
           </div>
@@ -153,7 +188,7 @@ const ChatBot = () => {
               }}>
                 <span style={{
                   display: "inline-block",
-                  background: msg.from === "bot" ? "#f1f1f1" : "#007bff",
+                  background: msg.from === "bot" ? "#f1f1f1" : "#000",
                   color: msg.from === "bot" ? "#333" : "#fff",
                   borderRadius: 12,
                   padding: "8px 12px",
@@ -170,11 +205,11 @@ const ChatBot = () => {
               placeholder="Type your question..."
               style={{ flex: 1, border: "none", padding: 10, outline: "none" }}
             />
-            <button type="submit" style={{ background: "#007bff", color: "#fff", border: "none", padding: "0 16px", cursor: "pointer" }}>Send</button>
+            <button type="submit" style={{ background: "#000", color: "#fff", border: "none", padding: "0 16px", cursor: "pointer" }}>Send</button>
           </form>
         </>
       ) : (
-        <button onClick={() => setOpen(true)} style={{ width: 60, height: 60, background: "#007bff", color: "#fff", border: "none", fontSize: 28, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", padding: 0 }}>
+        <button onClick={() => setOpen(true)} style={{ width: 60, height: 60, background: "#000", color: "#fff", border: "none", fontSize: 28, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", padding: 0 }}>
           <i className="fa-solid fa-robot"></i>
         </button>
       )}

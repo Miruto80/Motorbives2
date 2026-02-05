@@ -15,13 +15,13 @@ export default function Footer() {
 
           <div className="col-md-6 text-center text-md-end">
             <div className="social-icons">
-             <a href="https://www.facebook.com" className='social-link' target="_blank" aria-label="Facebook">
+             <a href="https://www.facebook.com/profile.php?id=61572580624185" className='social-link' target="_blank" aria-label="Facebook">
             <i className="fab fa-facebook-f" aria-hidden="true"></i>
           </a>
           <a href="https://www.instagram.com/motorvibesllc/" className='social-link' target="_blank" aria-label="Instagram">
             <i className="fab fa-instagram" aria-hidden="true"></i>
           </a>
-          <a href="https://www.twitter.com" className='social-link' target="_blank"  aria-label="Tiktok">
+          <a href="https://www.tiktok.com/@motorvibesllc?_r=1&_t=ZS-93fv0rHk8xU" className='social-link' target="_blank"  aria-label="Tiktok">
             <i className="fab fa-tiktok" aria-hidden="true"></i>
           </a>
           <a href="https://wa.me/16822406838" className='social-link' target="_blank" aria-label="WhatsApp">
