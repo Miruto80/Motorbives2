@@ -235,16 +235,16 @@ export default function ContactSection() {
       <Title text='Social Media'/>
       <div className="reservation-socials">
         <div className="socials">
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <a href="https://www.facebook.com/profile.php?id=61572580624185" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <i className="fab fa-facebook-f" aria-hidden="true"></i>
           </a>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <a href="https://www.instagram.com/motorvibesllc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <i className="fab fa-instagram" aria-hidden="true"></i>
           </a>
-          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-            <i className="fab fa-twitter" aria-hidden="true"></i>
+          <a href="https://www.tiktok.com/@motorvibesllc?_r=1&_t=ZS-93fv0rHk8xU" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <i className="fab fa-tiktok" aria-hidden="true"></i>
           </a>
-          <a href="https://wa.me/16824804614" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <a href="https://wa.me/16822406838" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
             <i className="fab fa-whatsapp" aria-hidden="true"></i>
           </a>
         </div>

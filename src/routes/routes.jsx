@@ -9,6 +9,9 @@ import MoreInfo from "../pages/MoreInfo.jsx";
 import Footer from "../components/Footer.jsx";
 import ChatBot from "../components/ChatBot.jsx"; 
 import FadeWrapper from "../components/Animations/FadeWrapper.jsx";
+import Privacy from "../pages/Legal/Privacy.jsx";
+import Disclaimer from "../pages/Legal/Disclaimer.jsx";
+import Terms from "../pages/Legal/Terms.jsx";
 
 
 
@@ -23,6 +26,9 @@ function AppRoutes() {
         <Route path="Preapproval" element={<FadeWrapper><Preapproval /></FadeWrapper>} />
         <Route path="Inventory" element={<FadeWrapper><Inventory /></FadeWrapper>} />
         <Route path="MoreInfo/:id" element={<FadeWrapper><MoreInfo /></FadeWrapper>} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/disclaimer" element={<Disclaimer />} />
         </Routes>
         <ChatBot />
      <FloatingWhatsApp
