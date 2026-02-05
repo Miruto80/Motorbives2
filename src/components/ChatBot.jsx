@@ -119,22 +119,26 @@ const ChatBot = () => {
   };
 
   return (
-    <div style={{
-      position: "fixed",
-      bottom: 100,
-      right: 30,
-      zIndex: 9000,
-      width: open ? 320 : 60,
-      height: open ? 420 : 60,
-      background: "#fff",
-      borderRadius: 16,
-      boxShadow: "0 4px 16px rgba(0,0,0,0.2)",
-      transition: "all 0.3s",
-      overflow: "hidden",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "flex-end"
-    }}>
+   <div
+  className={`chatbot-wrapper ${open ? "open" : ""}`}
+  style={{
+    position: "fixed",
+    bottom: 100,
+    right: 15,
+    zIndex: 9000,
+    width: open ? 320 : 60,
+    height: open ? 420 : 60,
+    background: "#fff",
+    borderRadius: 16,
+    boxShadow: "0 4px 16px rgba(0,0,0,0.2)",
+    transition: "all 0.3s",
+    overflow: "hidden",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-end"
+  }}
+>
+
       {open ? (
         <>
           <div style={{ background: "#007bff", color: "#fff", padding: 12, width: "100%", cursor: "pointer" }} onClick={() => setOpen(false)}>

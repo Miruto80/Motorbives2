@@ -18,13 +18,13 @@ export default function Footer() {
              <a href="https://www.facebook.com" className='social-link' target="_blank" aria-label="Facebook">
             <i className="fab fa-facebook-f" aria-hidden="true"></i>
           </a>
-          <a href="https://www.instagram.com" className='social-link' target="_blank" aria-label="Instagram">
+          <a href="https://www.instagram.com/motorvibesllc/" className='social-link' target="_blank" aria-label="Instagram">
             <i className="fab fa-instagram" aria-hidden="true"></i>
           </a>
           <a href="https://www.twitter.com" className='social-link' target="_blank"  aria-label="Tiktok">
             <i className="fab fa-tiktok" aria-hidden="true"></i>
           </a>
-          <a href="https://wa.me/16824804614" className='social-link' target="_blank" aria-label="WhatsApp">
+          <a href="https://wa.me/16822406838" className='social-link' target="_blank" aria-label="WhatsApp">
             <i className="fab fa-whatsapp" aria-hidden="true"></i>
           </a>
             </div>

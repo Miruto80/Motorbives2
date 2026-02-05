@@ -26,6 +26,27 @@ body{
     padding-top: 150px; /* Altura del navbar en móvil */
   }
 }
+.floating-whatsapp-button {
+  right: 15px !important;
+  left: auto !important;
+}
+
+@media (max-width: 768px) {
+  .floating-whatsapp-button {
+    transform: scale(0.95);
+    right: 8px !important;
+    bottom: 15px !important;
+  }
+  .chatbot-wrapper {
+    transform: scale(0.95);
+    bottom: 80px !important;
+    right: 8px !important;
+  }
+  .chatbot-wrapper.open {
+    width: 280px !important;
+    height: 360px !important;
+  }
+}
 
 a {
   font-weight: 500;
