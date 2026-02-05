@@ -34,13 +34,13 @@ body{
 @media (max-width: 768px) {
   .floating-whatsapp-button {
     transform: scale(0.95);
-    right: 8px !important;
-    bottom: 15px !important;
+    right: 13px !important;
+    bottom: 30px !important;
   }
   .chatbot-wrapper {
     transform: scale(0.95);
-    bottom: 80px !important;
-    right: 8px !important;
+    bottom: 95px !important;
+    right: 13px !important;
   }
   .chatbot-wrapper.open {
     width: 280px !important;

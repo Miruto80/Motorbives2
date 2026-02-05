@@ -6,8 +6,9 @@ html {
 /* Panel móvil como overlay ligero anclado abajo a la izquierda */
 .mobile-filter-panel {
   position: fixed;
-  bottom: 64px; /* deja espacio para el botón */
+  bottom: 100px; /* deja espacio para el botón */
   left: 12px;
+  max-width: 300px; 
   right: 12px;
   max-height: 60vh;
   overflow-y: auto;
@@ -125,3 +126,25 @@ details[open] > summary:before {
 
 /* ensure mobile button sits above other elements */
 .z-999 { z-index: 1200 !important; }
+ 
+/* MOBILE ONLY */
+@media (max-width: 768px) {
+  .btn.position-fixed.bottom-0.start-0.btn-naranja {
+    bottom: 40px !important; /* lo sube */
+    background: linear-gradient(
+      135deg,
+      #FFD369,
+      #DAAB43
+    ) !important; /* dorado más vivo */
+    color: #000 !important;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(218, 171, 67, 0.55);
+    border-radius: 14px;
+    padding: 8px 12px;
+  }
+
+  .btn.position-fixed.bottom-0.start-0.btn-naranja:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(218, 171, 67, 0.7);
+  }
+}
