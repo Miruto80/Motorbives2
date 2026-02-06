@@ -58,38 +58,3 @@
   border-radius: 8px;
   overflow: hidden;
 }
-
-/* Social icons */
-.reservation-socials {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 18px;
-}
-
-.socials {
-  display: flex;
-  gap: 12px;
-  background: #ffffff; /* white container so black icons are visible */
-  padding: 10px 14px;
-  border-radius: 10px;
-  align-items: center;
-}
-
-.socials a {
-  color: #000; /* black icons */
-  font-size: 18px;
-  width: 40px;
-  height: 40px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  text-decoration: none;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.socials a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-}
