@@ -11,6 +11,11 @@ export default function Footer() {
           <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
             <h5 className="footer-logo">MotorVibes</h5>
             <p className="mb-0 footer-tagline">Find your next vehicle with style.</p>
+
+            <a href="tel:+16822406838" className="footer-phone">
+    <i className="fas fa-phone-alt"></i>
+    (682) 240-6838
+  </a>
           </div>
 
           <div className="col-md-6 text-center text-md-end">

@@ -52,19 +52,22 @@
 
 .custom-footer .social-icons { display: inline-flex; gap: 12px; align-items: center; }
 .custom-footer .social-link {
-  color: #ffdd00;
+  color: #fff;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: rgba(255,221,0,0.06);
   box-shadow: 0 0 12px rgba(255,221,0,0.12);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
-.custom-footer .social-link svg { color: currentColor; }
+.custom-footer .social-link i {
+  font-size: 1.15rem;
+}
+
 .custom-footer .social-link:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 22px rgba(255,221,0,0.25), 0 0 30px rgba(255,221,0,0.12);
@@ -124,3 +127,25 @@
   }
 }
 
+/* Footer phone */
+.footer-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  color: #ffdd00;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  text-shadow: 0 0 6px rgba(255,221,0,0.6);
+  transition: transform 0.15s ease, text-shadow 0.15s ease;
+}
+
+.footer-phone i {
+  font-size: 0.9rem;
+}
+
+.footer-phone:hover {
+  transform: translateY(-2px);
+  text-shadow: 0 0 12px rgba(255,221,0,0.9);
+}
