@@ -121,7 +121,7 @@ export default function Filter({ cars = [], onFilterChange = () => {}, currentFi
         </div>
       </div>
 
-      <div className="d-none d-lg-flex align-items-center justify-content-center position-sticky" style={{ top: '100px', height: 'calc(100vh - 100px)' }}>
+      <div className="d-none d-lg-flex align-items-start position-sticky" style={{ top: '80px', height: 'calc(100vh - 100px)' }}>
         <aside className="w-100">
           <div className="card">
             <div className="card-body">

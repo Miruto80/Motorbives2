@@ -84,10 +84,10 @@ summary::-webkit-details-marker {
 }
 
 summary:before {
-  content: '\25B6'; /* triangle */
-  display: inline-block;
-  margin-right: 0.5rem;
-  transform: rotate(0deg);
+  content: '\f105'; /* fa-chevron-right */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  margin-right: 0.6rem;
   transition: transform 0.15s ease-in-out;
 }
 
