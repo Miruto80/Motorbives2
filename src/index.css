@@ -43,7 +43,7 @@ body{
     right: 13px !important;
   }
   .chatbot-wrapper.open {
-    width: 300px !important;
+    width: 320px !important;
     height: 360px !important;
   }
 }
