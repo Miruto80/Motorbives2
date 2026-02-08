@@ -251,6 +251,157 @@ const cars = [
       '/Box-trucks/HINO 2020 268 26 FT (19).webp',
     ],
 },
+{
+    id: 7,
+    name: 'EDGE TITANIUM',
+    make: 'Ford',
+    year: 2018,
+    type: 'Suvs',
+    downpayment: 2500,
+    financingprice: 10900,
+    cashprice: 9900,
+    mileage: 135000,
+    description: `- Clean Title
+- 135,000 Miles
+- Backup Camera
+- Leather Seats
+- Luxury Rims
+- Sunroof
+- Cold & Hot A/C
+- Brand New Tires
+- One Owner
+- Immaculate Condition
+- Financing Available
+      `,
+    images: [
+      '/Suvs/FORD EDGE TITANIUM 2018 (1).webp',
+      '/Suvs/FORD EDGE TITANIUM 2018 (2).webp',
+      '/Suvs/FORD EDGE TITANIUM 2018 (3).webp',
+      '/Suvs/FORD EDGE TITANIUM 2018 (4).webp',
+      '/Suvs/FORD EDGE TITANIUM 2018 (5).webp',
+      '/Suvs/FORD EDGE TITANIUM 2018 (6).webp',
+      '/Suvs/FORD EDGE TITANIUM 2018 (7).webp',
+      '/Suvs/FORD EDGE TITANIUM 2018 (8).webp',
+      '/Suvs/FORD EDGE TITANIUM 2018 (9).webp',
+      '/Suvs/FORD EDGE TITANIUM 2018 (10).webp',
+      '/Suvs/FORD EDGE TITANIUM 2018 (11).webp',
+      '/Suvs/FORD EDGE TITANIUM 2018 (12).webp',
+      '/Suvs/FORD EDGE TITANIUM 2018 (13).webp',
+      '/Suvs/FORD EDGE TITANIUM 2018 (14).webp',
+    ],
+},
+{
+    id: 8,
+    name: 'ESCAPE SEL AWD',
+    make: 'Ford',
+    year: 2021,
+    type: 'Suvs',
+    downpayment: 2500,
+    financingprice: 17900,
+    cashprice: 16900,
+    mileage: 74000,
+    description: `- Clean Title
+- 74,000 Miles
+- Luxury Rims
+- Leather Seats
+- Brand New Tires
+- Cold & Hot A/C
+- One Owner
+- Backup Camera
+- Financing Available
+      `,
+    images: [
+      '/Suvs/FORD ESCAPE SEL AWD 2021 (1).webp',
+      '/Suvs/FORD ESCAPE SEL AWD 2021 (2).webp',
+      '/Suvs/FORD ESCAPE SEL AWD 2021 (3).webp',
+      '/Suvs/FORD ESCAPE SEL AWD 2021 (4).webp',
+      '/Suvs/FORD ESCAPE SEL AWD 2021 (5).webp',
+      '/Suvs/FORD ESCAPE SEL AWD 2021 (6).webp',
+      '/Suvs/FORD ESCAPE SEL AWD 2021 (7).webp',
+      '/Suvs/FORD ESCAPE SEL AWD 2021 (8).webp',
+      '/Suvs/FORD ESCAPE SEL AWD 2021 (9).webp',
+      '/Suvs/FORD ESCAPE SEL AWD 2021 (10).webp',
+      '/Suvs/FORD ESCAPE SEL AWD 2021 (11).webp',
+      '/Suvs/FORD ESCAPE SEL AWD 2021 (12).webp',
+      '/Suvs/FORD ESCAPE SEL AWD 2021 (13).webp',
+      '/Suvs/FORD ESCAPE SEL AWD 2021 (14).webp',
+    ],
+},
+{
+    id: 9,
+    name: 'COMPASS 4x4 LIMITED',
+    make: 'Jeep',
+    year: 2021,
+    type: 'Suvs',
+    downpayment: 2500,
+    financingprice: 16900,
+    cashprice: 15900,
+    mileage: 96000,
+   description: `- Clean Title
+- 96,000 Miles
+- Leather Seats
+- Luxury Rims
+- Backup Camera
+- Touchscreen Display
+- One Owner
+- Brand New Tires
+- Cold & Hot A/C
+- Financing Available
+      `,
+    images: [
+      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (1).webp',
+      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (2).webp',
+      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (3).webp',
+      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (4).webp',
+      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (5).webp',
+      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (6).webp',
+      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (7).webp',
+      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (8).webp',
+      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (9).webp',
+      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (10).webp',
+      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (11).webp',
+      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (12).webp',
+      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (13).webp',
+      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (14).webp',
+    ],
+},
+{
+    id: 10,
+    name: 'MALIBU LT',
+    make: 'Chevrolet',
+    year: 2018,
+    type: 'Sedans',
+    downpayment: 2500,
+    financingprice: 11900,
+    cashprice: 10900,
+    mileage: 134000,
+    description: `- Clean Title
+- 134,000 Miles
+- Luxury Rims
+- Brand New Tires
+- Immaculate Condition
+- One Owner
+- Cold & Hot A/C
+- Backup Camera
+- Financing Available
+      `,
+    images: [
+      '/Sedans/CHEVROLET MALIBU LT 2020 (2).webp',
+      '/Sedans/CHEVROLET MALIBU LT 2020 (1).webp',
+      '/Sedans/CHEVROLET MALIBU LT 2020 (3).webp',
+      '/Sedans/CHEVROLET MALIBU LT 2020 (4).webp',
+      '/Sedans/CHEVROLET MALIBU LT 2020 (5).webp',
+      '/Sedans/CHEVROLET MALIBU LT 2020 (6).webp',
+      '/Sedans/CHEVROLET MALIBU LT 2020 (7).webp',
+      '/Sedans/CHEVROLET MALIBU LT 2020 (8).webp',
+      '/Sedans/CHEVROLET MALIBU LT 2020 (9).webp',
+      '/Sedans/CHEVROLET MALIBU LT 2020 (10).webp',
+      '/Sedans/CHEVROLET MALIBU LT 2020 (11).webp',
+      '/Sedans/CHEVROLET MALIBU LT 2020 (12).webp',
+      '/Sedans/CHEVROLET MALIBU LT 2020 (13).webp',
+      '/Sedans/CHEVROLET MALIBU LT 2020 (14).webp',
+    ],
+},
 
 ]
 
