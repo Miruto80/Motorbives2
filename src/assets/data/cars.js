@@ -203,6 +203,54 @@ const cars = [
       '/Vans/FORD TRANSIT 250 2021 (15).webp',
     ],
 },
+{
+    id: 6,
+    name: '268',
+    make: 'Hino',
+    year: 2020,
+    type: 'Box-trucks',
+    downpayment: 6000,
+    financingprice: 38900,
+    cashprice: 36900,
+    mileage: 163000,
+      description: `- Clean Title
+      -26-Foot Box
+      -GVWR: 25,950 lbs (Non-CDL)
+      -Aluminum Lift Gate
+      -New Tires
+      -Allison Automatic Transmission
+      -Toyota 7.6L Diesel Engine
+      -Air BrakesW
+      -Air Suspension
+      - 163,000 Miles
+      -Leather Seats
+      -Cold & Hot A/C
+      -One Owner
+      -Strong mechanical condition
+      - Financing Available
+      `,
+    images: [
+      '/Box-trucks/HINO 2020 268 26 FT (1).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (2).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (3).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (4).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (5).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (6).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (7).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (8).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (9).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (10).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (11).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (12).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (13).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (14).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (15).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (16).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (17).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (18).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (19).webp',
+    ],
+},
 
 ]
 
