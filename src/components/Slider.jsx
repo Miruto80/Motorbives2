@@ -46,7 +46,7 @@ export default function Slider({ cars = [], title = 'Our vehicles', options = {}
                       state={car}
                       className="btn btn-sm btn-primary"
                       style={{
-                        backgroundImage: 'linear-gradient(90deg, #DAAB43 0%, #ecc238 100%)',
+                        backgroundImage: 'linear-gradient(135deg, #8b8356 0%, #e6cc72 30%, #d1b257 65%, #8b8356 100%)',
                         color: '#000',
                         border: 'none',
                         borderRadius: '6px',
@@ -67,7 +67,7 @@ export default function Slider({ cars = [], title = 'Our vehicles', options = {}
             to="/inventory"
             className="btn btn-lg px-4 py-2 fw-bold shadow"
             style={{
-              backgroundImage: 'linear-gradient(90deg, #DAAB43 0%, #ecc238 100%)',
+              backgroundImage: 'linear-gradient(135deg, #8b8356 0%, #e6cc72 30%, #d1b257 65%, #8b8356 100%)',
               color: '#000',
               border: 'none',
               borderRadius: '30px',

@@ -50,28 +50,46 @@
   box-shadow: 0 8px 30px rgba(255,221,0,0.12), inset 0 0 12px rgba(255,221,0,0.06);
 }
 
-.custom-footer .social-icons { display: inline-flex; gap: 12px; align-items: center; }
+.custom-footer .social-icons { display: inline-flex; gap: 12px; align-items: center;}
+.custom-footer .social-icons a{ text-decoration: none !important; }
+
+
 .custom-footer .social-link {
-  color: #fff;
+  width: 48px;
+  height: 48px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
-  width: 44px;
-  height: 44px;
   border-radius: 50%;
-  background: rgba(255,221,0,0.06);
-  box-shadow: 0 0 12px rgba(255,221,0,0.12);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-.custom-footer .social-link i {
-  font-size: 1.15rem;
+  background: radial-gradient(circle at 30% 30%, #3a3a3a, #000);
+  border: 2px solid #d4af37;
+  box-shadow:
+    0 0 10px rgba(255, 215, 0, 0.35),
+    inset 0 0 12px rgba(255, 215, 0, 0.15);
+  transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.custom-footer .social-link:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 22px rgba(255,221,0,0.25), 0 0 30px rgba(255,221,0,0.12);
+/* ICONO DORADO METÁLICO */
+.custom-footer .social-link i {
+  font-size: 1.4rem;
+  background: linear-gradient(145deg, #fff7c2, #ffdd00, #c9a400, #fff2a8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.55));
 }
+
+/* EFECTO HOVER: MÁS BRILLO Y RELIEVE */
+.custom-footer .social-link:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 0 18px rgba(255, 215, 0, 0.55),
+    inset 0 0 18px rgba(255, 215, 0, 0.25);
+}
+
+.custom-footer .social-link:hover i {
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.9));
+}
+
 
 @media (max-width: 768px) {
   .custom-footer { text-align: center; }
@@ -95,7 +113,7 @@
 }
 
 .footer-legal .legal-links a {
-  color: rgba(255,221,0,0.85);
+  color: #fff;
   text-decoration: none;
   position: relative;
   padding-bottom: 2px;

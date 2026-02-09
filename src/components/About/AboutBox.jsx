@@ -10,7 +10,7 @@ export default function AboutBox({
     <div
       className="about-box h-100 p-4 rounded-4"
       style={{
-        backgroundColor: bgColor,
+        background: bgColor,
         color: textColor,
         boxShadow: '0 0 10px rgba(255, 221, 0, 0.8), 0 0 30px rgba(255, 221, 0, 0.6)',
       }}

@@ -44,11 +44,23 @@
 .request-btn {
   border-radius: 40px;
   min-width: 260px;
-  background-color: #DAAB43;
+ background: linear-gradient(
+    135deg,
+    #8b8356 0%,
+    #e6cc72 30%,
+    #d1b257 65%,
+    #8b8356 100%
+  );
   color: black;
 }
 
 .request-btn:hover {
-  background-color: #ecc238;
+   background: linear-gradient(
+    135deg,
+    #fff3b8 0%,
+    #eed680 35%,
+    #d9be63 70%,
+    #8b8356 100%
+  );
   color: black;
 }

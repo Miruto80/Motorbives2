@@ -28,8 +28,11 @@
 }
 
 .hero-title span {
-  color: #DAAB43;
+  background: linear-gradient(135deg, #f4e08f, #e6cc72, #d1b257);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
 
 .hero-subtitle {
   font-size: 1.1rem;
@@ -42,7 +45,8 @@
 }
 
 .btn-i{
-   background: linear-gradient(90deg, #DAAB43 0%, #ecc238 100%);
+   background: linear-gradient(135deg, #8b8356 0%, #e6cc72 30%, #d1b257 65%, #8b8356 100%);
+  font-weight: bold !important;
 }
 
 /* CARD */
@@ -99,7 +103,9 @@
 }
 
 .dealer-info h5 {
-  color: #d4af37;
+  background: linear-gradient(135deg, #f4e08f, #e6cc72, #d1b257);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 800;
   letter-spacing: 2px;
   margin-bottom: 25px;
@@ -118,7 +124,9 @@
 
 .dealer-title {
   display: block;
-  color: #d4af37;
+  background: linear-gradient(135deg, #f4e08f, #e6cc72, #d1b257);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 800;
   letter-spacing: 1.5px;
   font-size: 0.9rem;

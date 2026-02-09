@@ -14,7 +14,13 @@
 }
 
 .progress-bar {
-  background: linear-gradient(90deg, #ffdd00, #f4c400);
+  background: linear-gradient(
+    135deg,
+    #fff3b8 0%,
+    #eed680 35%,
+    #d9be63 70%,
+    #8b8356 100%
+  );
 }
 
 .preapproval-steps {
@@ -70,7 +76,13 @@
 }
 
 .step.active {
-  background: linear-gradient(90deg, #ffdd00, #f4c400);
+  background: linear-gradient(
+    135deg,
+    #8b8356 0%,
+    #e6cc72 30%,
+    #d1b257 65%,
+    #8b8356 100%
+  );
   color: #111;
 }
 

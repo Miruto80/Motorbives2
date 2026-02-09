@@ -29,7 +29,7 @@ As an immigrant family, we understand firsthand the challenges many American and
         <div className="col-lg-4 col-md-6">
           <AboutBox
             title={<><i className="fa-solid fa-handshake me-2" aria-hidden="true"></i>Here For You</>}
-            bgColor="#dbbb52"
+            bgColor='linear-gradient(135deg, #8b8356 0%, #e6cc72 30%, #d1b257 65%, #8b8356 100%)'
             textColor={'#111'}
             content={`At Motor Vibes, we are here to help you—no matter your situation.
 

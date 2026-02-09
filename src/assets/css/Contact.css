@@ -37,7 +37,13 @@
 
 
 .reservation-form button {
-  background-color: #DAAB43;
+  background: linear-gradient(
+    135deg,
+    #8b8356 0%,
+    #e6cc72 30%,
+    #d1b257 65%,
+    #8b8356 100%
+  );
   color: black;
   padding: 12px;
   border: none;
@@ -48,7 +54,13 @@
 }
 
 .reservation-form button:hover {
-  background-color: #c19e2e;
+  background: linear-gradient(
+    135deg,
+    #fff3b8 0%,
+    #eed680 35%,
+    #d9be63 70%,
+    #8b8356 100%
+  );
 }
 
 .reservation-map {

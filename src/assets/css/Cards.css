@@ -58,20 +58,43 @@
 
 /* Botón */
 .car-card .btn-primary {
-  background: #DAAB43;
+  background: linear-gradient(
+    135deg,
+    #8b8356 0%,
+    #e6cc72 30%,
+    #d1b257 65%,
+    #8b8356 100%
+  );
   border: none;
-  color: black;
+  color: #000;
   border-radius: 6px;
-  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow:
+    0 0 12px rgba(230, 204, 114, 0.35),
+    inset 0 0 10px rgba(255, 240, 180, 0.35);
+  transition: all 0.25s ease;
 }
+
 .car-card .btn-primary:hover {
-  background: #ecc238;
-  color: black;
+  background: linear-gradient(
+    135deg,
+    #fff3b8 0%,
+    #eed680 35%,
+    #d9be63 70%,
+    #8b8356 100%
+  );
+  box-shadow:
+    0 0 18px rgba(230, 204, 114, 0.55),
+    inset 0 0 14px rgba(255, 240, 180, 0.45);
+  transform: translateY(-2px);
+  color: #000;
 }
+
 
 /* Botón que sobresale un poco para facilitar el click */
 .car-card .btn-preapproval {
   position: relative;
+  font-weight: bold;
   transform: translateY(6px);
   box-shadow: 0 8px 18px rgba(0,0,0,0.12);
   z-index: 2;
