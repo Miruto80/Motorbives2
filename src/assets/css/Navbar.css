@@ -35,18 +35,24 @@
 /* Selector de idioma */
 .language-select {
   background: transparent;
-  color: #ffdd00;
-  border: 1px solid #ffdd00;
+  color: white;
+  border: 1px solid transparent;
+  border-image: linear-gradient(
+    135deg,
+    #8b8356 0%,
+    #e6cc72 30%,
+    #d1b257 65%,
+    #8b8356 100%
+  ) 1;
   padding: 4px 8px;
-  border-radius: 6px;
+  border-radius: 6px !important;
   font-size: 0.9rem;
 }
 
 .language-select option {
-  background: #000;
+  background: #000 !important;
   color: #ffdd00;
 }
-
 .offcanvas {
   box-shadow: -6px 0 25px rgba(255, 221, 0, 0.45);
 }

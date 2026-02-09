@@ -28,7 +28,13 @@
 }
 
 .hero-title span {
-  background: linear-gradient(135deg, #f4e08f, #e6cc72, #d1b257);
+  background: linear-gradient(
+    135deg,
+    #8b8356 0%,
+    #e6cc72 30%,
+    #d1b257 65%,
+    #8b8356 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -103,7 +109,13 @@
 }
 
 .dealer-info h5 {
-  background: linear-gradient(135deg, #f4e08f, #e6cc72, #d1b257);
+  background: linear-gradient(
+    135deg,
+    #8b8356 0%,
+    #e6cc72 30%,
+    #d1b257 65%,
+    #8b8356 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 800;
