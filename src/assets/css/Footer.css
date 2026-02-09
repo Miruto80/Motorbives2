@@ -8,7 +8,7 @@
 }
 
 .custom-footer .footer-logo {
-  color: #ffdd00;
+  color: #fff;
   font-weight: 700;
   letter-spacing: 1px;
   text-shadow: 0 0 8px rgba(255,221,0,0.9), 0 0 20px rgba(255,221,0,0.35);
@@ -151,7 +151,7 @@
   align-items: center;
   gap: 8px;
   margin-top: 10px;
-  color: #ffdd00;
+  color: #fff;
   font-weight: 600;
   text-decoration: none;
   font-size: 0.95rem;
@@ -164,6 +164,7 @@
 }
 
 .footer-phone:hover {
+  color: #fff;
   transform: translateY(-2px);
   text-shadow: 0 0 12px rgba(255,221,0,0.9);
 }
