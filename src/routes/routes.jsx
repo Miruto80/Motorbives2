@@ -34,8 +34,8 @@ function AppRoutes() {
      <FloatingWhatsApp
       phoneNumber="16822406838"   // Número de tu empresa en formato internacional
       accountName="MotorVibes" // Nombre de tu empresa
-      chatMessage="Hola ¿En qué podemos ayudarte?"
-      placeholder="Escribe tu mensaje..."              // Opcional: modo oscuro
+      chatMessage="Hi ¿How can we help you?"
+      placeholder="Write a text..."              // Opcional: modo oscuro
       allowClickAway={true}   
       darkMode={true}               // Opcional: modo oscuro
       avatar="/img/Logo en negro.jpeg"
