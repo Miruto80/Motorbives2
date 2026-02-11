@@ -402,6 +402,49 @@ const cars = [
       '/Sedans/CHEVROLET MALIBU LT 2020 (14).webp',
     ],
 },
+{
+    id: 11,
+    name: 'COMPASS 4x4 LIMITED',
+    make: 'Cadillac',
+    year: 2017,
+    type: 'Suvs',
+    downpayment: 3500,
+    financingprice: 24900,
+    cashprice: 23900,
+    mileage: 144000,
+   description: `- Clean Title
+- 144,000 Miles
+- Perfect Family SUV
+- Leather Seats
+- 3rd Row Seating
+- Touchscreen Display
+- Rear Entertainment Screens
+- Sunroof
+- Backup Camera
+- Luxury Rims
+- Tires 90%
+- Cold & Hot A/C
+- Immaculate Condition
+- Financing Available
+`,
+    images: [
+      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (7).webp',
+      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (1).webp',
+      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (2).webp',
+      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (3).webp',
+      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (4).webp',
+      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (5).webp',
+      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (6).webp',
+      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (8).webp',
+      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (9).webp',
+      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (10).webp',
+      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (11).webp',
+      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (12).webp',
+      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (13).webp',
+      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (14).webp',
+      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (15).webp',
+    ],
+},
 
 ]
 
