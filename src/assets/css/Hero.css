@@ -6,10 +6,12 @@
   align-items: center;
 }
 
+
+
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .hero-content {
@@ -80,6 +82,7 @@
   .hero {
     min-height: 70vh;
     text-align: center;
+  background: url('/img/Fondo1.webp') center/cover no-repeat;
   }
 
   .hero-title {
