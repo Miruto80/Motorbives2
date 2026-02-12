@@ -35,7 +35,7 @@ answer: "We work with different credit situations, including first-time buyers, 
   },
 
   {keywords: ["located", "location", "address"], 
-    answer: "We are located at 2201 N Main St, Fort Worth, TX 76164. Use 'Contact' for more information or to schedule a visit."
+    answer: "We are located at 2104 jacksboro hwy Fort Worth tx 76114. Use 'Contact' for more information or to schedule a visit."
   },
 
 { keywords: ["buy a car", "purchase", "get a car", "interested in a car", "want a car", "car for sale", "car to buy"], 

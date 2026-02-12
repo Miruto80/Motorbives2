@@ -225,7 +225,8 @@ export default function ContactSection() {
       <div className="reservation-map">
         <iframe
           title="Ubicación"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3354.2871327877124!2d-97.3496619!3d32.7846451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e77270e244259%3A0xf0fef2c095b92789!2sMotorvibes%20llc!5e0!3m2!1ses!2sus!4v1768606554060!5m2!1ses!2sus"          width="100%"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3354.372449093431!2d-97.37629262447268!3d32.78238238371213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e77270e244259%3A0xf0fef2c095b92789!2sMotorvibes%20llc!5e0!3m2!1ses!2sve!4v1770854334275!5m2!1ses!2sve"
+          width="100%"
           height="100%"
           style={{ border: 0 }}
           allowFullScreen=""
