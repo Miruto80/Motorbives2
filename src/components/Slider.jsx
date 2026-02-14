@@ -3,8 +3,27 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import { Link } from 'react-router-dom';
 import Title from './Title';
+import { useLanguage } from '../context/useLanguage.js'; 
 
 export default function Slider({ cars = [], title = 'Our vehicles', options = {} }) {
+  const { language } = useLanguage(); 
+
+  // Objeto con traducciones locales
+  const texts = {
+    en: {
+      yearLabel: 'Year:',
+      moreInfo: 'More-info',
+      moreVehicles: 'More vehicles',
+    },
+    es: {
+      yearLabel: 'Año:',
+      moreInfo: 'Más-info',
+      moreVehicles: 'Más vehículos',
+    },
+  };
+
+  const currentTexts = texts[language] || texts.en; 
+
   const defaultOptions = {
     type: 'loop',
     perPage: 3,
@@ -36,7 +55,7 @@ export default function Slider({ cars = [], title = 'Our vehicles', options = {}
                 />
                 <div className="text-center">
                   <h5 className="mb-1 text-white">{car.year} {car.make} {car.name}</h5>
-                  <div className="small text-secondary mb-1">Year: {car.year} | {car.type}</div>
+                  <div className="small text-secondary mb-1">{currentTexts.yearLabel} {car.year} | {car.type}</div>
                   <div className="fw-bold text-white mb-1">${car.financingprice?.toLocaleString?.() ?? car.price ?? ''}</div>
                   <div className="text-secondary" style={{ fontSize: '0.95rem' }}>
                   </div>
@@ -53,7 +72,7 @@ export default function Slider({ cars = [], title = 'Our vehicles', options = {}
                         padding: '0.35rem 0.6rem',
                       }}
                     >
-                      More-info
+                      {currentTexts.moreInfo}
                     </Link>
                   </div>
                 </div>
@@ -77,7 +96,7 @@ export default function Slider({ cars = [], title = 'Our vehicles', options = {}
               boxShadow: '0 8px 26px rgba(218,171,67,0.12)',
             }}
           >
-            More vehicles
+            {currentTexts.moreVehicles}
           </Link>
         </div>
       </div>

@@ -3,8 +3,11 @@ import '../assets/css/Contact.css';
 import Title from './Title';
 import { useForm } from '@formspree/react';
 import Swal from 'sweetalert2';
+import { useLanguage } from '../context/useLanguage.js'; // Agregar import
 
 export default function ContactSection() {
+  const { language, t } = useLanguage(); // Usar el hook
+
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const [email, setEmail] = useState('');
@@ -17,30 +20,30 @@ export default function ContactSection() {
   // Estado y handler de Formspree
   const [state, handleSubmit] = useForm("xzdvprqk");
 
-  // Validadores para cada campo
+  // Validadores para cada campo (usando traducciones)
   const validators = {
     name: value => {
-      if (!value.trim()) return 'Name is required';
-      if (!/^[a-zA-Z\s]+$/.test(value)) return 'Name must contain only letters and spaces';
+      if (!value.trim()) return t('preapproval.errors.required');
+      if (!/^[a-zA-Z\s]+$/.test(value)) return t('preapproval.errors.nameLetters');
       return '';
     },
     number: value => {
-      if (!value.trim()) return 'Number is required';
-      if (value.length < 10) return 'Number must be at least 10 digits';
-      if (!/^\d+$/.test(value)) return 'Number must contain only digits';
+      if (!value.trim()) return t('preapproval.errors.required');
+      if (value.length < 10) return t('preapproval.errors.phone');
+      if (!/^\d+$/.test(value)) return t('preapproval.errors.numberDigits');
       return '';
     },
     email: value => {
-      if (!value.trim()) return 'Email is required';
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return 'Invalid email format';
+      if (!value.trim()) return t('preapproval.errors.required');
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return t('preapproval.errors.email');
       return '';
     },
     date: value => {
-      if (!value.trim()) return 'Date is required';
+      if (!value.trim()) return t('preapproval.errors.required');
       const selectedDate = new Date(value);
       const today = new Date();
       today.setHours(0, 0, 0, 0);
-      if (selectedDate < today) return 'Date must be today or in the future';
+      if (selectedDate < today) return t('preapproval.errors.dateFuture');
       return '';
     },
   };
@@ -99,8 +102,8 @@ export default function ContactSection() {
     if (hasError) {
       Swal.fire({
         icon: 'warning',
-        title: 'Missing or invalid information',
-        text: 'Please correct the errors before submitting.',
+        title: t('contact.alerts.missingInfo'),
+        text: t('contact.alerts.correctErrors'),
       });
       return false;
     }
@@ -113,8 +116,8 @@ export default function ContactSection() {
     if (state.succeeded) {
       Swal.fire({
         icon: 'success',
-        title: 'Reservation Submitted',
-        text: 'Thank you! We will contact you soon to confirm your test drive.',
+        title: t('contact.alerts.success'),
+        text: t('contact.alerts.successText'),
       });
 
       // Resetear los campos después del envío
@@ -129,11 +132,11 @@ export default function ContactSection() {
     if (state.errors && state.errors.length > 0) {
       Swal.fire({
         icon: 'error',
-        title: 'Error',
-        text: 'Something went wrong. Please try again.',
+        title: t('contact.alerts.error'),
+        text: t('contact.alerts.errorText'),
       });
     }
-  }, [state.succeeded, state.errors]);
+  }, [state.succeeded, state.errors, t]);
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -151,22 +154,22 @@ export default function ContactSection() {
       console.error('Formspree error:', error);
       Swal.fire({
         icon: 'error',
-        title: 'Error',
-        text: 'Failed to send. Please check your connection.',
+        title: t('contact.alerts.error'),
+        text: t('contact.alerts.sendError'),
       });
     }
   };
 
   return (
     <section className="reservation-section">
-      <Title text='Schedule a test drive'/>
+      <Title text={t('contact.title')} />
       <div className="reservation-form">
         <form onSubmit={onSubmit}>
           <label>
-            Name:
+            {t('contact.labels.name')}
             <input 
               type="text" 
-              placeholder='Put your name here' 
+              placeholder={t('contact.placeholders.name')} 
               value={name} 
               onChange={handleChange} 
               name="name"
@@ -177,10 +180,10 @@ export default function ContactSection() {
           </label>
 
           <label>
-            Number:
+            {t('contact.labels.number')}
             <input 
               type="tel"  
-              placeholder='Put your number here' 
+              placeholder={t('contact.placeholders.number')} 
               value={number} 
               onChange={handleChange} 
               name="number"
@@ -191,10 +194,10 @@ export default function ContactSection() {
           </label>
 
           <label>
-            Email:
+            {t('contact.labels.email')}
             <input 
               type="email"  
-              placeholder='Put your email here' 
+              placeholder={t('contact.placeholders.email')} 
               value={email} 
               onChange={handleChange} 
               name="email"
@@ -205,7 +208,7 @@ export default function ContactSection() {
           </label>
 
           <label>
-            Date:
+            {t('contact.labels.date')}
             <input 
               type="date" 
               value={date} 
@@ -217,7 +220,7 @@ export default function ContactSection() {
             {errors.date && <span className="text-danger">{errors.date}</span>}
           </label>
           <button type="submit" disabled={state.submitting}>
-            {state.submitting ? 'Sending...' : 'Schedule Your Test Drive'}
+            {state.submitting ? t('contact.buttons.sending') : t('contact.buttons.submit')}
           </button>
         </form>
       </div>

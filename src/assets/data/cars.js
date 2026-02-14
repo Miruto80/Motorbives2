@@ -1,5 +1,5 @@
 const cars = [
-{
+  {
     id: 1,
     name: 'M2 106',
     make: 'Freightliner',
@@ -9,21 +9,34 @@ const cars = [
     financingprice: 34000,
     cashprice: 32000,
     mileage: 183000,
-      description: `- Clean Title
-      - Perfect for Heavy-Duty Work
-      - 185,000 Miles
-      - Cummins Engine
-      - No CDL Required
-      - GVWR: 25,999 lbs
-      - Allison Automatic Transmission
-      - 26 ft Box
-      - Aluminum Liftgate
-      - Air Suspension
-      - Air Brakes
-      - Tires at 90% Life
-      - Immaculate Condition
-      - Financing Available
-      `,
+    descriptionEn: `- Clean Title
+- Perfect for Heavy-Duty Work
+- 185,000 Miles
+- Cummins Engine
+- No CDL Required
+- GVWR: 25,999 lbs
+- Allison Automatic Transmission
+- 26 ft Box
+- Aluminum Liftgate
+- Air Suspension
+- Air Brakes
+- Tires at 90% Life
+- Immaculate Condition
+- Financing Available`,
+    descriptionEs: `- Título Limpio
+- Perfecto para Trabajo Pesado
+- 185,000 Millas
+- Motor Cummins
+- No Requiere CDL
+- GVWR: 25,999 lbs
+- Transmisión Automática Allison
+- Caja de 26 ft
+- Plataforma Elevadora de Aluminio
+- Suspensión de Aire
+- Frenos de Aire
+- Llantas al 90% de Vida
+- Condición Inmaculada
+- Financiamiento Disponible`,
     images: [
       '/Box-trucks/FREIGHTLINER M2 106 2017 (1).webp',
       '/Box-trucks/FREIGHTLINER M2 106 2017 (2).webp',
@@ -42,8 +55,8 @@ const cars = [
       '/Box-trucks/FREIGHTLINER M2 106 2017 (15).webp',
       '/Box-trucks/FREIGHTLINER M2 106 2017 (16).webp',
     ],
-},
-{
+  },
+  {
     id: 2,
     name: 'EXPLORER SPORT 4x4',
     make: 'Ford',
@@ -53,7 +66,7 @@ const cars = [
     financingprice: 10900,
     cashprice: 9900,
     mileage: 137000,
-    description: `- Clean Title
+    descriptionEn: `- Clean Title
 - Perfect for the Family
 - 137,000 Miles
 - 3 Rows of Seats
@@ -64,8 +77,19 @@ const cars = [
 - Cold & Hot A/C
 - Immaculate Condition
 - Luxury Rims
-- Financing Available
-      `,
+- Financing Available`,
+    descriptionEs: `- Título Limpio
+- Perfecto para la Familia
+- 137,000 Millas
+- 3 Filas de Asientos
+- Asientos de Cuero
+- Pantalla Táctil
+- Cámara de Reversa
+- Quemacocos Doble
+- Aire Acondicionado Frío/Caliente
+- Condición Inmaculada
+- Rines de Lujo
+- Financiamiento Disponible`,
     images: [
       '/Suvs/FORD EXPLORER SPORT 4x4 2015 (1).webp',
       '/Suvs/FORD EXPLORER SPORT 4x4 2015 (2).webp',
@@ -84,18 +108,18 @@ const cars = [
       '/Suvs/FORD EXPLORER SPORT 4x4 2015 (15).webp',
       '/Suvs/FORD EXPLORER SPORT 4x4 2015 (16).webp',
     ],
-},
-{
+  },
+  {
     id: 3,
     name: 'F150 LARIAT 4x4',
-    make:'Ford',
+    make: 'Ford',
     year: 2018,
     type: 'Trucks',
     downpayment: 3000,
     financingprice: 28900,
     cashprice: 25000,
     mileage: 101000,
-   description: `- Clean Title
+    descriptionEn: `- Clean Title
 - Luxury Rims
 - Brand New Tires
 - Immaculate Condition
@@ -105,8 +129,18 @@ const cars = [
 - Lifted Suspension
 - 8-Cylinder 6.0L Engine
 - Ready for Heavy-Duty Work
-- Financing Available
-      `,
+- Financing Available`,
+    descriptionEs: `- Título Limpio
+- Rines de Lujo
+- Llantas Nuevas
+- Condición Inmaculada
+- Un Solo Dueño
+- Aire Acondicionado Frío/Caliente
+- Cámara de Reversa
+- Suspensión Levantada
+- Motor de 8 Cilindros 6.0L
+- Listo para Trabajo Pesado
+- Financiamiento Disponible`,
     images: [
       '/Trucks/FORD F150 LARIAT 4x4 2018 (1).webp',
       '/Trucks/FORD F150 LARIAT 4x4 2018 (2).webp',
@@ -124,18 +158,18 @@ const cars = [
       '/Trucks/FORD F150 LARIAT 4x4 2018 (14).webp',
       '/Trucks/FORD F150 LARIAT 4x4 2018 (15).webp',
     ],
-},
-{
+  },
+  {
     id: 4,
     name: 'G2500 EXPRESS',
     make: 'Chevrolet',
     year: 2021,
-     type: 'Vans',
+    type: 'Vans',
     downpayment: 2500,
     financingprice: 22900,
     cashprice: 21000,
     mileage: 64000,
-  description: `- Clean Title
+    descriptionEn: `- Clean Title
 - Perfect for Heavy-Duty Work
 - Backup Camera
 - 66,000 Miles
@@ -144,8 +178,17 @@ const cars = [
 - Cold & Hot A/C
 - Tires at 100% Life
 - One Owner
-- Immaculate Condition
-      `,
+- Immaculate Condition`,
+    descriptionEs: `- Título Limpio
+- Perfecto para Trabajo Pesado
+- Cámara de Reversa
+- 66,000 Millas
+- Rines de Lujo
+- Motor de 6 Cilindros 4.3L
+- Aire Acondicionado Frío/Caliente
+- Llantas al 100% de Vida
+- Un Solo Dueño
+- Condición Inmaculada`,
     images: [
       '/Vans/CHEVROLET G2500 EXPRESS 2021 (1).webp',
       '/Vans/CHEVROLET G2500 EXPRESS 2021 (2).webp',
@@ -163,18 +206,18 @@ const cars = [
       '/Vans/CHEVROLET G2500 EXPRESS 2021 (14).webp',
       '/Vans/CHEVROLET G2500 EXPRESS 2021 (15).webp',
     ],
-},
-{
+  },
+  {
     id: 5,
     name: 'TRANSIT 250',
     make: 'Ford',
     year: 2021,
-     type: 'Vans',
+    type: 'Vans',
     downpayment: 3000,
     financingprice: 27000,
     cashprice: 25000,
     mileage: 84000,
-  description: `- Clean Title
+    descriptionEn: `- Clean Title
 - Excellent Condition
 - Touchscreen Display
 - Tires at 90% Life
@@ -183,8 +226,17 @@ const cars = [
 - Backup Camera
 - Gasoline Engine
 - Immaculate Condition
-- Financing Available
-      `,
+- Financing Available`,
+    descriptionEs: `- Título Limpio
+- Excelente Condición
+- Pantalla Táctil
+- Llantas al 90% de Vida
+- Un Solo Dueño
+- Aire Acondicionado Frío/Caliente
+- Cámara de Reversa
+- Motor a Gasolina
+- Condición Inmaculada
+- Financiamiento Disponible`,
     images: [
       '/Vans/FORD TRANSIT 250 2021 (1).webp',
       '/Vans/FORD TRANSIT 250 2021 (2).webp',
@@ -202,8 +254,8 @@ const cars = [
       '/Vans/FORD TRANSIT 250 2021 (14).webp',
       '/Vans/FORD TRANSIT 250 2021 (15).webp',
     ],
-},
-{
+  },
+  {
     id: 6,
     name: '268',
     make: 'Hino',
@@ -213,22 +265,36 @@ const cars = [
     financingprice: 38900,
     cashprice: 36900,
     mileage: 163000,
-      description: `- Clean Title
-      -26-Foot Box
-      -GVWR: 25,950 lbs (Non-CDL)
-      -Aluminum Lift Gate
-      -New Tires
-      -Allison Automatic Transmission
-      -Toyota 7.6L Diesel Engine
-      -Air BrakesW
-      -Air Suspension
-      - 163,000 Miles
-      -Leather Seats
-      -Cold & Hot A/C
-      -One Owner
-      -Strong mechanical condition
-      - Financing Available
-      `,
+    descriptionEn: `- Clean Title
+- 26-Foot Box
+- GVWR: 25,950 lbs (Non-CDL)
+- Aluminum Lift Gate
+- New Tires
+- Allison Automatic Transmission
+- Toyota 7.6L Diesel Engine
+- Air Brakes
+- Air Suspension
+- 163,000 Miles
+- Leather Seats
+- Cold & Hot A/C
+- One Owner
+- Strong mechanical condition
+- Financing Available`,
+    descriptionEs: `- Título Limpio
+- Caja de 26 Pies
+- GVWR: 25,950 lbs (No CDL)
+- Plataforma Elevadora de Aluminio
+- Llantas Nuevas
+- Transmisión Automática Allison
+- Motor Toyota 7.6L Diesel
+- Frenos de Aire
+- Suspensión de Aire
+- 163,000 Millas
+- Asientos de Cuero
+- Aire Acondicionado Frío/Caliente
+- Un Solo Dueño
+- Fuerte Condición Mecánica
+- Financiamiento Disponible`,
     images: [
       '/Box-trucks/HINO 2020 268 26 FT (1).webp',
       '/Box-trucks/HINO 2020 268 26 FT (2).webp',
@@ -250,8 +316,8 @@ const cars = [
       '/Box-trucks/HINO 2020 268 26 FT (18).webp',
       '/Box-trucks/HINO 2020 268 26 FT (19).webp',
     ],
-},
-{
+  },
+  {
     id: 7,
     name: 'EDGE TITANIUM',
     make: 'Ford',
@@ -261,7 +327,7 @@ const cars = [
     financingprice: 10900,
     cashprice: 9900,
     mileage: 135000,
-    description: `- Clean Title
+    descriptionEn: `- Clean Title
 - 135,000 Miles
 - Backup Camera
 - Leather Seats
@@ -271,8 +337,18 @@ const cars = [
 - Brand New Tires
 - One Owner
 - Immaculate Condition
-- Financing Available
-      `,
+- Financing Available`,
+    descriptionEs: `- Título Limpio
+- 135,000 Millas
+- Cámara de Reversa
+- Asientos de Cuero
+- Rines de Lujo
+- Quemacocos
+- Aire Acondicionado Frío/Caliente
+- Llantas Nuevas
+- Un Solo Dueño
+- Condición Inmaculada
+- Financiamiento Disponible`,
     images: [
       '/Suvs/FORD EDGE TITANIUM 2018 (1).webp',
       '/Suvs/FORD EDGE TITANIUM 2018 (2).webp',
@@ -289,8 +365,8 @@ const cars = [
       '/Suvs/FORD EDGE TITANIUM 2018 (13).webp',
       '/Suvs/FORD EDGE TITANIUM 2018 (14).webp',
     ],
-},
-{
+  },
+  {
     id: 8,
     name: 'ESCAPE SEL AWD',
     make: 'Ford',
@@ -300,7 +376,7 @@ const cars = [
     financingprice: 17900,
     cashprice: 16900,
     mileage: 74000,
-    description: `- Clean Title
+    descriptionEn: `- Clean Title
 - 74,000 Miles
 - Luxury Rims
 - Leather Seats
@@ -308,8 +384,16 @@ const cars = [
 - Cold & Hot A/C
 - One Owner
 - Backup Camera
-- Financing Available
-      `,
+- Financing Available`,
+    descriptionEs: `- Título Limpio
+- 74,000 Millas
+- Rines de Lujo
+- Asientos de Cuero
+- Llantas Nuevas
+- Aire Acondicionado Frío/Caliente
+- Un Solo Dueño
+- Cámara de Reversa
+- Financiamiento Disponible`,
     images: [
       '/Suvs/FORD ESCAPE SEL AWD 2021 (1).webp',
       '/Suvs/FORD ESCAPE SEL AWD 2021 (2).webp',
@@ -326,8 +410,8 @@ const cars = [
       '/Suvs/FORD ESCAPE SEL AWD 2021 (13).webp',
       '/Suvs/FORD ESCAPE SEL AWD 2021 (14).webp',
     ],
-},
-{
+  },
+  {
     id: 9,
     name: 'COMPASS 4x4 LIMITED',
     make: 'Jeep',
@@ -337,7 +421,7 @@ const cars = [
     financingprice: 16900,
     cashprice: 15900,
     mileage: 96000,
-   description: `- Clean Title
+    descriptionEn: `- Clean Title
 - 96,000 Miles
 - Leather Seats
 - Luxury Rims
@@ -346,8 +430,17 @@ const cars = [
 - One Owner
 - Brand New Tires
 - Cold & Hot A/C
-- Financing Available
-      `,
+- Financing Available`,
+    descriptionEs: `- Título Limpio
+- 96,000 Millas
+- Asientos de Cuero
+- Rines de Lujo
+- Cámara de Reversa
+- Pantalla Táctil
+- Un Solo Dueño
+- Llantas Nuevas
+- Aire Acondicionado Frío/Caliente
+- Financiamiento Disponible`,
     images: [
       '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (1).webp',
       '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (2).webp',
@@ -364,18 +457,18 @@ const cars = [
       '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (13).webp',
       '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (14).webp',
     ],
-},
-{
+  },
+  {
     id: 10,
     name: 'MALIBU LT',
     make: 'Chevrolet',
-    year: 2018,
+    year: 2020,
     type: 'Sedans',
     downpayment: 2500,
     financingprice: 11900,
     cashprice: 10900,
     mileage: 134000,
-    description: `- Clean Title
+    descriptionEn: `- Clean Title
 - 134,000 Miles
 - Luxury Rims
 - Brand New Tires
@@ -383,8 +476,16 @@ const cars = [
 - One Owner
 - Cold & Hot A/C
 - Backup Camera
-- Financing Available
-      `,
+- Financing Available`,
+    descriptionEs: `- Título Limpio
+- 134,000 Millas
+- Rines de Lujo
+- Llantas Nuevas
+- Condición Inmaculada
+- Un Solo Dueño
+- Aire Acondicionado Frío/Caliente
+- Cámara de Reversa
+- Financiamiento Disponible`,
     images: [
       '/Sedans/CHEVROLET MALIBU LT 2020 (2).webp',
       '/Sedans/CHEVROLET MALIBU LT 2020 (1).webp',
@@ -401,10 +502,10 @@ const cars = [
       '/Sedans/CHEVROLET MALIBU LT 2020 (13).webp',
       '/Sedans/CHEVROLET MALIBU LT 2020 (14).webp',
     ],
-},
-{
+  },
+  {
     id: 11,
-    name: 'COMPASS 4x4 LIMITED',
+    name: 'ESCALADE PREMIUM 4X4',
     make: 'Cadillac',
     year: 2017,
     type: 'Suvs',
@@ -412,7 +513,7 @@ const cars = [
     financingprice: 24900,
     cashprice: 23900,
     mileage: 144000,
-   description: `- Clean Title
+    descriptionEn: `- Clean Title
 - 144,000 Miles
 - Perfect Family SUV
 - Leather Seats
@@ -425,8 +526,21 @@ const cars = [
 - Tires 90%
 - Cold & Hot A/C
 - Immaculate Condition
-- Financing Available
-`,
+- Financing Available`,
+    descriptionEs: `- Título Limpio
+- 144,000 Millas
+- SUV Familiar Perfecta
+- Asientos de Cuero
+- 3 Filas de Asientos
+- Pantalla Táctil
+- Pantallas de Entretenimiento Traseras
+- Quemacocos
+- Cámara de Reversa
+- Rines de Lujo
+- Llantas al 90%
+- Aire Acondicionado Frío/Caliente
+- Condición Inmaculada
+- Financiamiento Disponible`,
     images: [
       '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (7).webp',
       '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (1).webp',
@@ -444,8 +558,147 @@ const cars = [
       '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (14).webp',
       '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (15).webp',
     ],
-},
-
-]
+  },
+  {
+    id: 12,
+    name: 'Civic Sport',
+    make: 'Honda',
+    year: 2022,
+    type: 'Sedans',
+    downpayment: 3000,
+    financingprice: 17500,
+    cashprice: 16500,
+    mileage: 112000,
+    descriptionEn: `- Clean Title
+- 112,000 Miles
+- Luxury Rims
+- One Owner
+- Brand New Tires
+- Backup Camera
+- Cold & Hot A/C
+- Immaculate Condition
+- Financing Available`,
+descriptionEs: `- Título Limpio
+- 112,000 Millas
+- Rines de Lujo
+- Un Solo Dueño
+- Llantas Nuevas
+- Cámara de Reversa
+- Aire Acondicionado Frío/Caliente
+- Condición Inmaculada
+- Financiamiento Disponible`,
+    images: [
+      '/Sedans/HONDA CIVIC SPORT 2022 (7).webp',
+      '/Sedans/HONDA CIVIC SPORT 2022 (1).webp',
+      '/Sedans/HONDA CIVIC SPORT 2022 (2).webp',
+      '/Sedans/HONDA CIVIC SPORT 2022 (3).webp',
+      '/Sedans/HONDA CIVIC SPORT 2022 (4).webp',
+      '/Sedans/HONDA CIVIC SPORT 2022 (5).webp',
+      '/Sedans/HONDA CIVIC SPORT 2022 (6).webp',
+      '/Sedans/HONDA CIVIC SPORT 2022 (8).webp',
+      '/Sedans/HONDA CIVIC SPORT 2022 (9).webp',
+      '/Sedans/HONDA CIVIC SPORT 2022 (10).webp',
+      '/Sedans/HONDA CIVIC SPORT 2022 (11).webp',
+      '/Sedans/HONDA CIVIC SPORT 2022 (12).webp',
+      '/Sedans/HONDA CIVIC SPORT 2022 (13).webp',
+      '/Sedans/HONDA CIVIC SPORT 2022 (14).webp',
+    ],
+  },
+  {
+    id: 13,
+    name: 'Forte',
+    make: 'Kia',
+    year: 2019,
+    type: 'Sedans',
+    downpayment: 3000,
+    financingprice: 10500,
+    cashprice: 9500,
+    mileage: 137000,
+    descriptionEn: `- Clean Title
+- 137,000 Miles
+- Cold & Hot A/C
+- Touchscreen Display
+- Backup Camera
+- One Owner
+- Immaculate Condition
+- Financing Available`,
+descriptionEs: `- Título Limpio
+- 137,000 Millas
+- Aire Acondicionado Frío/Caliente
+- Pantalla Táctil
+- Cámara de Reversa
+- Un Solo Dueño
+- Condición Inmaculada
+- Financiamiento Disponible`,
+    images: [
+      '/Sedans/KIA FORTE FE 2019 (7).webp',
+      '/Sedans/KIA FORTE FE 2019 (1).webp',
+      '/Sedans/KIA FORTE FE 2019 (2).webp',
+      '/Sedans/KIA FORTE FE 2019 (3).webp',
+      '/Sedans/KIA FORTE FE 2019 (4).webp',
+      '/Sedans/KIA FORTE FE 2019 (5).webp',
+      '/Sedans/KIA FORTE FE 2019 (6).webp',
+      '/Sedans/KIA FORTE FE 2019 (8).webp',
+      '/Sedans/KIA FORTE FE 2019 (9).webp',
+      '/Sedans/KIA FORTE FE 2019 (10).webp',
+      '/Sedans/KIA FORTE FE 2019 (11).webp',
+      '/Sedans/KIA FORTE FE 2019 (12).webp',
+      '/Sedans/KIA FORTE FE 2019 (13).webp',
+      '/Sedans/KIA FORTE FE 2019 (14).webp',
+    ],
+  },
+  {
+    id: 14,
+    name: 'MV607',
+    make: 'International',
+    year: 2022,
+    type: 'Box-trucks',
+    downpayment: 6000,
+    financingprice: 36900,
+    cashprice: 35900,
+    mileage: 204000,
+   descriptionEn: `- Clean Title
+- 204,000 Miles
+- Cummins 6.7L Engine
+- Allison Transmission
+- Tires 90%
+- Cold & Hot A/C
+- Liftgate 100% Working
+- Leather Seats
+- Ready to Work
+- Immaculate Condition
+- Financing Available
+- Price: $36,900`,
+descriptionEs: `- Título Limpio
+- 204,000 Millas
+- Motor Cummins 6.7L
+- Transmisión Allison
+- Llantas al 90%
+- Aire Acondicionado Frío/Caliente
+- Liftgate al 100% Funcional
+- Asientos de Cuero
+- Listo para Trabajar
+- Condición Inmaculada
+- Financiamiento Disponible
+- Precio: $36,900`,
+    images: [
+      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (1).webp',
+      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (2).webp',
+      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (3).webp',
+      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (4).webp',
+      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (5).webp',
+      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (6).webp',
+      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (7).webp',
+      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (8).webp',
+      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (9).webp',
+      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (10).webp',
+      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (11).webp',
+      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (12).webp',
+      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (13).webp',
+      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (14).webp',
+      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (15).webp',
+    ],
+  },
+];
 
 export default cars;

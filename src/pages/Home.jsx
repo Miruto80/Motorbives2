@@ -7,6 +7,7 @@ import Hero from '../components/Hero.jsx'
 import SEO from '../components/SEO.jsx';
 import Clients from '../components/Clients.jsx'
 import RevealUp from '../components/Animations/RevealUp.jsx'
+import { useLanguage } from '../context/useLanguage.js';
 
 
 export default function Home() {
@@ -14,6 +15,18 @@ export default function Home() {
     if (!Array.isArray(cars)) return [];
     return cars.slice(-8).reverse();
   }, []);
+  const { language } = useLanguage();
+   
+  const texts = {
+    en: {
+      latestVehicles: 'Latest vehicles',
+    },
+    es: {
+      latestVehicles: 'Últimos vehículos',
+    },
+  };
+
+  const currentTexts = texts[language] || texts.en;
 
   return (
     <div>
@@ -26,7 +39,7 @@ export default function Home() {
       <Hero />
 
       <RevealUp>
-      <Slider cars={latestCars} title="Latest vehicles" />
+      <Slider cars={latestCars} title={currentTexts.latestVehicles} />
       </RevealUp>
 
       <RevealUp>

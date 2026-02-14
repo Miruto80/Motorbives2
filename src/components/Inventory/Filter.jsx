@@ -2,8 +2,26 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../assets/css/Filter.css';
 import Collapse from 'bootstrap/js/dist/collapse';
+import { useLanguage } from '../../context/useLanguage.js'; 
 
 export default function Filter({ cars = [], onFilterChange = () => {}, currentFilters = {} }) {
+  const { language } = useLanguage(); 
+
+  const texts = {
+    en: {
+      categories: 'Categories',
+      allTypesMakes: 'All types / makes',
+      all: 'All',
+    },
+    es: {
+      categories: 'Categorías',
+      allTypesMakes: 'Todos los tipos / marcas',
+      all: 'Todos los',
+    },
+  };
+
+  const currentTexts = texts[language] || texts.en; 
+
   const handleLinkClick = () => {
     const collapseEl = document.getElementById('categoryFilterMobile');
     if (!collapseEl) return;
@@ -74,13 +92,13 @@ export default function Filter({ cars = [], onFilterChange = () => {}, currentFi
         aria-expanded="false"
         aria-controls="categoryFilterMobile"
       >
-        ☰ Categories
+        ☰ {currentTexts.categories}
       </button>
 
       <div className="collapse d-lg-none" id="categoryFilterMobile">
         <div className="card shadow-lg mobile-filter-panel">
           <div className="card-header d-flex justify-content-between align-items-center">
-            <span>Categories</span>
+            <span>{currentTexts.categories}</span>
             <button
               className="btn btn-sm btn-outline-secondary z-3"
               type="button"
@@ -92,7 +110,7 @@ export default function Filter({ cars = [], onFilterChange = () => {}, currentFi
           <div className="card-body p-0">
             <ul className="list-group list-group-flush">
               <li className="list-group-item">
-                <button className="btn btn-link p-0" onClick={clearFilters}>All types / makes</button>
+                <button className="btn btn-link p-0" onClick={clearFilters}>{currentTexts.allTypesMakes}</button>
               </li>
               {categories.map((cat) => (
                 <li key={cat.id} className="list-group-item">
@@ -103,7 +121,7 @@ export default function Filter({ cars = [], onFilterChange = () => {}, currentFi
                         className={`btn btn-link p-0 ${currentFilters.type === cat.name && !currentFilters.make ? 'text-primary fw-bold filter-selected' : ''}`}
                         onClick={() => handleSelect(cat.name, null)}
                       >
-                        All {cat.name}
+                        {currentTexts.all} {cat.name}
                       </button>
                     </div>
                     <ul className="ps-3">
@@ -127,7 +145,7 @@ export default function Filter({ cars = [], onFilterChange = () => {}, currentFi
             <div className="card-body">
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
-                  <button className="btn btn-link p-0" onClick={clearFilters}>All types / makes</button>
+                  <button className="btn btn-link p-0" onClick={clearFilters}>{currentTexts.allTypesMakes}</button>
                 </li>
                 {categories.map((cat) => (
                   <li key={cat.id} className="list-group-item">
@@ -138,7 +156,7 @@ export default function Filter({ cars = [], onFilterChange = () => {}, currentFi
                           className={`btn btn-link p-0 ${currentFilters.type === cat.name && !currentFilters.make ? 'text-primary fw-bold filter-selected' : ''}`}
                           onClick={() => handleSelect(cat.name, null)}
                         >
-                          All {cat.name}
+                          {currentTexts.all} {cat.name}
                         </button>
                       </div>
                       <ul className="ps-3 mb-0">

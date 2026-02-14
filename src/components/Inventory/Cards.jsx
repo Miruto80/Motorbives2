@@ -1,9 +1,26 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../../assets/css/Cards.css';
+import { useLanguage } from '../../context/useLanguage.js'; 
 
 export default function Cards({ cars }) {
   const navigate = useNavigate();
+  const { language } = useLanguage(); 
+
+ 
+  const texts = {
+    en: {
+      priceLabel: 'Price:',
+      getPreApproval: 'Get Pre-Approval',
+    },
+    es: {
+      priceLabel: 'Precio:',
+      getPreApproval: 'Obtener Pre-Aprobación',
+    },
+  };
+
+  const currentTexts = texts[language] || texts.en; 
+
   return (
     <div className="row g-4">
       {cars.map((car) => (
@@ -29,7 +46,7 @@ export default function Cards({ cars }) {
                 </h6>
 
                 <p className="car-prices">
-                  Price: ${car.financingprice.toLocaleString()}
+                  {currentTexts.priceLabel} ${car.financingprice.toLocaleString()}
                 </p>
 
                 <button
@@ -41,7 +58,7 @@ export default function Cards({ cars }) {
                     navigate('/Preapproval', { state: car });
                   }}
                 >
-                  Get Pre-Approval
+                  {currentTexts.getPreApproval}
                 </button>
               </div>
 

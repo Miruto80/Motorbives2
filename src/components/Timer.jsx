@@ -1,7 +1,28 @@
+// src/components/BusinessStatus.jsx
 import React, { useEffect, useState } from 'react';
+import { useLanguage } from '../context/useLanguage.js';
 
 const BusinessStatus = () => {
-  const [status, setStatus] = useState('Close');
+  const { language } = useLanguage(); 
+
+
+  const texts = {
+    en: {
+      open: 'Open',
+      close: 'Close',
+      appointments: 'Appointments',
+    },
+    es: {
+      open: 'Abierto',
+      close: 'Cerrado',
+      appointments: 'Solo con Cita',
+    },
+  };
+
+  // Selecciona el texto basado en el idioma
+  const currentTexts = texts[language] || texts.en; 
+
+  const [status, setStatus] = useState(currentTexts.close); 
 
   useEffect(() => {
     const checkStatus = () => {
@@ -22,32 +43,32 @@ const BusinessStatus = () => {
       if (day >= 1 && day <= 5) {
         // Lunes a viernes
         if (currentTime >= weekdayOpen && currentTime <= weekdayClose) {
-          setStatus('Open');
+          setStatus(currentTexts.open);
         } else {
-          setStatus('Close');
+          setStatus(currentTexts.close);
         }
       } else if (day === 6) {
         // Sábado
         if (currentTime >= saturdayOpen && currentTime <= saturdayClose) {
-          setStatus('Open');
+          setStatus(currentTexts.open);
         } else {
-          setStatus('Close');
+          setStatus(currentTexts.close);
         }
       } else {
         // Domingo
-        setStatus('Appointments');
+        setStatus(currentTexts.appointments);
       }
     };
 
     checkStatus();
     const interval = setInterval(checkStatus, 60000);
     return () => clearInterval(interval);
-  }, []);
+  }, [currentTexts]); // Agrega currentTexts como dependencia para actualizar al cambiar idioma
 
   const color =
-    status === 'Open'
+    status === currentTexts.open
       ? '#00ff00'
-      : status === 'Close'
+      : status === currentTexts.close
       ? '#888'
       : '#ffcc00'; // Amarillo para "Solo con cita"
 

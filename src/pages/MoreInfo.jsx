@@ -5,12 +5,42 @@ import cars from '../assets/data/cars.js'
 import { useNavigate } from 'react-router-dom';
 import CarSplide from '../components/Moreinfo/CarSplide.jsx'
 import '../assets/css/Moreinfo.css'
+import { useLanguage } from '../context/useLanguage.js';
 
 export default function MoreInfo() {
   const { state } = useLocation();
   const { id } = useParams();
   const navigate = useNavigate();
+  const { language } = useLanguage();
   const car = state || null;
+  
+  // Objeto con traducciones locales
+  const texts = {
+    en: {
+      moreInfoPage: 'More Info Page',
+      noCarData: 'No car data was passed via navigation state.',
+      requestedId: 'Requested id:',
+      financing: 'Financing',
+      mileage: 'Mileage:',
+      downPayment: 'Down Payment:',
+      cashPrice: 'Cash Price:',
+      getPreApproved: 'Get Pre-Approved',
+      relatedVehicles: 'Related vehicles',
+    },
+    es: {
+      moreInfoPage: 'Página de Más Información',
+      noCarData: 'No se pasaron datos del vehículo a través del estado de navegación.',
+      requestedId: 'ID solicitado:',
+      financing: 'Financiado',
+      mileage: 'Kilometraje:',
+      downPayment: 'Pago Inicial:',
+      cashPrice: 'Precio en Efectivo:',
+      getPreApproved: 'Obtener Pre-Aprobación',
+      relatedVehicles: 'Vehículos relacionados',
+    },
+  };
+
+  const currentTexts = texts[language] || texts.en; // Fallback a inglés si no hay idioma
   
   const handleRequestInfo = (carObj) => {
     console.log('Request info for', carObj?.id);
@@ -45,12 +75,14 @@ export default function MoreInfo() {
   if (!car) {
     return (
       <div>
-        <h1>More Info Page</h1>
-        <p>No car data was passed via navigation state.</p>
-        <p>Requested id: {id}</p>
+        <h1>{currentTexts.moreInfoPage}</h1>
+        <p>{currentTexts.noCarData}</p>
+        <p>{currentTexts.requestedId} {id}</p>
       </div>
     )
   }
+
+  const selectedDescription = language === 'en' ? car.descriptionEn : car.descriptionEs;
 
   return (
     <div className="container my-5 text-white">
@@ -74,17 +106,17 @@ export default function MoreInfo() {
             </h3>
 
             <p className="car-price">
-              ${car.financingprice.toLocaleString()} <span>Financing</span>
+              ${car.financingprice.toLocaleString()} <span>{currentTexts.financing}</span>
             </p>
 
             <ul className="car-specs">
-              <li><strong>Mileage:</strong> {car.mileage.toLocaleString()} miles</li>
-              <li><strong>Down Payment:</strong> ${car.downpayment.toLocaleString()}</li>
-              <li><strong>Cash Price:</strong> ${car.cashprice.toLocaleString()}</li>
+              <li><strong>{currentTexts.mileage}</strong> {car.mileage.toLocaleString()} miles</li>
+              <li><strong>{currentTexts.downPayment}</strong> ${car.downpayment.toLocaleString()}</li>
+              <li><strong>{currentTexts.cashPrice}</strong> ${car.cashprice.toLocaleString()}</li>
             </ul>
 
             <p className="car-description">
-              {car.description}
+              {selectedDescription}
             </p>
               <div className="row mt-4">
                 <div className="col text-center">
@@ -96,7 +128,7 @@ export default function MoreInfo() {
                       navigate('/Preapproval', { state: car });
                     }}
                   >
-                    Get Pre-Approved
+                    {currentTexts.getPreApproved}
                   </button>
                 </div>
               </div>
@@ -107,7 +139,7 @@ export default function MoreInfo() {
       {/* RELATED */}
       {related.length > 0 && (
         <div className="mt-5">
-          <Slider cars={related} title="Related vehicles" />
+          <Slider cars={related} title={currentTexts.relatedVehicles} />
         </div>
       )}
     </div>

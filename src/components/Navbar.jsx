@@ -2,9 +2,14 @@ import React from 'react';
 import '../assets/css/Navbar.css';
 import { Link, useNavigate } from 'react-router-dom';
 import Timer from './Timer';
+import { useLanguage } from '../context/useLanguage'; 
 
 export default function Navbar() {
   const navigate = useNavigate();
+  const { language, t, changeLanguage } = useLanguage();
+  const handleLanguageChange = (e) => {
+    changeLanguage(e.target.value);
+  };
 
   function handleMobileLink(e, path) {
     if (e && e.preventDefault) e.preventDefault();
@@ -19,7 +24,7 @@ export default function Navbar() {
         setTimeout(() => navigate(path), 220);
         return;
       } catch (err) {
-        // fallthrough to other methods
+        console.error('Error handling offcanvas:', err);
       }
     }
 
@@ -65,17 +70,17 @@ export default function Navbar() {
         {/* LINKS DESKTOP */}
         <ul className="navbar-nav flex-row align-items-center gap-3 d-none d-lg-flex ms-auto">
           <li className="nav-item">
-            <Link className="nav-link" to="/">Home</Link>
+            <Link className="nav-link" to="/">{t('navbar.home')}</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/Preapproval">Pre-approval</Link>
+            <Link className="nav-link" to="/Preapproval">{t('navbar.preapproval')}</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/Inventory">Inventory</Link>
+            <Link className="nav-link" to="/Inventory">{t('navbar.inventory')}</Link>
           </li>
 
           <li className="nav-item">
-            <select className="language-select">
+            <select className="language-select" value={language} onChange={handleLanguageChange}>
               <option value="en">EN</option>
               <option value="es">ES</option>
             </select>
@@ -98,7 +103,7 @@ export default function Navbar() {
           id="mobileMenu"
         >
           <div className="offcanvas-header">
-            <h5 className="offcanvas-title">Menu</h5>
+            <h5 className="offcanvas-title">{t('navbar.menu')}</h5>
             <button
               type="button"
               className="btn-close btn-close-white"
@@ -114,7 +119,7 @@ export default function Navbar() {
                   to="/"
                   onClick={(e) => handleMobileLink(e, '/')}
                 >
-                  Home
+                  {t('navbar.home')}
                 </Link>
               </li>
               <li className="nav-item">
@@ -123,7 +128,7 @@ export default function Navbar() {
                   to="/Preapproval"
                   onClick={(e) => handleMobileLink(e, '/Preapproval')}
                 >
-                  Pre-approval
+                  {t('navbar.preapproval')}
                 </Link>
               </li>
               <li className="nav-item">
@@ -132,12 +137,12 @@ export default function Navbar() {
                   to="/Inventory"
                   onClick={(e) => handleMobileLink(e, '/Inventory')}
                 >
-                  Inventory
+                  {t('navbar.inventory')}
                 </Link>
               </li>
 
               <li className="nav-item mt-3">
-                <select className="language-select w-100">
+                <select className="language-select w-100" value={language} onChange={handleLanguageChange}>
                   <option value="en">English</option>
                   <option value="es">Español</option>
                 </select>
