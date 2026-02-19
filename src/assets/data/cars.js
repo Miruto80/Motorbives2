@@ -1,59 +1,52 @@
 const cars = [
   {
     id: 1,
-    name: 'M2 106',
-    make: 'Freightliner',
-    year: 2017,
-    type: 'Box-trucks',
-    downpayment: 6000,
-    financingprice: 34000,
-    cashprice: 32000,
-    mileage: 183000,
-    descriptionEn: `- Clean Title
-- Perfect for Heavy-Duty Work
-- 185,000 Miles
-- Cummins Engine
-- No CDL Required
-- GVWR: 25,999 lbs
-- Allison Automatic Transmission
-- 26 ft Box
-- Aluminum Liftgate
-- Air Suspension
-- Air Brakes
-- Tires at 90% Life
+    name: 'PROMASTER 3500 EX',
+    make: 'Ram',
+    year: 2021,
+    type: 'Vans',
+    downpayment: 2500,
+    financingprice: 23900,
+    cashprice: 21900,
+    mileage: 102000,
+  descriptionEn: `- Clean Title
+- 102,000 Miles
+- Perfect for Work
+- 3.6L 6-Cylinder Engine
+- Touchscreen Display
+- Backup Camera
+- Luxury Rims
+- Tires 90%
+- Cold & Hot A/C
 - Immaculate Condition
 - Financing Available`,
-    descriptionEs: `- Título Limpio
-- Perfecto para Trabajo Pesado
-- 185,000 Millas
-- Motor Cummins
-- No Requiere CDL
-- GVWR: 25,999 lbs
-- Transmisión Automática Allison
-- Caja de 26 ft
-- Plataforma Elevadora de Aluminio
-- Suspensión de Aire
-- Frenos de Aire
-- Llantas al 90% de Vida
+descriptionEs: `- Título Limpio
+- 102,000 Millas
+- Perfecto para el Jale
+- Motor 3.6L 6 Cilindros
+- Pantalla Táctil
+- Cámara de Reversa
+- Rines de Lujo
+- Llantas al 90%
+- Aire Acondicionado Frío/Caliente
 - Condición Inmaculada
 - Financiamiento Disponible`,
     images: [
-      '/Box-trucks/FREIGHTLINER M2 106 2017 (1).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2017 (2).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2017 (3).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2017 (4).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2017 (5).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2017 (6).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2017 (7).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2017 (8).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2017 (9).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2017 (10).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2017 (11).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2017 (12).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2017 (13).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2017 (14).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2017 (15).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2017 (16).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 2 (1).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 2 (2).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 2 (3).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 2 (4).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 2 (5).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 2 (6).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 2 (7).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 2 (8).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 2 (9).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 2 (10).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 2 (11).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 2 (12).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 2 (13).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 2 (14).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 2 (15).webp',
     ],
   },
   {
@@ -161,98 +154,108 @@ const cars = [
   },
   {
     id: 4,
-    name: 'G2500 EXPRESS',
-    make: 'Chevrolet',
-    year: 2021,
+    name: 'T-250 TRANSIT',
+    make: 'Ford',
+    year: 2019,
     type: 'Vans',
     downpayment: 2500,
-    financingprice: 22900,
-    cashprice: 21000,
-    mileage: 64000,
+    financingprice: 21900,
+    cashprice: 20900,
+    mileage: 145000,
     descriptionEn: `- Clean Title
-- Perfect for Heavy-Duty Work
-- Backup Camera
-- 66,000 Miles
+- 145,000 Miles
+- Perfect for Work
+- Diesel Engine
+- 3.2L 5-Cylinder
 - Luxury Rims
-- 6-Cylinder 4.3L Engine
+- Tires 90%
 - Cold & Hot A/C
-- Tires at 100% Life
-- One Owner
-- Immaculate Condition`,
-    descriptionEs: `- Título Limpio
-- Perfecto para Trabajo Pesado
-- Cámara de Reversa
-- 66,000 Millas
+- Backup Camera
+- Touchscreen Display
+- Leather Seats
+- Immaculate Condition
+- Financing Available
+- Price: $21,900`,
+descriptionEs: `- Título Limpio
+- 145,000 Millas
+- Perfecta para el Jale
+- Motor Diésel
+- 3.2L 5 Cilindros
 - Rines de Lujo
-- Motor de 6 Cilindros 4.3L
+- Llantas al 90%
 - Aire Acondicionado Frío/Caliente
-- Llantas al 100% de Vida
-- Un Solo Dueño
-- Condición Inmaculada`,
+- Cámara de Reversa
+- Pantalla Táctil
+- Asientos de Cuero
+- Condición Inmaculada
+- Financiamiento Disponible
+- Precio: $21,900`,
     images: [
-      '/Vans/CHEVROLET G2500 EXPRESS 2021 (1).webp',
-      '/Vans/CHEVROLET G2500 EXPRESS 2021 (2).webp',
-      '/Vans/CHEVROLET G2500 EXPRESS 2021 (3).webp',
-      '/Vans/CHEVROLET G2500 EXPRESS 2021 (4).webp',
-      '/Vans/CHEVROLET G2500 EXPRESS 2021 (5).webp',
-      '/Vans/CHEVROLET G2500 EXPRESS 2021 (6).webp',
-      '/Vans/CHEVROLET G2500 EXPRESS 2021 (7).webp',
-      '/Vans/CHEVROLET G2500 EXPRESS 2021 (8).webp',
-      '/Vans/CHEVROLET G2500 EXPRESS 2021 (9).webp',
-      '/Vans/CHEVROLET G2500 EXPRESS 2021 (10).webp',
-      '/Vans/CHEVROLET G2500 EXPRESS 2021 (11).webp',
-      '/Vans/CHEVROLET G2500 EXPRESS 2021 (12).webp',
-      '/Vans/CHEVROLET G2500 EXPRESS 2021 (13).webp',
-      '/Vans/CHEVROLET G2500 EXPRESS 2021 (14).webp',
-      '/Vans/CHEVROLET G2500 EXPRESS 2021 (15).webp',
+      '/Vans/FORD T-250 TRANSIT 2019 (2).webp',
+      '/Vans/FORD T-250 TRANSIT 2019 (1).webp',
+      '/Vans/FORD T-250 TRANSIT 2019 (3).webp',
+      '/Vans/FORD T-250 TRANSIT 2019 (4).webp',
+      '/Vans/FORD T-250 TRANSIT 2019 (5).webp',
+      '/Vans/FORD T-250 TRANSIT 2019 (6).webp',
+      '/Vans/FORD T-250 TRANSIT 2019 (7).webp',
+      '/Vans/FORD T-250 TRANSIT 2019 (8).webp',
+      '/Vans/FORD T-250 TRANSIT 2019 (9).webp',
+      '/Vans/FORD T-250 TRANSIT 2019 (10).webp',
+      '/Vans/FORD T-250 TRANSIT 2019 (11).webp',
+      '/Vans/FORD T-250 TRANSIT 2019 (12).webp',
+      '/Vans/FORD T-250 TRANSIT 2019 (13).webp',
+      '/Vans/FORD T-250 TRANSIT 2019 (14).webp',
+      '/Vans/FORD T-250 TRANSIT 2019 (15).webp',
     ],
   },
   {
     id: 5,
-    name: 'TRANSIT 250',
-    make: 'Ford',
+    name: 'PROMASTER 3500 EX',
+    make: 'Ram',
     year: 2021,
     type: 'Vans',
     downpayment: 3000,
-    financingprice: 27000,
-    cashprice: 25000,
-    mileage: 84000,
-    descriptionEn: `- Clean Title
-- Excellent Condition
+    financingprice: 27900,
+    cashprice: 25900,
+    mileage: 50000,
+   descriptionEn: `- Clean Title
+- 50,000 Miles
+- Perfect for Work
+- 3.6L 6-Cylinder Engine
 - Touchscreen Display
-- Tires at 90% Life
-- One Owner
-- Cold & Hot A/C
 - Backup Camera
-- Gasoline Engine
+- Luxury Rims
+- Brand New Tires
+- Cold & Hot A/C
 - Immaculate Condition
 - Financing Available`,
-    descriptionEs: `- Título Limpio
-- Excelente Condición
+descriptionEs: `- Título Limpio
+- 50,000 Millas
+- Perfecto para el Jale
+- Motor 3.6L 6 Cilindros
 - Pantalla Táctil
-- Llantas al 90% de Vida
-- Un Solo Dueño
-- Aire Acondicionado Frío/Caliente
 - Cámara de Reversa
-- Motor a Gasolina
+- Rines de Lujo
+- Llantas Nuevas
+- Aire Acondicionado Frío/Caliente
 - Condición Inmaculada
 - Financiamiento Disponible`,
     images: [
-      '/Vans/FORD TRANSIT 250 2021 (1).webp',
-      '/Vans/FORD TRANSIT 250 2021 (2).webp',
-      '/Vans/FORD TRANSIT 250 2021 (3).webp',
-      '/Vans/FORD TRANSIT 250 2021 (4).webp',
-      '/Vans/FORD TRANSIT 250 2021 (5).webp',
-      '/Vans/FORD TRANSIT 250 2021 (6).webp',
-      '/Vans/FORD TRANSIT 250 2021 (7).webp',
-      '/Vans/FORD TRANSIT 250 2021 (8).webp',
-      '/Vans/FORD TRANSIT 250 2021 (9).webp',
-      '/Vans/FORD TRANSIT 250 2021 (10).webp',
-      '/Vans/FORD TRANSIT 250 2021 (11).webp',
-      '/Vans/FORD TRANSIT 250 2021 (12).webp',
-      '/Vans/FORD TRANSIT 250 2021 (13).webp',
-      '/Vans/FORD TRANSIT 250 2021 (14).webp',
-      '/Vans/FORD TRANSIT 250 2021 (15).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 (1).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 (2).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 (3).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 (4).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 (5).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 (6).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 (7).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 (8).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 (9).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 (10).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 (11).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 (12).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 (13).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 (14).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2021 (15).webp',
     ],
   },
   {
