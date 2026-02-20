@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   min-height: 85vh;
-  background: url('/Box-trucks/FREIGHTLINER\ M2\ 106\ 2017\ \(1\).webp') center/cover no-repeat;
+  background: url('/img/Camion.webp') center/cover no-repeat;
   display: flex;
   align-items: center;
 }
