@@ -508,58 +508,52 @@ descriptionEs: `- Título Limpio
   },
   {
     id: 11,
-    name: 'ESCALADE PREMIUM 4X4',
-    make: 'Cadillac',
-    year: 2017,
+    name: 'EQUINOX AWD LT',
+    make: 'Chevrolet',
+    year: 2020,
     type: 'Suvs',
     downpayment: 3500,
-    financingprice: 24900,
-    cashprice: 23900,
-    mileage: 144000,
+    financingprice: 13900,
+    cashprice: 12900,
+    mileage: 108000,
     descriptionEn: `- Clean Title
-- 144,000 Miles
+- 108,000 Miles
 - Perfect Family SUV
-- Leather Seats
-- 3rd Row Seating
-- Touchscreen Display
-- Rear Entertainment Screens
-- Sunroof
+- AWD
 - Backup Camera
 - Luxury Rims
-- Tires 90%
+- One Owner
 - Cold & Hot A/C
+- Tires 90%
 - Immaculate Condition
 - Financing Available`,
-    descriptionEs: `- Título Limpio
-- 144,000 Millas
-- SUV Familiar Perfecta
-- Asientos de Cuero
-- 3 Filas de Asientos
-- Pantalla Táctil
-- Pantallas de Entretenimiento Traseras
-- Quemacocos
+descriptionEs: `- Título Limpio
+- 108,000 Millas
+- SUV Perfecta para la Familia
+- Tracción AWD
 - Cámara de Reversa
 - Rines de Lujo
-- Llantas al 90%
+- Un Solo Dueño
 - Aire Acondicionado Frío/Caliente
+- Llantas al 90%
 - Condición Inmaculada
 - Financiamiento Disponible`,
     images: [
-      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (7).webp',
-      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (1).webp',
-      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (2).webp',
-      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (3).webp',
-      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (4).webp',
-      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (5).webp',
-      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (6).webp',
-      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (8).webp',
-      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (9).webp',
-      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (10).webp',
-      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (11).webp',
-      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (12).webp',
-      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (13).webp',
-      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (14).webp',
-      '/Suvs/2017 CADILLAC ESCALADE PREMIUM 4X4 (15).webp',
+      '/Suvs/CHEVROLET EQUINOX AWD LT 2020 (1).webp',
+      '/Suvs/CHEVROLET EQUINOX AWD LT 2020 (4).webp',
+      '/Suvs/CHEVROLET EQUINOX AWD LT 2020 (5).webp',
+      '/Suvs/CHEVROLET EQUINOX AWD LT 2020 (2).webp',
+      '/Suvs/CHEVROLET EQUINOX AWD LT 2020 (3).webp',
+      '/Suvs/CHEVROLET EQUINOX AWD LT 2020 (6).webp',
+      '/Suvs/CHEVROLET EQUINOX AWD LT 2020 (7).webp',
+      '/Suvs/CHEVROLET EQUINOX AWD LT 2020 (8).webp',
+      '/Suvs/CHEVROLET EQUINOX AWD LT 2020 (9).webp',
+      '/Suvs/CHEVROLET EQUINOX AWD LT 2020 (10).webp',
+      '/Suvs/CHEVROLET EQUINOX AWD LT 2020 (11).webp',
+      '/Suvs/CHEVROLET EQUINOX AWD LT 2020 (12).webp',
+      '/Suvs/CHEVROLET EQUINOX AWD LT 2020 (13).webp',
+      '/Suvs/CHEVROLET EQUINOX AWD LT 2020 (14).webp',
+      '/Suvs/CHEVROLET EQUINOX AWD LT 2020 (15).webp',
     ],
   },
   {
@@ -700,6 +694,53 @@ descriptionEs: `- Título Limpio
       '/Box-trucks/INTERNATIONAL MV607 2022 26FT (13).webp',
       '/Box-trucks/INTERNATIONAL MV607 2022 26FT (14).webp',
       '/Box-trucks/INTERNATIONAL MV607 2022 26FT (15).webp',
+    ],
+  },
+  {
+    id: 15,
+    name: 'Fusion SE',
+    make: 'Ford',
+    year: 2017,
+    type: 'Sedans',
+    downpayment: 3000,
+    financingprice: 8500,
+    cashprice: 7500,
+    mileage: 138000,
+   descriptionEn: `- Clean Title
+- 138,000 Miles
+- Brand New Tires
+- Luxury Rims
+- Backup Camera
+- One Owner
+- Touchscreen Display
+- Immaculate Condition
+- Cold & Hot A/C
+- Financing Available`,
+descriptionEs: `- Título Limpio
+- 138,000 Millas
+- Llantas Nuevas
+- Rines de Lujo
+- Cámara de Reversa
+- Un Solo Dueño
+- Pantalla Táctil
+- Condición Inmaculada
+- Aire Acondicionado Frío/Caliente
+- Financiamiento Disponible`,
+    images: [
+      '/Sedans/FORD FUSION SE 2017 (6).webp',
+      '/Sedans/FORD FUSION SE 2017 (1).webp',
+      '/Sedans/FORD FUSION SE 2017 (2).webp',
+      '/Sedans/FORD FUSION SE 2017 (3).webp',
+      '/Sedans/FORD FUSION SE 2017 (4).webp',
+      '/Sedans/FORD FUSION SE 2017 (5).webp',
+      '/Sedans/FORD FUSION SE 2017 (7).webp',
+      '/Sedans/FORD FUSION SE 2017 (8).webp',
+      '/Sedans/FORD FUSION SE 2017 (9).webp',
+      '/Sedans/FORD FUSION SE 2017 (10).webp',
+      '/Sedans/FORD FUSION SE 2017 (11).webp',
+      '/Sedans/FORD FUSION SE 2017 (12).webp',
+      '/Sedans/FORD FUSION SE 2017 (13).webp',
+      '/Sedans/FORD FUSION SE 2017 (14).webp',
     ],
   },
 ];
