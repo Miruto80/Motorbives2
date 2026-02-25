@@ -801,6 +801,123 @@ descriptionEs: `- Título Limpio
       '/Box-trucks/FREIGHTLINER M2 106 2019 (17).webp',
     ],
   },
+  {
+    id: 17,
+    name: 'M2 106',
+    make: 'Freightliner',
+    year: 2020,
+    type: 'Box-trucks',
+    downpayment: 6000,
+    financingprice: 40900,
+    cashprice: 38900,
+    mileage: 154000,
+  descriptionEn: `- Clean Title
+- 154,000 Miles
+- Perfect for Work
+- Cummins Engine
+- Allison Transmission
+- No CDL Required
+- 25,999 LBS GVW
+- 26 FT Box
+- Aluminum Lift Gate
+- Air Suspension
+- Air Brakes
+- Brand New Tires
+- Immaculate Condition
+- Financing Available`,
+descriptionEs: `- Título Limpio
+- 154,000 Millas
+- Perfecto para el Jale
+- Motor Cummins
+- Transmisión Allison
+- No Requiere CDL
+- 25,999 LBS
+- Caja de 26 FT
+- Lift Gate de Aluminio
+- Suspensión de Aire
+- Frenos de Aire
+- Llantas Nuevas
+- Condición Inmaculada
+- Financiamiento Disponible`,
+    images: [
+      '/Box-trucks/FREIGHTLINER M2 106 2020 (1).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2020 (2).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2020 (3).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2020 (4).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2020 (5).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2020 (6).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2020 (7).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2020 (8).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2020 (9).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2020 (10).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2020 (11).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2020 (12).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2020 (13).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2020 (14).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2020 (15).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2020 (16).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2020 (17).webp',
+    ],
+  },
+  {
+    id: 18,
+    name: 'IL6 26 FT',
+    make: 'Hino',
+    year: 2021,
+    type: 'Box-trucks',
+    downpayment: 6000,
+    financingprice: 39999,
+    cashprice: 38900,
+    mileage: 170000,
+  descriptionEn: `- Clean Title
+- 170,000 Miles
+- Perfect for Transportation
+- Toyota 7.6L Engine
+- Allison Transmission
+- No CDL Required
+- 25,950 LBS GVW
+- 26 FT Box
+- Aluminum Lift Gate
+- Air Brakes
+- Brand New Tires
+- Leather Seats
+- Cold & Hot A/C
+- One Owner
+- Financing Available
+`,
+descriptionEs: `- Título Limpio
+- 170,000 Millas
+- Perfecto para el Transporte
+- Motor Toyota 7.6L
+- Transmisión Allison
+- No Requiere CDL
+- 25,950 LBS
+- Caja de 26 FT
+- Lift Gate de Aluminio
+- Frenos de Aire
+- Llantas Nuevas
+- Asientos de Cuero
+- Aire Acondicionado Frío/Caliente
+- Un Solo Dueño
+- Financiamiento Disponible`,
+    images: [
+      '/Box-trucks/HINO 2021 IL6 26 FT (2).webp',
+      '/Box-trucks/HINO 2021 IL6 26 FT (1).webp',
+      '/Box-trucks/HINO 2021 IL6 26 FT (3).webp',
+      '/Box-trucks/HINO 2021 IL6 26 FT (4).webp',
+      '/Box-trucks/HINO 2021 IL6 26 FT (5).webp',
+      '/Box-trucks/HINO 2021 IL6 26 FT (6).webp',
+      '/Box-trucks/HINO 2021 IL6 26 FT (7).webp',
+      '/Box-trucks/HINO 2021 IL6 26 FT (8).webp',
+      '/Box-trucks/HINO 2021 IL6 26 FT (9).webp',
+      '/Box-trucks/HINO 2021 IL6 26 FT (10).webp',
+      '/Box-trucks/HINO 2021 IL6 26 FT (11).webp',
+      '/Box-trucks/HINO 2021 IL6 26 FT (12).webp',
+      '/Box-trucks/HINO 2021 IL6 26 FT (13).webp',
+      '/Box-trucks/HINO 2021 IL6 26 FT (14).webp',
+      '/Box-trucks/HINO 2021 IL6 26 FT (15).webp',
+    ],
+  },
 ];
 
 export default cars;
