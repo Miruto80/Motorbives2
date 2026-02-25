@@ -743,6 +743,64 @@ descriptionEs: `- Título Limpio
       '/Sedans/FORD FUSION SE 2017 (14).webp',
     ],
   },
+  {
+    id: 16,
+    name: 'M2 106',
+    make: 'Freightliner',
+    year: 2019,
+    type: 'Box-trucks',
+    downpayment: 6000,
+    financingprice: 39900,
+    cashprice: 38900,
+    mileage: 180000,
+   descriptionEn: `- Clean Title
+- 180,000 Miles
+- Perfect for Work
+- Cummins Engine
+- Allison Transmission
+- No CDL Required
+- 25,999 LBS GVW
+- 26 FT Box
+- Aluminum Lift Gate
+- Air Suspension
+- Air Brakes
+- Brand New Tires
+- Immaculate Condition
+- Financing Available`,
+descriptionEs: `- Título Limpio
+- 180,000 Millas
+- Perfecto para el Jale
+- Motor Cummins
+- Transmisión Allison
+- No Requiere CDL
+- 25,999 LBS
+- Caja de 26 FT
+- Lift Gate de Aluminio
+- Suspensión de Aire
+- Frenos de Aire
+- Llantas Nuevas
+- Condición Inmaculada
+- Financiamiento Disponible`,
+    images: [
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (1).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (2).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (3).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (4).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (5).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (6).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (7).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (8).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (9).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (10).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (11).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (12).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (13).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (14).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (15).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (16).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (17).webp',
+    ],
+  },
 ];
 
 export default cars;
