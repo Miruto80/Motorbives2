@@ -1,16 +1,16 @@
 const cars = [
   {
     id: 1,
-    name: 'PROMASTER 3500 EX',
+    name: 'PROMASTER 3500 EX 4x4',
     make: 'Ram',
-    year: 2021,
+    year: 2020,
     type: 'Vans',
-    downpayment: 2500,
-    financingprice: 23900,
-    cashprice: 21900,
-    mileage: 102000,
-  descriptionEn: `- Clean Title
-- 102,000 Miles
+    downpayment: 3000,
+    financingprice: 22900,
+    cashprice: 20900,
+    mileage: 111000,
+    descriptionEn: `- Clean Title
+- 111,000 Miles
 - Perfect for Work
 - 3.6L 6-Cylinder Engine
 - Touchscreen Display
@@ -21,7 +21,7 @@ const cars = [
 - Immaculate Condition
 - Financing Available`,
 descriptionEs: `- Título Limpio
-- 102,000 Millas
+- 111,000 Millas
 - Perfecto para el Jale
 - Motor 3.6L 6 Cilindros
 - Pantalla Táctil
@@ -32,21 +32,21 @@ descriptionEs: `- Título Limpio
 - Condición Inmaculada
 - Financiamiento Disponible`,
     images: [
-      '/Vans/RAM PROMASTER 3500 EX 2021 2 (1).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 2 (2).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 2 (3).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 2 (4).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 2 (5).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 2 (6).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 2 (7).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 2 (8).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 2 (9).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 2 (10).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 2 (11).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 2 (12).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 2 (13).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 2 (14).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 2 (15).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2020 (1).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2020 (2).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2020 (3).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2020 (4).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2020 (5).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2020 (6).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2020 (7).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2020 (8).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2020 (9).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2020 (10).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2020 (11).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2020 (12).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2020 (13).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2020 (14).webp',
+      '/Vans/RAM PROMASTER 3500 EX 2020 (15).webp',
     ],
   },
   {
@@ -154,112 +154,6 @@ descriptionEs: `- Título Limpio
   },
   {
     id: 4,
-    name: 'T-250 TRANSIT',
-    make: 'Ford',
-    year: 2019,
-    type: 'Vans',
-    downpayment: 2500,
-    financingprice: 21900,
-    cashprice: 20900,
-    mileage: 145000,
-    descriptionEn: `- Clean Title
-- 145,000 Miles
-- Perfect for Work
-- Diesel Engine
-- 3.2L 5-Cylinder
-- Luxury Rims
-- Tires 90%
-- Cold & Hot A/C
-- Backup Camera
-- Touchscreen Display
-- Leather Seats
-- Immaculate Condition
-- Financing Available
-- Price: $21,900`,
-descriptionEs: `- Título Limpio
-- 145,000 Millas
-- Perfecta para el Jale
-- Motor Diésel
-- 3.2L 5 Cilindros
-- Rines de Lujo
-- Llantas al 90%
-- Aire Acondicionado Frío/Caliente
-- Cámara de Reversa
-- Pantalla Táctil
-- Asientos de Cuero
-- Condición Inmaculada
-- Financiamiento Disponible
-- Precio: $21,900`,
-    images: [
-      '/Vans/FORD T-250 TRANSIT 2019 (2).webp',
-      '/Vans/FORD T-250 TRANSIT 2019 (1).webp',
-      '/Vans/FORD T-250 TRANSIT 2019 (3).webp',
-      '/Vans/FORD T-250 TRANSIT 2019 (4).webp',
-      '/Vans/FORD T-250 TRANSIT 2019 (5).webp',
-      '/Vans/FORD T-250 TRANSIT 2019 (6).webp',
-      '/Vans/FORD T-250 TRANSIT 2019 (7).webp',
-      '/Vans/FORD T-250 TRANSIT 2019 (8).webp',
-      '/Vans/FORD T-250 TRANSIT 2019 (9).webp',
-      '/Vans/FORD T-250 TRANSIT 2019 (10).webp',
-      '/Vans/FORD T-250 TRANSIT 2019 (11).webp',
-      '/Vans/FORD T-250 TRANSIT 2019 (12).webp',
-      '/Vans/FORD T-250 TRANSIT 2019 (13).webp',
-      '/Vans/FORD T-250 TRANSIT 2019 (14).webp',
-      '/Vans/FORD T-250 TRANSIT 2019 (15).webp',
-    ],
-  },
-  {
-    id: 5,
-    name: 'PROMASTER 3500 EX',
-    make: 'Ram',
-    year: 2021,
-    type: 'Vans',
-    downpayment: 3000,
-    financingprice: 27900,
-    cashprice: 25900,
-    mileage: 50000,
-   descriptionEn: `- Clean Title
-- 50,000 Miles
-- Perfect for Work
-- 3.6L 6-Cylinder Engine
-- Touchscreen Display
-- Backup Camera
-- Luxury Rims
-- Brand New Tires
-- Cold & Hot A/C
-- Immaculate Condition
-- Financing Available`,
-descriptionEs: `- Título Limpio
-- 50,000 Millas
-- Perfecto para el Jale
-- Motor 3.6L 6 Cilindros
-- Pantalla Táctil
-- Cámara de Reversa
-- Rines de Lujo
-- Llantas Nuevas
-- Aire Acondicionado Frío/Caliente
-- Condición Inmaculada
-- Financiamiento Disponible`,
-    images: [
-      '/Vans/RAM PROMASTER 3500 EX 2021 (1).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 (2).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 (3).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 (4).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 (5).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 (6).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 (7).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 (8).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 (9).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 (10).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 (11).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 (12).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 (13).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 (14).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2021 (15).webp',
-    ],
-  },
-  {
-    id: 6,
     name: '268',
     make: 'Hino',
     year: 2020,
@@ -321,7 +215,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 7,
+    id: 5,
     name: 'EDGE TITANIUM',
     make: 'Ford',
     year: 2018,
@@ -370,7 +264,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 8,
+    id: 6,
     name: 'ESCAPE SEL AWD',
     make: 'Ford',
     year: 2021,
@@ -415,7 +309,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 9,
+    id: 7,
     name: 'COMPASS 4x4 LIMITED',
     make: 'Jeep',
     year: 2021,
@@ -462,7 +356,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 10,
+    id: 8,
     name: 'MALIBU LT',
     make: 'Chevrolet',
     year: 2020,
@@ -507,7 +401,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 11,
+    id: 9,
     name: 'EQUINOX AWD LT',
     make: 'Chevrolet',
     year: 2020,
@@ -557,52 +451,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 12,
-    name: 'Civic Sport',
-    make: 'Honda',
-    year: 2022,
-    type: 'Sedans',
-    downpayment: 3000,
-    financingprice: 17500,
-    cashprice: 16500,
-    mileage: 112000,
-    descriptionEn: `- Clean Title
-- 112,000 Miles
-- Luxury Rims
-- One Owner
-- Brand New Tires
-- Backup Camera
-- Cold & Hot A/C
-- Immaculate Condition
-- Financing Available`,
-descriptionEs: `- Título Limpio
-- 112,000 Millas
-- Rines de Lujo
-- Un Solo Dueño
-- Llantas Nuevas
-- Cámara de Reversa
-- Aire Acondicionado Frío/Caliente
-- Condición Inmaculada
-- Financiamiento Disponible`,
-    images: [
-      '/Sedans/HONDA CIVIC SPORT 2022 (7).webp',
-      '/Sedans/HONDA CIVIC SPORT 2022 (1).webp',
-      '/Sedans/HONDA CIVIC SPORT 2022 (2).webp',
-      '/Sedans/HONDA CIVIC SPORT 2022 (3).webp',
-      '/Sedans/HONDA CIVIC SPORT 2022 (4).webp',
-      '/Sedans/HONDA CIVIC SPORT 2022 (5).webp',
-      '/Sedans/HONDA CIVIC SPORT 2022 (6).webp',
-      '/Sedans/HONDA CIVIC SPORT 2022 (8).webp',
-      '/Sedans/HONDA CIVIC SPORT 2022 (9).webp',
-      '/Sedans/HONDA CIVIC SPORT 2022 (10).webp',
-      '/Sedans/HONDA CIVIC SPORT 2022 (11).webp',
-      '/Sedans/HONDA CIVIC SPORT 2022 (12).webp',
-      '/Sedans/HONDA CIVIC SPORT 2022 (13).webp',
-      '/Sedans/HONDA CIVIC SPORT 2022 (14).webp',
-    ],
-  },
-  {
-    id: 13,
+    id: 10,
     name: 'Forte',
     make: 'Kia',
     year: 2019,
@@ -645,7 +494,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 14,
+    id: 11,
     name: 'MV607',
     make: 'International',
     year: 2022,
@@ -697,7 +546,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 15,
+    id: 12,
     name: 'Fusion SE',
     make: 'Ford',
     year: 2017,
@@ -744,7 +593,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 16,
+    id: 13,
     name: 'M2 106',
     make: 'Freightliner',
     year: 2019,
@@ -802,7 +651,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 17,
+    id: 14,
     name: 'M2 106',
     make: 'Freightliner',
     year: 2020,
@@ -860,7 +709,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 18,
+    id: 15,
     name: 'IL6 26 FT',
     make: 'Hino',
     year: 2021,
@@ -916,6 +765,61 @@ descriptionEs: `- Título Limpio
       '/Box-trucks/HINO 2021 IL6 26 FT (13).webp',
       '/Box-trucks/HINO 2021 IL6 26 FT (14).webp',
       '/Box-trucks/HINO 2021 IL6 26 FT (15).webp',
+    ],
+  },
+   {
+    id: 16,
+    name: 'F250 SUPER DUTY 4x4',
+    make: 'Ford',
+    year: 2013,
+    type: 'Trucks',
+    downpayment: 3000,
+    financingprice: 25900,
+    cashprice: 23000,
+    mileage: 175000,
+    descriptionEn: `- Clean Title
+- 175,000 Miles
+- King Ranch Edition
+- 4x4
+- 6.7L V8 Engine
+- Leather Seats
+- Sunroof
+- Brand New Tires
+- Upgraded Suspension
+- Cold & Hot A/C
+- Ready for Work
+- Immaculate Condition
+- Financing Available`,
+descriptionEs: `- Título Limpio
+- 175,000 Millas
+- Versión King Ranch
+- 4x4
+- Motor V8 6.7L
+- Asientos de Cuero
+- Quemacocos
+- Llantas Nuevas
+- Suspensión Mejorada
+- Aire Acondicionado Frío/Caliente
+- Lista para el Jale
+- Condición Inmaculada
+- Financiamiento Disponible`,
+    images: [
+      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (1).webp',
+      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (2).webp',
+      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (3).webp',
+      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (4).webp',
+      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (5).webp',
+      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (6).webp',
+      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (7).webp',
+      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (8).webp',
+      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (9).webp',
+      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (10).webp',
+      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (11).webp',
+      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (12).webp',
+      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (13).webp',
+      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (14).webp',
+      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (15).webp',
+      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (16).webp',
     ],
   },
 ];
