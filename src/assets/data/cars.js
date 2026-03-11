@@ -51,59 +51,6 @@ descriptionEs: `- Título Limpio
   },
   {
     id: 2,
-    name: 'EXPLORER SPORT 4x4',
-    make: 'Ford',
-    year: 2015,
-    type: 'Suvs',
-    downpayment: 2500,
-    financingprice: 10900,
-    cashprice: 9900,
-    mileage: 137000,
-    descriptionEn: `- Clean Title
-- Perfect for the Family
-- 137,000 Miles
-- 3 Rows of Seats
-- Leather Seats
-- Touchscreen Display
-- Backup Camera
-- Dual Sunroof
-- Cold & Hot A/C
-- Immaculate Condition
-- Luxury Rims
-- Financing Available`,
-    descriptionEs: `- Título Limpio
-- Perfecto para la Familia
-- 137,000 Millas
-- 3 Filas de Asientos
-- Asientos de Cuero
-- Pantalla Táctil
-- Cámara de Reversa
-- Quemacocos Doble
-- Aire Acondicionado Frío/Caliente
-- Condición Inmaculada
-- Rines de Lujo
-- Financiamiento Disponible`,
-    images: [
-      '/Suvs/FORD EXPLORER SPORT 4x4 2015 (1).webp',
-      '/Suvs/FORD EXPLORER SPORT 4x4 2015 (2).webp',
-      '/Suvs/FORD EXPLORER SPORT 4x4 2015 (3).webp',
-      '/Suvs/FORD EXPLORER SPORT 4x4 2015 (4).webp',
-      '/Suvs/FORD EXPLORER SPORT 4x4 2015 (5).webp',
-      '/Suvs/FORD EXPLORER SPORT 4x4 2015 (6).webp',
-      '/Suvs/FORD EXPLORER SPORT 4x4 2015 (7).webp',
-      '/Suvs/FORD EXPLORER SPORT 4x4 2015 (8).webp',
-      '/Suvs/FORD EXPLORER SPORT 4x4 2015 (9).webp',
-      '/Suvs/FORD EXPLORER SPORT 4x4 2015 (10).webp',
-      '/Suvs/FORD EXPLORER SPORT 4x4 2015 (11).webp',
-      '/Suvs/FORD EXPLORER SPORT 4x4 2015 (12).webp',
-      '/Suvs/FORD EXPLORER SPORT 4x4 2015 (13).webp',
-      '/Suvs/FORD EXPLORER SPORT 4x4 2015 (14).webp',
-      '/Suvs/FORD EXPLORER SPORT 4x4 2015 (15).webp',
-      '/Suvs/FORD EXPLORER SPORT 4x4 2015 (16).webp',
-    ],
-  },
-  {
-    id: 3,
     name: 'F150 LARIAT 4x4',
     make: 'Ford',
     year: 2018,
@@ -153,7 +100,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 4,
+    id: 3,
     name: 'EDGE TITANIUM',
     make: 'Ford',
     year: 2018,
@@ -202,7 +149,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 5,
+    id: 4,
     name: 'ESCAPE SEL AWD',
     make: 'Ford',
     year: 2021,
@@ -247,7 +194,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 6,
+    id: 5,
     name: 'COMPASS 4x4 LIMITED',
     make: 'Jeep',
     year: 2021,
@@ -294,7 +241,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 7,
+    id: 6,
     name: 'MALIBU LT',
     make: 'Chevrolet',
     year: 2020,
@@ -339,7 +286,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 8,
+    id: 7,
     name: 'EQUINOX AWD LT',
     make: 'Chevrolet',
     year: 2020,
@@ -389,7 +336,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 9,
+    id: 8,
     name: 'Forte',
     make: 'Kia',
     year: 2019,
@@ -432,7 +379,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 10,
+    id: 9,
     name: 'Fusion SE',
     make: 'Ford',
     year: 2017,
@@ -479,7 +426,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 11,
+    id: 10,
     name: 'M2 106',
     make: 'Freightliner',
     year: 2019,
@@ -537,7 +484,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 12,
+    id: 11,
     name: 'M2 106',
     make: 'Freightliner',
     year: 2020,
@@ -592,65 +539,6 @@ descriptionEs: `- Título Limpio
       '/Box-trucks/FREIGHTLINER M2 106 2020 (15).webp',
       '/Box-trucks/FREIGHTLINER M2 106 2020 (16).webp',
       '/Box-trucks/FREIGHTLINER M2 106 2020 (17).webp',
-    ],
-  },
-  {
-    id: 13,
-    name: 'IL6 26 FT',
-    make: 'Hino',
-    year: 2021,
-    type: 'Box-trucks',
-    downpayment: 6000,
-    financingprice: 39999,
-    cashprice: 38900,
-    mileage: 170000,
-  descriptionEn: `- Clean Title
-- 170,000 Miles
-- Perfect for Transportation
-- Toyota 7.6L Engine
-- Allison Transmission
-- No CDL Required
-- 25,950 LBS GVW
-- 26 FT Box
-- Aluminum Lift Gate
-- Air Brakes
-- Brand New Tires
-- Leather Seats
-- Cold & Hot A/C
-- One Owner
-- Financing Available
-`,
-descriptionEs: `- Título Limpio
-- 170,000 Millas
-- Perfecto para el Transporte
-- Motor Toyota 7.6L
-- Transmisión Allison
-- No Requiere CDL
-- 25,950 LBS
-- Caja de 26 FT
-- Lift Gate de Aluminio
-- Frenos de Aire
-- Llantas Nuevas
-- Asientos de Cuero
-- Aire Acondicionado Frío/Caliente
-- Un Solo Dueño
-- Financiamiento Disponible`,
-    images: [
-      '/Box-trucks/HINO 2021 IL6 26 FT (2).webp',
-      '/Box-trucks/HINO 2021 IL6 26 FT (1).webp',
-      '/Box-trucks/HINO 2021 IL6 26 FT (3).webp',
-      '/Box-trucks/HINO 2021 IL6 26 FT (4).webp',
-      '/Box-trucks/HINO 2021 IL6 26 FT (5).webp',
-      '/Box-trucks/HINO 2021 IL6 26 FT (6).webp',
-      '/Box-trucks/HINO 2021 IL6 26 FT (7).webp',
-      '/Box-trucks/HINO 2021 IL6 26 FT (8).webp',
-      '/Box-trucks/HINO 2021 IL6 26 FT (9).webp',
-      '/Box-trucks/HINO 2021 IL6 26 FT (10).webp',
-      '/Box-trucks/HINO 2021 IL6 26 FT (11).webp',
-      '/Box-trucks/HINO 2021 IL6 26 FT (12).webp',
-      '/Box-trucks/HINO 2021 IL6 26 FT (13).webp',
-      '/Box-trucks/HINO 2021 IL6 26 FT (14).webp',
-      '/Box-trucks/HINO 2021 IL6 26 FT (15).webp',
     ],
   },
 ];
