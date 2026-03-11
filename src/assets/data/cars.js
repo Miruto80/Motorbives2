@@ -154,68 +154,6 @@ descriptionEs: `- Título Limpio
   },
   {
     id: 4,
-    name: '268',
-    make: 'Hino',
-    year: 2020,
-    type: 'Box-trucks',
-    downpayment: 6000,
-    financingprice: 38900,
-    cashprice: 36900,
-    mileage: 163000,
-    descriptionEn: `- Clean Title
-- 26-Foot Box
-- GVWR: 25,950 lbs (Non-CDL)
-- Aluminum Lift Gate
-- New Tires
-- Allison Automatic Transmission
-- Toyota 7.6L Diesel Engine
-- Air Brakes
-- Air Suspension
-- 163,000 Miles
-- Leather Seats
-- Cold & Hot A/C
-- One Owner
-- Strong mechanical condition
-- Financing Available`,
-    descriptionEs: `- Título Limpio
-- Caja de 26 Pies
-- GVWR: 25,950 lbs (No CDL)
-- Plataforma Elevadora de Aluminio
-- Llantas Nuevas
-- Transmisión Automática Allison
-- Motor Toyota 7.6L Diesel
-- Frenos de Aire
-- Suspensión de Aire
-- 163,000 Millas
-- Asientos de Cuero
-- Aire Acondicionado Frío/Caliente
-- Un Solo Dueño
-- Fuerte Condición Mecánica
-- Financiamiento Disponible`,
-    images: [
-      '/Box-trucks/HINO 2020 268 26 FT (1).webp',
-      '/Box-trucks/HINO 2020 268 26 FT (2).webp',
-      '/Box-trucks/HINO 2020 268 26 FT (3).webp',
-      '/Box-trucks/HINO 2020 268 26 FT (4).webp',
-      '/Box-trucks/HINO 2020 268 26 FT (5).webp',
-      '/Box-trucks/HINO 2020 268 26 FT (6).webp',
-      '/Box-trucks/HINO 2020 268 26 FT (7).webp',
-      '/Box-trucks/HINO 2020 268 26 FT (8).webp',
-      '/Box-trucks/HINO 2020 268 26 FT (9).webp',
-      '/Box-trucks/HINO 2020 268 26 FT (10).webp',
-      '/Box-trucks/HINO 2020 268 26 FT (11).webp',
-      '/Box-trucks/HINO 2020 268 26 FT (12).webp',
-      '/Box-trucks/HINO 2020 268 26 FT (13).webp',
-      '/Box-trucks/HINO 2020 268 26 FT (14).webp',
-      '/Box-trucks/HINO 2020 268 26 FT (15).webp',
-      '/Box-trucks/HINO 2020 268 26 FT (16).webp',
-      '/Box-trucks/HINO 2020 268 26 FT (17).webp',
-      '/Box-trucks/HINO 2020 268 26 FT (18).webp',
-      '/Box-trucks/HINO 2020 268 26 FT (19).webp',
-    ],
-  },
-  {
-    id: 5,
     name: 'EDGE TITANIUM',
     make: 'Ford',
     year: 2018,
@@ -264,7 +202,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 6,
+    id: 5,
     name: 'ESCAPE SEL AWD',
     make: 'Ford',
     year: 2021,
@@ -309,7 +247,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 7,
+    id: 6,
     name: 'COMPASS 4x4 LIMITED',
     make: 'Jeep',
     year: 2021,
@@ -356,7 +294,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 8,
+    id: 7,
     name: 'MALIBU LT',
     make: 'Chevrolet',
     year: 2020,
@@ -401,7 +339,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 9,
+    id: 8,
     name: 'EQUINOX AWD LT',
     make: 'Chevrolet',
     year: 2020,
@@ -451,7 +389,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 10,
+    id: 9,
     name: 'Forte',
     make: 'Kia',
     year: 2019,
@@ -494,59 +432,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 11,
-    name: 'MV607',
-    make: 'International',
-    year: 2022,
-    type: 'Box-trucks',
-    downpayment: 6000,
-    financingprice: 36900,
-    cashprice: 35900,
-    mileage: 204000,
-   descriptionEn: `- Clean Title
-- 204,000 Miles
-- Cummins 6.7L Engine
-- Allison Transmission
-- Tires 90%
-- Cold & Hot A/C
-- Liftgate 100% Working
-- Leather Seats
-- Ready to Work
-- Immaculate Condition
-- Financing Available
-- Price: $36,900`,
-descriptionEs: `- Título Limpio
-- 204,000 Millas
-- Motor Cummins 6.7L
-- Transmisión Allison
-- Llantas al 90%
-- Aire Acondicionado Frío/Caliente
-- Liftgate al 100% Funcional
-- Asientos de Cuero
-- Listo para Trabajar
-- Condición Inmaculada
-- Financiamiento Disponible
-- Precio: $36,900`,
-    images: [
-      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (1).webp',
-      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (2).webp',
-      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (3).webp',
-      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (4).webp',
-      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (5).webp',
-      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (6).webp',
-      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (7).webp',
-      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (8).webp',
-      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (9).webp',
-      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (10).webp',
-      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (11).webp',
-      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (12).webp',
-      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (13).webp',
-      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (14).webp',
-      '/Box-trucks/INTERNATIONAL MV607 2022 26FT (15).webp',
-    ],
-  },
-  {
-    id: 12,
+    id: 10,
     name: 'Fusion SE',
     make: 'Ford',
     year: 2017,
@@ -593,7 +479,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 13,
+    id: 11,
     name: 'M2 106',
     make: 'Freightliner',
     year: 2019,
@@ -651,7 +537,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 14,
+    id: 12,
     name: 'M2 106',
     make: 'Freightliner',
     year: 2020,
@@ -709,7 +595,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 15,
+    id: 13,
     name: 'IL6 26 FT',
     make: 'Hino',
     year: 2021,
@@ -765,61 +651,6 @@ descriptionEs: `- Título Limpio
       '/Box-trucks/HINO 2021 IL6 26 FT (13).webp',
       '/Box-trucks/HINO 2021 IL6 26 FT (14).webp',
       '/Box-trucks/HINO 2021 IL6 26 FT (15).webp',
-    ],
-  },
-   {
-    id: 16,
-    name: 'F250 SUPER DUTY 4x4',
-    make: 'Ford',
-    year: 2013,
-    type: 'Trucks',
-    downpayment: 3000,
-    financingprice: 25900,
-    cashprice: 23000,
-    mileage: 175000,
-    descriptionEn: `- Clean Title
-- 175,000 Miles
-- King Ranch Edition
-- 4x4
-- 6.7L V8 Engine
-- Leather Seats
-- Sunroof
-- Brand New Tires
-- Upgraded Suspension
-- Cold & Hot A/C
-- Ready for Work
-- Immaculate Condition
-- Financing Available`,
-descriptionEs: `- Título Limpio
-- 175,000 Millas
-- Versión King Ranch
-- 4x4
-- Motor V8 6.7L
-- Asientos de Cuero
-- Quemacocos
-- Llantas Nuevas
-- Suspensión Mejorada
-- Aire Acondicionado Frío/Caliente
-- Lista para el Jale
-- Condición Inmaculada
-- Financiamiento Disponible`,
-    images: [
-      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (1).webp',
-      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (2).webp',
-      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (3).webp',
-      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (4).webp',
-      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (5).webp',
-      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (6).webp',
-      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (7).webp',
-      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (8).webp',
-      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (9).webp',
-      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (10).webp',
-      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (11).webp',
-      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (12).webp',
-      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (13).webp',
-      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (14).webp',
-      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (15).webp',
-      '/Trucks/FORD F250 SUPER DUTY 4x4 2013 (16).webp',
     ],
   },
 ];
