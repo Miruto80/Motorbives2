@@ -337,49 +337,6 @@ descriptionEs: `- Título Limpio
   },
   {
     id: 8,
-    name: 'Forte',
-    make: 'Kia',
-    year: 2019,
-    type: 'Sedans',
-    downpayment: 3000,
-    financingprice: 10500,
-    cashprice: 9500,
-    mileage: 137000,
-    descriptionEn: `- Clean Title
-- 137,000 Miles
-- Cold & Hot A/C
-- Touchscreen Display
-- Backup Camera
-- One Owner
-- Immaculate Condition
-- Financing Available`,
-descriptionEs: `- Título Limpio
-- 137,000 Millas
-- Aire Acondicionado Frío/Caliente
-- Pantalla Táctil
-- Cámara de Reversa
-- Un Solo Dueño
-- Condición Inmaculada
-- Financiamiento Disponible`,
-    images: [
-      '/Sedans/KIA FORTE FE 2019 (7).webp',
-      '/Sedans/KIA FORTE FE 2019 (1).webp',
-      '/Sedans/KIA FORTE FE 2019 (2).webp',
-      '/Sedans/KIA FORTE FE 2019 (3).webp',
-      '/Sedans/KIA FORTE FE 2019 (4).webp',
-      '/Sedans/KIA FORTE FE 2019 (5).webp',
-      '/Sedans/KIA FORTE FE 2019 (6).webp',
-      '/Sedans/KIA FORTE FE 2019 (8).webp',
-      '/Sedans/KIA FORTE FE 2019 (9).webp',
-      '/Sedans/KIA FORTE FE 2019 (10).webp',
-      '/Sedans/KIA FORTE FE 2019 (11).webp',
-      '/Sedans/KIA FORTE FE 2019 (12).webp',
-      '/Sedans/KIA FORTE FE 2019 (13).webp',
-      '/Sedans/KIA FORTE FE 2019 (14).webp',
-    ],
-  },
-  {
-    id: 9,
     name: 'Fusion SE',
     make: 'Ford',
     year: 2017,
@@ -426,7 +383,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 10,
+    id: 9,
     name: 'M2 106',
     make: 'Freightliner',
     year: 2019,
@@ -484,7 +441,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 11,
+    id: 10,
     name: 'M2 106',
     make: 'Freightliner',
     year: 2020,
