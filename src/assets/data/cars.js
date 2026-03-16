@@ -498,6 +498,60 @@ descriptionEs: `- Título Limpio
       '/Box-trucks/FREIGHTLINER M2 106 2020 (17).webp',
     ],
   },
+   {
+    id: 11,
+    name: 'YUKON XL SLT 4x4',
+    make: 'Gmc',
+    year: 2020,
+    type: 'Suvs',
+    downpayment: 3500,
+    financingprice: 20900,
+    cashprice: 18900,
+    mileage: 143000,
+    descriptionEn: `- Clean Title
+- 143,000 Miles
+- Perfect Family SUV
+- 4x4
+- 5.3L V8 Engine
+- Leather Seats
+- 3rd Row Seating
+- Touchscreen Display
+- Backup Camera
+- Luxury Rims
+- Cold & Hot A/C
+- Immaculate Condition`,
+descriptionEs: `- Título Limpio
+- 143,000 Millas
+- SUV Perfecta para la Familia
+- 4x4
+- Motor V8 5.3L
+- Asientos de Cuero
+- 3 Filas de Asientos
+- Pantalla Táctil
+- Cámara de Reversa
+- Rines de Lujo
+- Aire Acondicionado Frío/Caliente
+- Condición Inmaculada`,
+    images: [
+      '/Suvs/GMC YUKON XL SLT 4x4 2020 (1).webp',
+      '/Suvs/GMC YUKON XL SLT 4x4 2020 (4).webp',
+      '/Suvs/GMC YUKON XL SLT 4x4 2020 (5).webp',
+      '/Suvs/GMC YUKON XL SLT 4x4 2020 (2).webp',
+      '/Suvs/GMC YUKON XL SLT 4x4 2020 (3).webp',
+      '/Suvs/GMC YUKON XL SLT 4x4 2020 (6).webp',
+      '/Suvs/GMC YUKON XL SLT 4x4 2020 (7).webp',
+      '/Suvs/GMC YUKON XL SLT 4x4 2020 (8).webp',
+      '/Suvs/GMC YUKON XL SLT 4x4 2020 (9).webp',
+      '/Suvs/GMC YUKON XL SLT 4x4 2020 (10).webp',
+      '/Suvs/GMC YUKON XL SLT 4x4 2020 (11).webp',
+      '/Suvs/GMC YUKON XL SLT 4x4 2020 (12).webp',
+      '/Suvs/GMC YUKON XL SLT 4x4 2020 (13).webp',
+      '/Suvs/GMC YUKON XL SLT 4x4 2020 (14).webp',
+      '/Suvs/GMC YUKON XL SLT 4x4 2020 (15).webp',
+      '/Suvs/GMC YUKON XL SLT 4x4 2020 (16).webp',
+      '/Suvs/GMC YUKON XL SLT 4x4 2020 (17).webp',
+    ],
+  },
 ];
 
 export default cars;
