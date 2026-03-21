@@ -436,6 +436,64 @@ descriptionEs: `- Título Limpio
       '/Suvs/GMC YUKON XL SLT 4x4 2020 (17).webp',
     ],
   },
+   {
+    id: 10,
+    name: '268',
+    make: 'Hino',
+    year: 2020,
+    type: 'Box-trucks',
+    downpayment: 6000,
+    financingprice: 49900,
+    cashprice: 47900,
+    mileage: 155000,
+    descriptionEn: `- Clean Title
+- 155,000 Miles
+- Perfect for Transportation
+- Cummins 6.7L Engine
+- Allison Transmission
+- No CDL Required
+- 25,950 LBS GVW
+- 26 FT Box
+- Lift Gate
+- Air Brakes
+- Brand New Tires
+- Leather Seats
+- Cold & Hot A/C
+- One Owner
+- Financing Available`,
+descriptionEs: `- Título Limpio
+- 155,000 Millas
+- Perfecto para el Transporte
+- Motor Cummins 6.7L
+- Transmisión Allison
+- No Requiere CDL
+- 25,950 LBS
+- Caja de 26 FT
+- Lift Gate
+- Frenos de Aire
+- Llantas Nuevas
+- Asientos de Cuero
+- Aire Acondicionado Frío/Caliente
+- Un Solo Dueño
+- Financiamiento Disponible`,
+    images: [
+      '/Box-trucks/HINO 2023 IL6 26 FT (1).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (4).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (5).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (2).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (3).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (6).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (7).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (8).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (9).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (10).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (11).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (12).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (13).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (14).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (15).webp',
+    ],
+  },
 ];
 
 export default cars;
