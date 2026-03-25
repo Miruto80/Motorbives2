@@ -1,56 +1,6 @@
 const cars = [
   {
     id: 1,
-    name: 'PROMASTER 3500 EX 4x4',
-    make: 'Ram',
-    year: 2020,
-    type: 'Vans',
-    downpayment: 3000,
-    financingprice: 22900,
-    cashprice: 20900,
-    mileage: 111000,
-    descriptionEn: `- Clean Title
-- 111,000 Miles
-- Perfect for Work
-- 3.6L 6-Cylinder Engine
-- Touchscreen Display
-- Backup Camera
-- Luxury Rims
-- Tires 90%
-- Cold & Hot A/C
-- Immaculate Condition
-- Financing Available`,
-descriptionEs: `- Título Limpio
-- 111,000 Millas
-- Perfecto para el Jale
-- Motor 3.6L 6 Cilindros
-- Pantalla Táctil
-- Cámara de Reversa
-- Rines de Lujo
-- Llantas al 90%
-- Aire Acondicionado Frío/Caliente
-- Condición Inmaculada
-- Financiamiento Disponible`,
-    images: [
-      '/Vans/RAM PROMASTER 3500 EX 2020 (1).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2020 (2).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2020 (3).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2020 (4).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2020 (5).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2020 (6).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2020 (7).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2020 (8).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2020 (9).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2020 (10).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2020 (11).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2020 (12).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2020 (13).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2020 (14).webp',
-      '/Vans/RAM PROMASTER 3500 EX 2020 (15).webp',
-    ],
-  },
-  {
-    id: 2,
     name: 'F150 LARIAT 4x4',
     make: 'Ford',
     year: 2018,
@@ -100,7 +50,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 3,
+    id: 2,
     name: 'EDGE TITANIUM',
     make: 'Ford',
     year: 2018,
@@ -149,7 +99,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 4,
+    id: 3,
     name: 'ESCAPE SEL AWD',
     make: 'Ford',
     year: 2021,
@@ -194,7 +144,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 5,
+    id: 4,
     name: 'COMPASS 4x4 LIMITED',
     make: 'Jeep',
     year: 2021,
@@ -241,7 +191,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 6,
+    id: 5,
     name: 'MALIBU LT',
     make: 'Chevrolet',
     year: 2020,
@@ -286,7 +236,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 7,
+    id: 6,
     name: 'EQUINOX AWD LT',
     make: 'Chevrolet',
     year: 2020,
@@ -336,7 +286,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 8,
+    id: 7,
     name: 'Fusion SE',
     make: 'Ford',
     year: 2017,
@@ -383,7 +333,7 @@ descriptionEs: `- Título Limpio
     ],
   },
    {
-    id: 9,
+    id: 8,
     name: 'YUKON XL SLT 4x4',
     make: 'Gmc',
     year: 2020,
@@ -434,64 +384,6 @@ descriptionEs: `- Título Limpio
       '/Suvs/GMC YUKON XL SLT 4x4 2020 (15).webp',
       '/Suvs/GMC YUKON XL SLT 4x4 2020 (16).webp',
       '/Suvs/GMC YUKON XL SLT 4x4 2020 (17).webp',
-    ],
-  },
-   {
-    id: 10,
-    name: '268',
-    make: 'Hino',
-    year: 2020,
-    type: 'Box-trucks',
-    downpayment: 6000,
-    financingprice: 49900,
-    cashprice: 47900,
-    mileage: 155000,
-    descriptionEn: `- Clean Title
-- 155,000 Miles
-- Perfect for Transportation
-- Cummins 6.7L Engine
-- Allison Transmission
-- No CDL Required
-- 25,950 LBS GVW
-- 26 FT Box
-- Lift Gate
-- Air Brakes
-- Brand New Tires
-- Leather Seats
-- Cold & Hot A/C
-- One Owner
-- Financing Available`,
-descriptionEs: `- Título Limpio
-- 155,000 Millas
-- Perfecto para el Transporte
-- Motor Cummins 6.7L
-- Transmisión Allison
-- No Requiere CDL
-- 25,950 LBS
-- Caja de 26 FT
-- Lift Gate
-- Frenos de Aire
-- Llantas Nuevas
-- Asientos de Cuero
-- Aire Acondicionado Frío/Caliente
-- Un Solo Dueño
-- Financiamiento Disponible`,
-    images: [
-      '/Box-trucks/HINO 2023 IL6 26 FT (1).webp',
-      '/Box-trucks/HINO 2023 IL6 26 FT (4).webp',
-      '/Box-trucks/HINO 2023 IL6 26 FT (5).webp',
-      '/Box-trucks/HINO 2023 IL6 26 FT (2).webp',
-      '/Box-trucks/HINO 2023 IL6 26 FT (3).webp',
-      '/Box-trucks/HINO 2023 IL6 26 FT (6).webp',
-      '/Box-trucks/HINO 2023 IL6 26 FT (7).webp',
-      '/Box-trucks/HINO 2023 IL6 26 FT (8).webp',
-      '/Box-trucks/HINO 2023 IL6 26 FT (9).webp',
-      '/Box-trucks/HINO 2023 IL6 26 FT (10).webp',
-      '/Box-trucks/HINO 2023 IL6 26 FT (11).webp',
-      '/Box-trucks/HINO 2023 IL6 26 FT (12).webp',
-      '/Box-trucks/HINO 2023 IL6 26 FT (13).webp',
-      '/Box-trucks/HINO 2023 IL6 26 FT (14).webp',
-      '/Box-trucks/HINO 2023 IL6 26 FT (15).webp',
     ],
   },
 ];
