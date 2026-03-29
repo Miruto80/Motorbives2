@@ -386,6 +386,52 @@ descriptionEs: `- Título Limpio
       '/Suvs/GMC YUKON XL SLT 4x4 2020 (17).webp',
     ],
   },
+  {
+    id: 9,
+    name: 'SIERRA 350 DENALI SLT 4x4',
+    make: 'Gmc',
+    year: 2018,
+    type: 'Trucks',
+    downpayment: 3000,
+    financingprice: 38999,
+    cashprice: 36999,
+    mileage: 30000,
+    descriptionEn: `- Clean Title
+- Heavy-Duty Truck
+- 6.6L V8 Engine
+- Allison Transmission
+- Leather Seats
+- Touchscreen Display
+- Backup Camera
+- Luxury Rims
+- Tires in Good Condition
+- Cold & Hot A/C
+- Immaculate Condition
+- Financing Available`,
+descriptionEs: `- Título Limpio
+- Camioneta de Trabajo Pesado
+- Motor V8 6.6L
+- Transmisión Allison
+- Asientos de Cuero
+- Pantalla Táctil
+- Cámara de Reversa
+- Rines de Lujo
+- Llantas en Buen Estado
+- Aire Acondicionado Frío/Caliente
+- Condición Inmaculada
+- Financiamiento Disponible`,
+    images: [
+      '/Trucks/GMC SIERRA 350 DENALI SLT 4x4 2018 (6).webp',
+      '/Trucks/GMC SIERRA 350 DENALI SLT 4x4 2018 (7).webp',
+      '/Trucks/GMC SIERRA 350 DENALI SLT 4x4 2018 (4).webp',
+      '/Trucks/GMC SIERRA 350 DENALI SLT 4x4 2018 (5).webp',
+      '/Trucks/GMC SIERRA 350 DENALI SLT 4x4 2018 (1).webp',
+      '/Trucks/GMC SIERRA 350 DENALI SLT 4x4 2018 (2).webp',
+      '/Trucks/GMC SIERRA 350 DENALI SLT 4x4 2018 (3).webp',
+      '/Trucks/GMC SIERRA 350 DENALI SLT 4x4 2018 (8).webp',
+      '/Trucks/GMC SIERRA 350 DENALI SLT 4x4 2018 (9).webp',
+    ],
+  },
 ];
 
 export default cars;
