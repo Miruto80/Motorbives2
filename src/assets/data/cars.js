@@ -395,7 +395,7 @@ descriptionEs: `- Título Limpio
     downpayment: 3000,
     financingprice: 38999,
     cashprice: 36999,
-    mileage: 30000,
+    mileage: 138000,
     descriptionEn: `- Clean Title
 - Heavy-Duty Truck
 - 6.6L V8 Engine
