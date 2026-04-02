@@ -1,56 +1,6 @@
 const cars = [
   {
     id: 1,
-    name: 'F150 LARIAT 4x4',
-    make: 'Ford',
-    year: 2018,
-    type: 'Trucks',
-    downpayment: 3000,
-    financingprice: 28900,
-    cashprice: 25000,
-    mileage: 101000,
-    descriptionEn: `- Clean Title
-- Luxury Rims
-- Brand New Tires
-- Immaculate Condition
-- One Owner
-- Cold & Hot A/C
-- Backup Camera
-- Lifted Suspension
-- 8-Cylinder 6.0L Engine
-- Ready for Heavy-Duty Work
-- Financing Available`,
-    descriptionEs: `- Título Limpio
-- Rines de Lujo
-- Llantas Nuevas
-- Condición Inmaculada
-- Un Solo Dueño
-- Aire Acondicionado Frío/Caliente
-- Cámara de Reversa
-- Suspensión Levantada
-- Motor de 8 Cilindros 6.0L
-- Listo para Trabajo Pesado
-- Financiamiento Disponible`,
-    images: [
-      '/Trucks/FORD F150 LARIAT 4x4 2018 (1).webp',
-      '/Trucks/FORD F150 LARIAT 4x4 2018 (2).webp',
-      '/Trucks/FORD F150 LARIAT 4x4 2018 (3).webp',
-      '/Trucks/FORD F150 LARIAT 4x4 2018 (4).webp',
-      '/Trucks/FORD F150 LARIAT 4x4 2018 (5).webp',
-      '/Trucks/FORD F150 LARIAT 4x4 2018 (6).webp',
-      '/Trucks/FORD F150 LARIAT 4x4 2018 (7).webp',
-      '/Trucks/FORD F150 LARIAT 4x4 2018 (8).webp',
-      '/Trucks/FORD F150 LARIAT 4x4 2018 (9).webp',
-      '/Trucks/FORD F150 LARIAT 4x4 2018 (10).webp',
-      '/Trucks/FORD F150 LARIAT 4x4 2018 (11).webp',
-      '/Trucks/FORD F150 LARIAT 4x4 2018 (12).webp',
-      '/Trucks/FORD F150 LARIAT 4x4 2018 (13).webp',
-      '/Trucks/FORD F150 LARIAT 4x4 2018 (14).webp',
-      '/Trucks/FORD F150 LARIAT 4x4 2018 (15).webp',
-    ],
-  },
-  {
-    id: 2,
     name: 'EDGE TITANIUM',
     make: 'Ford',
     year: 2018,
@@ -99,7 +49,7 @@ const cars = [
     ],
   },
   {
-    id: 3,
+    id: 2,
     name: 'ESCAPE SEL AWD',
     make: 'Ford',
     year: 2021,
@@ -144,7 +94,7 @@ const cars = [
     ],
   },
   {
-    id: 4,
+    id: 3,
     name: 'COMPASS 4x4 LIMITED',
     make: 'Jeep',
     year: 2021,
@@ -191,7 +141,7 @@ const cars = [
     ],
   },
   {
-    id: 5,
+    id: 4,
     name: 'MALIBU LT',
     make: 'Chevrolet',
     year: 2020,
@@ -236,7 +186,7 @@ const cars = [
     ],
   },
   {
-    id: 6,
+    id: 5,
     name: 'EQUINOX AWD LT',
     make: 'Chevrolet',
     year: 2020,
@@ -286,7 +236,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 7,
+    id: 6,
     name: 'Fusion SE',
     make: 'Ford',
     year: 2017,
@@ -333,7 +283,7 @@ descriptionEs: `- Título Limpio
     ],
   },
    {
-    id: 8,
+    id: 7,
     name: 'YUKON XL SLT 4x4',
     make: 'Gmc',
     year: 2020,
@@ -387,7 +337,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 9,
+    id: 8,
     name: 'SIERRA 350 DENALI SLT 4x4',
     make: 'Gmc',
     year: 2018,
