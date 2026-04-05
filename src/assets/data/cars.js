@@ -382,6 +382,202 @@ descriptionEs: `- Título Limpio
       '/Trucks/GMC SIERRA 350 DENALI SLT 4x4 2018 (9).webp',
     ],
   },
+  {
+    id: 9,
+    name: 'TRÁNSIT 350 XLT',
+    make: 'Ford',
+    year: 2019,
+    type: 'Vans',
+    downpayment: 3000,
+    financingprice: 28900,
+    cashprice: 26900,
+    mileage: 30000,
+  descriptionEn: `- Clean Title
+- 30,000 Miles
+- 15 Passenger Van
+- Gasoline Engine
+- One Owner
+- Tires in Very Good Condition
+- Cold & Hot A/C
+- Immaculate Condition
+- Financing Available
+- Price: $28,900`,
+descriptionEs: `- Título Limpio
+- 30,000 Millas
+- Van de 15 Pasajeros
+- Motor a Gasolina
+- Un Solo Dueño
+- Llantas en Muy Buen Estado
+- Aire Acondicionado Frío/Caliente
+- Condición Inmaculada
+- Financiamiento Disponible
+- Precio: $28,900`,
+    images: [
+      '/Vans/FORD TRÁNSIT 350 XLT 2019 (2).webp',
+      '/Vans/FORD TRÁNSIT 350 XLT 2019 (1).webp',
+      '/Vans/FORD TRÁNSIT 350 XLT 2019 (3).webp',
+      '/Vans/FORD TRÁNSIT 350 XLT 2019 (4).webp',
+      '/Vans/FORD TRÁNSIT 350 XLT 2019 (5).webp',
+      '/Vans/FORD TRÁNSIT 350 XLT 2019 (6).webp',
+      '/Vans/FORD TRÁNSIT 350 XLT 2019 (7).webp',
+      '/Vans/FORD TRÁNSIT 350 XLT 2019 (8).webp',
+      '/Vans/FORD TRÁNSIT 350 XLT 2019 (9).webp',
+      '/Vans/FORD TRÁNSIT 350 XLT 2019 (10).webp',
+      '/Vans/FORD TRÁNSIT 350 XLT 2019 (11).webp',
+      '/Vans/FORD TRÁNSIT 350 XLT 2019 (12).webp',
+      '/Vans/FORD TRÁNSIT 350 XLT 2019 (13).webp',
+      '/Vans/FORD TRÁNSIT 350 XLT 2019 (14).webp',
+      '/Vans/FORD TRÁNSIT 350 XLT 2019 (15).webp',
+    ],
+  },
+   {
+    id: 10,
+    name: 'Civic Sport',
+    make: 'Honda',
+    year: 2024,
+    type: 'Sedans',
+    downpayment: 3000,
+    financingprice: 25900,
+    cashprice: 23900,
+    mileage: 56000,
+   descriptionEn: `- Clean Title
+- 56,000 Miles
+- Luxury Rims
+- One Owner
+- Brand New Tires
+- Backup Camera
+- Cold & Hot A/C
+- Immaculate Condition
+- Financing Available
+- Price: $25,900`,
+descriptionEs: `- Título Limpio
+- 56,000 Millas
+- Rines de Lujo
+- Un Solo Dueño
+- Llantas Nuevas
+- Cámara de Reversa
+- Aire Acondicionado Frío/Caliente
+- Condición Inmaculada
+- Financiamiento Disponible
+- Precio: $25,900`,
+    images: [
+      '/Sedans/HONDA CIVIC SPORT 2024 (1).webp',
+      '/Sedans/HONDA CIVIC SPORT 2024 (2).webp',
+      '/Sedans/HONDA CIVIC SPORT 2024 (3).webp',
+      '/Sedans/HONDA CIVIC SPORT 2024 (4).webp',
+      '/Sedans/HONDA CIVIC SPORT 2024 (5).webp',
+      '/Sedans/HONDA CIVIC SPORT 2024 (6).webp',
+      '/Sedans/HONDA CIVIC SPORT 2024 (7).webp',
+      '/Sedans/HONDA CIVIC SPORT 2024 (8).webp',
+      '/Sedans/HONDA CIVIC SPORT 2024 (9).webp',
+      '/Sedans/HONDA CIVIC SPORT 2024 (10).webp',
+      '/Sedans/HONDA CIVIC SPORT 2024 (11).webp',
+      '/Sedans/HONDA CIVIC SPORT 2024 (12).webp',
+      '/Sedans/HONDA CIVIC SPORT 2024 (13).webp',
+      '/Sedans/HONDA CIVIC SPORT 2024 (14).webp',
+      '/Sedans/HONDA CIVIC SPORT 2024 (15).webp',
+      '/Sedans/HONDA CIVIC SPORT 2024 (16).webp',
+    ],
+  },
+   {
+    id: 11,
+    name: 'Elantra SEL',
+    make: 'Hyundai',
+    year: 2021,
+    type: 'Sedans',
+    downpayment: 3000,
+    financingprice: 13900,
+    cashprice: 11900,
+    mileage: 123000,
+  descriptionEn: `- Clean Title
+- 123,000 Miles
+- Luxury Rims
+- Backup Camera
+- Brand New Tires
+- Cold & Hot A/C
+- Touchscreen Display
+- Immaculate Condition
+- Financing Available
+- Price: $13,900`,
+descriptionEs: `- Título Limpio
+- 123,000 Millas
+- Rines de Lujo
+- Cámara de Reversa
+- Llantas Nuevas
+- Aire Acondicionado Frío/Caliente
+- Pantalla Táctil
+- Condición Inmaculada
+- Financiamiento Disponible
+- Precio: $13,900`,
+    images: [
+      '/Sedans/HYUNDAI ELANTRA SEL 2021 (4).webp',
+      '/Sedans/HYUNDAI ELANTRA SEL 2021 (1).webp',
+      '/Sedans/HYUNDAI ELANTRA SEL 2021 (2).webp',
+      '/Sedans/HYUNDAI ELANTRA SEL 2021 (3).webp',
+      '/Sedans/HYUNDAI ELANTRA SEL 2021 (5).webp',
+      '/Sedans/HYUNDAI ELANTRA SEL 2021 (6).webp',
+      '/Sedans/HYUNDAI ELANTRA SEL 2021 (7).webp',
+      '/Sedans/HYUNDAI ELANTRA SEL 2021 (8).webp',
+      '/Sedans/HYUNDAI ELANTRA SEL 2021 (9).webp',
+      '/Sedans/HYUNDAI ELANTRA SEL 2021 (10).webp',
+      '/Sedans/HYUNDAI ELANTRA SEL 2021 (11).webp',
+      '/Sedans/HYUNDAI ELANTRA SEL 2021 (12).webp',
+      '/Sedans/HYUNDAI ELANTRA SEL 2021 (13).webp',
+      '/Sedans/HYUNDAI ELANTRA SEL 2021 (14).webp',
+      '/Sedans/HYUNDAI ELANTRA SEL 2021 (15).webp',
+      '/Sedans/HYUNDAI ELANTRA SEL 2021 (16).webp',
+    ],
+  },
+   {
+    id: 12,
+    name: 'Corolla SE',
+    make: 'Toyota',
+    year: 2022,
+    type: 'Sedans',
+    downpayment: 3000,
+    financingprice: 16500,
+    cashprice: 14500,
+    mileage: 124000,
+  descriptionEn: `- Clean Title
+- 124,000 Miles
+- Luxury Rims
+- Touchscreen Display
+- Backup Camera
+- Tires in Good Condition
+- Cold & Hot A/C
+- Immaculate Condition
+- One Owner
+- Financing Available
+- Price: $16,500`,
+descriptionEs: `- Título Limpio
+- 124,000 Millas
+- Rines de Lujo
+- Pantalla Táctil
+- Cámara de Reversa
+- Llantas en Buen Estado
+- Aire Acondicionado Frío/Caliente
+- Condición Inmaculada
+- Un Solo Dueño
+- Financiamiento Disponible
+- Precio: $16,500`,
+    images: [
+      '/Sedans/TOYOTA COROLLA SE 2022 (1).webp',
+      '/Sedans/TOYOTA COROLLA SE 2022 (2).webp',
+      '/Sedans/TOYOTA COROLLA SE 2022 (3).webp',
+      '/Sedans/TOYOTA COROLLA SE 2022 (4).webp',
+      '/Sedans/TOYOTA COROLLA SE 2022 (5).webp',
+      '/Sedans/TOYOTA COROLLA SE 2022 (7).webp',
+      '/Sedans/TOYOTA COROLLA SE 2022 (6).webp',
+      '/Sedans/TOYOTA COROLLA SE 2022 (8).webp',
+      '/Sedans/TOYOTA COROLLA SE 2022 (9).webp',
+      '/Sedans/TOYOTA COROLLA SE 2022 (10).webp',
+      '/Sedans/TOYOTA COROLLA SE 2022 (11).webp',
+      '/Sedans/TOYOTA COROLLA SE 2022 (12).webp',
+      '/Sedans/TOYOTA COROLLA SE 2022 (13).webp',
+      '/Sedans/TOYOTA COROLLA SE 2022 (14).webp',
+      '/Sedans/TOYOTA COROLLA SE 2022 (15).webp',
+    ],
+  },
 ];
 
 export default cars;
