@@ -578,6 +578,56 @@ descriptionEs: `- Título Limpio
       '/Sedans/TOYOTA COROLLA SE 2022 (15).webp',
     ],
   },
+   {
+    id: 13,
+    name: 'Silverado Z71',
+    make: 'Chevrolet',
+    year: 2015,
+    type: 'Trucks',
+    downpayment: 3500,
+    financingprice: 18900,
+    cashprice: 16900,
+    mileage: 140000,
+ descriptionEn: `- Clean Title
+- 140,000 Miles
+- 4x4
+- V8 Engine
+- Backup Camera
+- Touchscreen Display
+- Luxury Rims
+- Brand New Tires
+- Cold & Hot A/C
+- Immaculate Condition
+- Financing Available`,
+descriptionEs: `- Título Limpio
+- 140,000 Millas
+- 4x4
+- Motor V8
+- Cámara de Reversa
+- Pantalla Táctil
+- Rines de Lujo
+- Llantas Nuevas
+- Aire Acondicionado Frío/Caliente
+- Condición Inmaculada
+- Financiamiento Disponible`,
+    images: [
+      '/Trucks/CHEVROLET SILVERADO Z71 2015 (7).webp',
+      '/Trucks/CHEVROLET SILVERADO Z71 2015 (1).webp',
+      '/Trucks/CHEVROLET SILVERADO Z71 2015 (2).webp',
+      '/Trucks/CHEVROLET SILVERADO Z71 2015 (3).webp',
+      '/Trucks/CHEVROLET SILVERADO Z71 2015 (4).webp',
+      '/Trucks/CHEVROLET SILVERADO Z71 2015 (5).webp',
+      '/Trucks/CHEVROLET SILVERADO Z71 2015 (6).webp',
+      '/Trucks/CHEVROLET SILVERADO Z71 2015 (8).webp',
+      '/Trucks/CHEVROLET SILVERADO Z71 2015 (9).webp',
+      '/Trucks/CHEVROLET SILVERADO Z71 2015 (10).webp',
+      '/Trucks/CHEVROLET SILVERADO Z71 2015 (11).webp',
+      '/Trucks/CHEVROLET SILVERADO Z71 2015 (12).webp',
+      '/Trucks/CHEVROLET SILVERADO Z71 2015 (13).webp',
+      '/Trucks/CHEVROLET SILVERADO Z71 2015 (14).webp',
+      '/Trucks/CHEVROLET SILVERADO Z71 2015 (15).webp',
+    ],
+  },
 ];
 
 export default cars;
