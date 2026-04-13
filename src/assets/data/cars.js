@@ -627,7 +627,7 @@ descriptionEs: `- Título Limpio
       '/Trucks/CHEVROLET SILVERADO Z71 2015 (14).webp',
       '/Trucks/CHEVROLET SILVERADO Z71 2015 (15).webp',
     ],
-  },
+  }, //Prueba
 ];
 
 export default cars;
