@@ -687,6 +687,107 @@ descriptionEs: `- Título Limpio
       '/Box-trucks/HINO 2019 268 26 FT (16).webp',
     ],
   },
+  {
+    id: 15,
+    name: 'CAMARO 1LT RS',
+    make: 'Chevrolet',
+    year: 2018,
+    type: 'Sedans',
+    downpayment: 3000,
+    financingprice: 16900,
+    cashprice: 14900,
+    mileage: 138000,
+ descriptionEn: `- Clean Title
+- 138,000 Miles
+- 6-Cylinder Engine
+- Luxury Rims
+- Brand New Tires
+- Backup Camera
+- Touchscreen Display
+- Sunroof
+- One Owner
+- Cold & Hot A/C
+- Immaculate Condition
+- Financing Available
+- Price: $16,900`,
+descriptionEs: `- Título Limpio
+- 138,000 Millas
+- Motor 6 Cilindros
+- Rines de Lujo
+- Llantas Nuevas
+- Cámara de Reversa
+- Pantalla Táctil
+- Quemacocos
+- Un Solo Dueño
+- Aire Acondicionado Frío/Caliente
+- Condición Inmaculada
+- Financiamiento Disponible
+- Precio: $16,900`,
+    images: [
+      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (2).webp',
+      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (1).webp',
+      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (3).webp',
+      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (4).webp',
+      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (5).webp',
+      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (7).webp',
+      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (6).webp',
+      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (8).webp',
+      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (9).webp',
+      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (10).webp',
+      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (11).webp',
+      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (12).webp',
+      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (13).webp',
+      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (14).webp',
+    ],
+  },
+  {
+    id: 16,
+    name: 'Civic Sport',
+    make: 'Honda',
+    year: 2023,
+    type: 'Sedans',
+    downpayment: 3000,
+    financingprice: 19900,
+    cashprice: 17900,
+    mileage: 132000,
+  descriptionEn: `- Clean Title
+- 132,000 Miles
+- Luxury Rims
+- One Owner
+- Brand New Tires
+- Backup Camera
+- Cold & Hot A/C
+- Immaculate Condition
+- Financing Available
+- Price: $19,900`,
+descriptionEs: `- Título Limpio
+- 132,000 Millas
+- Rines de Lujo
+- Un Solo Dueño
+- Llantas Nuevas
+- Cámara de Reversa
+- Aire Acondicionado Frío/Caliente
+- Condición Inmaculada
+- Financiamiento Disponible
+- Precio: $19,900`,
+    images: [
+      '/Sedans/HONDA CIVIC SPORT 2023 (7).webp',
+      '/Sedans/HONDA CIVIC SPORT 2023 (1).webp',
+      '/Sedans/HONDA CIVIC SPORT 2023 (2).webp',
+      '/Sedans/HONDA CIVIC SPORT 2023 (3).webp',
+      '/Sedans/HONDA CIVIC SPORT 2023 (4).webp',
+      '/Sedans/HONDA CIVIC SPORT 2023 (5).webp',
+      '/Sedans/HONDA CIVIC SPORT 2023 (6).webp',
+      '/Sedans/HONDA CIVIC SPORT 2023 (8).webp',
+      '/Sedans/HONDA CIVIC SPORT 2023 (9).webp',
+      '/Sedans/HONDA CIVIC SPORT 2023 (10).webp',
+      '/Sedans/HONDA CIVIC SPORT 2023 (11).webp',
+      '/Sedans/HONDA CIVIC SPORT 2023 (12).webp',
+      '/Sedans/HONDA CIVIC SPORT 2023 (13).webp',
+      '/Sedans/HONDA CIVIC SPORT 2023 (14).webp',
+      '/Sedans/HONDA CIVIC SPORT 2023 (15).webp',
+    ],
+  },
 ];
 
 export default cars;
