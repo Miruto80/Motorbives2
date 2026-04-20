@@ -1,55 +1,6 @@
 const cars = [
   {
     id: 1,
-    name: 'EDGE TITANIUM',
-    make: 'Ford',
-    year: 2018,
-    type: 'Suvs',
-    downpayment: 2500,
-    financingprice: 10900,
-    cashprice: 9900,
-    mileage: 135000,
-    descriptionEn: `- Clean Title
-- 135,000 Miles
-- Backup Camera
-- Leather Seats
-- Luxury Rims
-- Sunroof
-- Cold & Hot A/C
-- Brand New Tires
-- One Owner
-- Immaculate Condition
-- Financing Available`,
-    descriptionEs: `- Título Limpio
-- 135,000 Millas
-- Cámara de Reversa
-- Asientos de Cuero
-- Rines de Lujo
-- Quemacocos
-- Aire Acondicionado Frío/Caliente
-- Llantas Nuevas
-- Un Solo Dueño
-- Condición Inmaculada
-- Financiamiento Disponible`,
-    images: [
-      '/Suvs/FORD EDGE TITANIUM 2018 (1).webp',
-      '/Suvs/FORD EDGE TITANIUM 2018 (2).webp',
-      '/Suvs/FORD EDGE TITANIUM 2018 (3).webp',
-      '/Suvs/FORD EDGE TITANIUM 2018 (4).webp',
-      '/Suvs/FORD EDGE TITANIUM 2018 (5).webp',
-      '/Suvs/FORD EDGE TITANIUM 2018 (6).webp',
-      '/Suvs/FORD EDGE TITANIUM 2018 (7).webp',
-      '/Suvs/FORD EDGE TITANIUM 2018 (8).webp',
-      '/Suvs/FORD EDGE TITANIUM 2018 (9).webp',
-      '/Suvs/FORD EDGE TITANIUM 2018 (10).webp',
-      '/Suvs/FORD EDGE TITANIUM 2018 (11).webp',
-      '/Suvs/FORD EDGE TITANIUM 2018 (12).webp',
-      '/Suvs/FORD EDGE TITANIUM 2018 (13).webp',
-      '/Suvs/FORD EDGE TITANIUM 2018 (14).webp',
-    ],
-  },
-  {
-    id: 2,
     name: 'ESCAPE SEL AWD',
     make: 'Ford',
     year: 2021,
@@ -94,7 +45,7 @@ const cars = [
     ],
   },
   {
-    id: 3,
+    id: 2,
     name: 'COMPASS 4x4 LIMITED',
     make: 'Jeep',
     year: 2021,
@@ -141,7 +92,7 @@ const cars = [
     ],
   },
   {
-    id: 4,
+    id: 3,
     name: 'MALIBU LT',
     make: 'Chevrolet',
     year: 2020,
@@ -186,7 +137,7 @@ const cars = [
     ],
   },
   {
-    id: 5,
+    id: 4,
     name: 'EQUINOX AWD LT',
     make: 'Chevrolet',
     year: 2020,
@@ -236,7 +187,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 6,
+    id: 5,
     name: 'Fusion SE',
     make: 'Ford',
     year: 2017,
@@ -283,7 +234,7 @@ descriptionEs: `- Título Limpio
     ],
   },
    {
-    id: 7,
+    id: 6,
     name: 'YUKON XL SLT 4x4',
     make: 'Gmc',
     year: 2020,
@@ -337,7 +288,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 8,
+    id: 7,
     name: 'SIERRA 350 DENALI SLT 4x4',
     make: 'Gmc',
     year: 2018,
@@ -383,7 +334,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 9,
+    id: 8,
     name: 'TRÁNSIT 350 XLT',
     make: 'Ford',
     year: 2019,
@@ -431,7 +382,7 @@ descriptionEs: `- Título Limpio
     ],
   },
    {
-    id: 10,
+    id: 9,
     name: 'Civic Sport',
     make: 'Honda',
     year: 2024,
@@ -480,7 +431,7 @@ descriptionEs: `- Título Limpio
     ],
   },
    {
-    id: 11,
+    id: 10,
     name: 'Elantra SEL',
     make: 'Hyundai',
     year: 2021,
@@ -529,7 +480,7 @@ descriptionEs: `- Título Limpio
     ],
   },
    {
-    id: 12,
+    id: 11,
     name: 'Corolla SE',
     make: 'Toyota',
     year: 2022,
@@ -579,7 +530,7 @@ descriptionEs: `- Título Limpio
     ],
   },
    {
-    id: 13,
+    id: 12,
     name: 'Silverado Z71',
     make: 'Chevrolet',
     year: 2015,
@@ -629,7 +580,7 @@ descriptionEs: `- Título Limpio
     ],
   },
    {
-    id: 14,
+    id: 13,
     name: '268 26 FT',
     make: 'Hino',
     year: 2019,
@@ -688,7 +639,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 15,
+    id: 14,
     name: 'CAMARO 1LT RS',
     make: 'Chevrolet',
     year: 2018,
@@ -741,7 +692,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 16,
+    id: 15,
     name: 'Civic Sport',
     make: 'Honda',
     year: 2023,
