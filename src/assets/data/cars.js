@@ -187,54 +187,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 5,
-    name: 'Fusion SE',
-    make: 'Ford',
-    year: 2017,
-    type: 'Sedans',
-    downpayment: 3000,
-    financingprice: 8500,
-    cashprice: 7500,
-    mileage: 138000,
-   descriptionEn: `- Clean Title
-- 138,000 Miles
-- Brand New Tires
-- Luxury Rims
-- Backup Camera
-- One Owner
-- Touchscreen Display
-- Immaculate Condition
-- Cold & Hot A/C
-- Financing Available`,
-descriptionEs: `- Título Limpio
-- 138,000 Millas
-- Llantas Nuevas
-- Rines de Lujo
-- Cámara de Reversa
-- Un Solo Dueño
-- Pantalla Táctil
-- Condición Inmaculada
-- Aire Acondicionado Frío/Caliente
-- Financiamiento Disponible`,
-    images: [
-      '/Sedans/FORD FUSION SE 2017 (6).webp',
-      '/Sedans/FORD FUSION SE 2017 (1).webp',
-      '/Sedans/FORD FUSION SE 2017 (2).webp',
-      '/Sedans/FORD FUSION SE 2017 (3).webp',
-      '/Sedans/FORD FUSION SE 2017 (4).webp',
-      '/Sedans/FORD FUSION SE 2017 (5).webp',
-      '/Sedans/FORD FUSION SE 2017 (7).webp',
-      '/Sedans/FORD FUSION SE 2017 (8).webp',
-      '/Sedans/FORD FUSION SE 2017 (9).webp',
-      '/Sedans/FORD FUSION SE 2017 (10).webp',
-      '/Sedans/FORD FUSION SE 2017 (11).webp',
-      '/Sedans/FORD FUSION SE 2017 (12).webp',
-      '/Sedans/FORD FUSION SE 2017 (13).webp',
-      '/Sedans/FORD FUSION SE 2017 (14).webp',
-    ],
-  },
-   {
-    id: 6,
+   id: 5,
     name: 'YUKON XL SLT 4x4',
     make: 'Gmc',
     year: 2020,
@@ -288,7 +241,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 7,
+    id: 6,
     name: 'SIERRA 350 DENALI SLT 4x4',
     make: 'Gmc',
     year: 2018,
@@ -334,7 +287,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 8,
+    id: 7,
     name: 'TRÁNSIT 350 XLT',
     make: 'Ford',
     year: 2019,
@@ -381,8 +334,8 @@ descriptionEs: `- Título Limpio
       '/Vans/FORD TRÁNSIT 350 XLT 2019 (15).webp',
     ],
   },
-   {
-    id: 9,
+  {
+   id: 8,
     name: 'Civic Sport',
     make: 'Honda',
     year: 2024,
@@ -430,57 +383,8 @@ descriptionEs: `- Título Limpio
       '/Sedans/HONDA CIVIC SPORT 2024 (16).webp',
     ],
   },
-   {
-    id: 10,
-    name: 'Elantra SEL',
-    make: 'Hyundai',
-    year: 2021,
-    type: 'Sedans',
-    downpayment: 3000,
-    financingprice: 13900,
-    cashprice: 11900,
-    mileage: 123000,
-  descriptionEn: `- Clean Title
-- 123,000 Miles
-- Luxury Rims
-- Backup Camera
-- Brand New Tires
-- Cold & Hot A/C
-- Touchscreen Display
-- Immaculate Condition
-- Financing Available
-- Price: $13,900`,
-descriptionEs: `- Título Limpio
-- 123,000 Millas
-- Rines de Lujo
-- Cámara de Reversa
-- Llantas Nuevas
-- Aire Acondicionado Frío/Caliente
-- Pantalla Táctil
-- Condición Inmaculada
-- Financiamiento Disponible
-- Precio: $13,900`,
-    images: [
-      '/Sedans/HYUNDAI ELANTRA SEL 2021 (4).webp',
-      '/Sedans/HYUNDAI ELANTRA SEL 2021 (1).webp',
-      '/Sedans/HYUNDAI ELANTRA SEL 2021 (2).webp',
-      '/Sedans/HYUNDAI ELANTRA SEL 2021 (3).webp',
-      '/Sedans/HYUNDAI ELANTRA SEL 2021 (5).webp',
-      '/Sedans/HYUNDAI ELANTRA SEL 2021 (6).webp',
-      '/Sedans/HYUNDAI ELANTRA SEL 2021 (7).webp',
-      '/Sedans/HYUNDAI ELANTRA SEL 2021 (8).webp',
-      '/Sedans/HYUNDAI ELANTRA SEL 2021 (9).webp',
-      '/Sedans/HYUNDAI ELANTRA SEL 2021 (10).webp',
-      '/Sedans/HYUNDAI ELANTRA SEL 2021 (11).webp',
-      '/Sedans/HYUNDAI ELANTRA SEL 2021 (12).webp',
-      '/Sedans/HYUNDAI ELANTRA SEL 2021 (13).webp',
-      '/Sedans/HYUNDAI ELANTRA SEL 2021 (14).webp',
-      '/Sedans/HYUNDAI ELANTRA SEL 2021 (15).webp',
-      '/Sedans/HYUNDAI ELANTRA SEL 2021 (16).webp',
-    ],
-  },
-   {
-    id: 11,
+  {
+   id: 9,
     name: 'Corolla SE',
     make: 'Toyota',
     year: 2022,
@@ -529,8 +433,8 @@ descriptionEs: `- Título Limpio
       '/Sedans/TOYOTA COROLLA SE 2022 (15).webp',
     ],
   },
-   {
-    id: 12,
+  {
+   id: 10,
     name: 'Silverado Z71',
     make: 'Chevrolet',
     year: 2015,
@@ -579,8 +483,8 @@ descriptionEs: `- Título Limpio
       '/Trucks/CHEVROLET SILVERADO Z71 2015 (15).webp',
     ],
   },
-   {
-    id: 13,
+  {
+   id: 11,
     name: '268 26 FT',
     make: 'Hino',
     year: 2019,
@@ -639,7 +543,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 14,
+    id: 12,
     name: 'CAMARO 1LT RS',
     make: 'Chevrolet',
     year: 2018,
@@ -692,7 +596,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 15,
+    id: 13,
     name: 'Civic Sport',
     make: 'Honda',
     year: 2023,
