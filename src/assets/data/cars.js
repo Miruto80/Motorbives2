@@ -242,7 +242,7 @@ descriptionEs: `- Título Limpio
   },
   {
     id: 6,
-    name: 'SIERRA 350 DENALI SLT 4x4',
+    name: 'SIERRA 3500 Denali 4x4',
     make: 'Gmc',
     year: 2018,
     type: 'Trucks',
@@ -261,6 +261,7 @@ descriptionEs: `- Título Limpio
 - Tires in Good Condition
 - Cold & Hot A/C
 - Immaculate Condition
+- Dually
 - Financing Available`,
 descriptionEs: `- Título Limpio
 - Camioneta de Trabajo Pesado
