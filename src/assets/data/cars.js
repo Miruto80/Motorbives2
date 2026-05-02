@@ -294,8 +294,8 @@ descriptionEs: `- Título Limpio
     year: 2019,
     type: 'Vans',
     downpayment: 3000,
-    financingprice: 28900,
-    cashprice: 26900,
+    financingprice: 26900,
+    cashprice: 24900,
     mileage: 30000,
   descriptionEn: `- Clean Title
 - 30,000 Miles
