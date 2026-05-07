@@ -485,66 +485,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-   id: 11,
-    name: '268 26 FT',
-    make: 'Hino',
-    year: 2019,
-    type: 'Box-trucks',
-    downpayment: 6000,
-    financingprice: 38900,
-    cashprice: 36900,
-    mileage: 185000,
- descriptionEn: `- Clean Title
-- 185,000 Miles
-- Perfect for Transportation
-- Toyota 7.6L Diesel Engine
-- Allison Automatic Transmission
-- No CDL Required (25,950 LBS GVW)
-- 26 FT Box
-- Aluminum Lift Gate
-- Air Brakes
-- Brand New Tires
-- Leather Seats
-- Cold & Hot A/C
-- One Owner
-- Excellent Condition
-- Financing Available`,
-descriptionEs: `- Título Limpio
-- 185,000 Millas
-- Perfecto para el Transporte
-- Motor Diésel Toyota 7.6L
-- Transmisión Automática Allison
-- No Requiere CDL (25,950 LBS)
-- Caja de 26 FT
-- Lift Gate de Aluminio
-- Frenos de Aire
-- Llantas Nuevas
-- Asientos de Cuero
-- Aire Acondicionado Frío/Caliente
-- Un Solo Dueño
-- Excelente Condición
-- Financiamiento Disponible`,
-    images: [
-      '/Box-trucks/HINO 2019 268 26 FT (1).webp',
-      '/Box-trucks/HINO 2019 268 26 FT (2).webp',
-      '/Box-trucks/HINO 2019 268 26 FT (3).webp',
-      '/Box-trucks/HINO 2019 268 26 FT (4).webp',
-      '/Box-trucks/HINO 2019 268 26 FT (5).webp',
-      '/Box-trucks/HINO 2019 268 26 FT (6).webp',
-      '/Box-trucks/HINO 2019 268 26 FT (7).webp',
-      '/Box-trucks/HINO 2019 268 26 FT (8).webp',
-      '/Box-trucks/HINO 2019 268 26 FT (9).webp',
-      '/Box-trucks/HINO 2019 268 26 FT (10).webp',
-      '/Box-trucks/HINO 2019 268 26 FT (11).webp',
-      '/Box-trucks/HINO 2019 268 26 FT (12).webp',
-      '/Box-trucks/HINO 2019 268 26 FT (13).webp',
-      '/Box-trucks/HINO 2019 268 26 FT (14).webp',
-      '/Box-trucks/HINO 2019 268 26 FT (15).webp',
-      '/Box-trucks/HINO 2019 268 26 FT (16).webp',
-    ],
-  },
-  {
-    id: 12,
+    id: 11,
     name: 'CAMARO 1LT RS',
     make: 'Chevrolet',
     year: 2018,
@@ -597,7 +538,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 13,
+    id: 12,
     name: 'Civic Sport',
     make: 'Honda',
     year: 2023,
@@ -642,6 +583,69 @@ descriptionEs: `- Título Limpio
       '/Sedans/HONDA CIVIC SPORT 2023 (13).webp',
       '/Sedans/HONDA CIVIC SPORT 2023 (14).webp',
       '/Sedans/HONDA CIVIC SPORT 2023 (15).webp',
+    ],
+  },
+    {
+   id: 13,
+    name: '268 26 FT Refrigered',
+    make: 'Hino',
+    year: 2020,
+    type: 'Box-trucks',
+    downpayment: 6000,
+    financingprice: 38900,
+    cashprice: 36900,
+    mileage: 164000,
+ descriptionEn: `- Clean Title
+- 164,000 Miles
+- Refrigerated Box (Thermo King T-1080R)
+- Perfect for Transportation
+- Toyota 7.6L Engine
+- Allison Transmission
+- No CDL Required (25,950 LBS GVW)
+- 26 FT Box
+- Aluminum Lift Gate
+- Air Suspension
+- Air Brakes
+- Brand New Tires
+- Leather Seats
+- Cold & Hot A/C
+- One Owner
+- Financing Available
+- Price: $38,900`,
+descriptionEs: `- Título Limpio
+- 164,000 Millas
+- Caja Refrigerada (Thermo King T-1080R)
+- Perfecto para el Transporte
+- Motor Toyota 7.6L
+- Transmisión Allison
+- No Requiere CDL (25,950 LBS)
+- Caja de 26 FT
+- Lift Gate de Aluminio
+- Suspensión de Aire
+- Frenos de Aire
+- Llantas Nuevas
+- Asientos de Cuero
+- Aire Acondicionado Frío/Caliente
+- Un Solo Dueño
+- Financiamiento Disponible
+- Precio: $38,900`,
+    images: [
+      '/Box-trucks/HINO 2020 268 26 FT (1).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (2).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (3).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (4).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (5).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (6).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (7).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (8).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (9).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (10).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (11).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (12).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (13).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (14).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (15).webp',
+      '/Box-trucks/HINO 2020 268 26 FT (16).webp',
     ],
   },
 ];
