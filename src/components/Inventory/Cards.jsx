@@ -22,7 +22,7 @@ export default function Cards({ cars }) {
   const currentTexts = texts[language] || texts.en; 
 
   return (
-    <div className="row g-4">
+    <div className="row g-4 pe-4">
       {cars.map((car) => (
         <div className="col-md-6 col-lg-4" key={car.id}>
           <Link
