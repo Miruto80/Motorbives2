@@ -486,59 +486,6 @@ descriptionEs: `- Título Limpio
   },
   {
     id: 11,
-    name: 'CAMARO 1LT RS',
-    make: 'Chevrolet',
-    year: 2018,
-    type: 'Sedans',
-    downpayment: 3000,
-    financingprice: 16900,
-    cashprice: 14900,
-    mileage: 138000,
- descriptionEn: `- Clean Title
-- 138,000 Miles
-- 6-Cylinder Engine
-- Luxury Rims
-- Brand New Tires
-- Backup Camera
-- Touchscreen Display
-- Sunroof
-- One Owner
-- Cold & Hot A/C
-- Immaculate Condition
-- Financing Available
-- Price: $16,900`,
-descriptionEs: `- Título Limpio
-- 138,000 Millas
-- Motor 6 Cilindros
-- Rines de Lujo
-- Llantas Nuevas
-- Cámara de Reversa
-- Pantalla Táctil
-- Quemacocos
-- Un Solo Dueño
-- Aire Acondicionado Frío/Caliente
-- Condición Inmaculada
-- Financiamiento Disponible
-- Precio: $16,900`,
-    images: [
-      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (2).webp',
-      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (1).webp',
-      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (3).webp',
-      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (4).webp',
-      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (5).webp',
-      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (7).webp',
-      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (6).webp',
-      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (8).webp',
-      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (9).webp',
-      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (10).webp',
-      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (11).webp',
-      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (12).webp',
-      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (13).webp',
-      '/Sedans/CHEVROLET CAMARO 1LT RS 2018 (14).webp',
-    ],
-  },
-  {
-    id: 12,
     name: 'Civic Sport',
     make: 'Honda',
     year: 2023,
@@ -586,7 +533,7 @@ descriptionEs: `- Título Limpio
     ],
   },
     {
-   id: 13,
+   id: 12,
     name: '268 26 FT Refrigered',
     make: 'Hino',
     year: 2020,
@@ -649,7 +596,7 @@ descriptionEs: `- Título Limpio
     ],
   },
     {
-   id: 14,
+   id: 13,
     name: 'M2 106 26 FT',
     make: 'Freightliner',
     year: 2022,
@@ -704,7 +651,7 @@ descriptionEs: `- Título Limpio
     ],
   },
     {
-   id: 15,
+   id: 14,
     name: 'M2 106 26 FT Refrigered',
     make: 'Freightliner',
     year: 2020,
