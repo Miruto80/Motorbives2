@@ -484,56 +484,8 @@ descriptionEs: `- Título Limpio
       '/Trucks/CHEVROLET SILVERADO Z71 2015 (15).webp',
     ],
   },
-  {
-    id: 11,
-    name: 'Civic Sport',
-    make: 'Honda',
-    year: 2023,
-    type: 'Sedans',
-    downpayment: 3000,
-    financingprice: 19900,
-    cashprice: 17900,
-    mileage: 132000,
-  descriptionEn: `- Clean Title
-- 132,000 Miles
-- Luxury Rims
-- One Owner
-- Brand New Tires
-- Backup Camera
-- Cold & Hot A/C
-- Immaculate Condition
-- Financing Available
-- Price: $19,900`,
-descriptionEs: `- Título Limpio
-- 132,000 Millas
-- Rines de Lujo
-- Un Solo Dueño
-- Llantas Nuevas
-- Cámara de Reversa
-- Aire Acondicionado Frío/Caliente
-- Condición Inmaculada
-- Financiamiento Disponible
-- Precio: $19,900`,
-    images: [
-      '/Sedans/HONDA CIVIC SPORT 2023 (7).webp',
-      '/Sedans/HONDA CIVIC SPORT 2023 (1).webp',
-      '/Sedans/HONDA CIVIC SPORT 2023 (2).webp',
-      '/Sedans/HONDA CIVIC SPORT 2023 (3).webp',
-      '/Sedans/HONDA CIVIC SPORT 2023 (4).webp',
-      '/Sedans/HONDA CIVIC SPORT 2023 (5).webp',
-      '/Sedans/HONDA CIVIC SPORT 2023 (6).webp',
-      '/Sedans/HONDA CIVIC SPORT 2023 (8).webp',
-      '/Sedans/HONDA CIVIC SPORT 2023 (9).webp',
-      '/Sedans/HONDA CIVIC SPORT 2023 (10).webp',
-      '/Sedans/HONDA CIVIC SPORT 2023 (11).webp',
-      '/Sedans/HONDA CIVIC SPORT 2023 (12).webp',
-      '/Sedans/HONDA CIVIC SPORT 2023 (13).webp',
-      '/Sedans/HONDA CIVIC SPORT 2023 (14).webp',
-      '/Sedans/HONDA CIVIC SPORT 2023 (15).webp',
-    ],
-  },
     {
-   id: 12,
+   id: 11,
     name: '268 26 FT Refrigered',
     make: 'Hino',
     year: 2020,
@@ -596,62 +548,7 @@ descriptionEs: `- Título Limpio
     ],
   },
     {
-   id: 13,
-    name: 'M2 106 26 FT',
-    make: 'Freightliner',
-    year: 2022,
-    type: 'Box-trucks',
-    downpayment: 6000,
-    financingprice: 41900,
-    cashprice: 39900,
-    mileage: 177000,
- descriptionEn: `- Clean Title
-- 177,000 Miles
-- Perfect for Work
-- Cummins Engine
-- Allison Transmission
-- No CDL Required
-- 25,999 LBS GVW
-- 26 FT Box
-- Air Brakes
-- Brand New Tires
-- Immaculate Condition
-- Financing Available
-- Price: $41,900`,
-descriptionEs: `- Título Limpio
-- 177,000 Millas
-- Perfecto para el Jale
-- Motor Cummins
-- Transmisión Allison
-- No Requiere CDL
-- 25,999 LBS
-- Caja de 26 FT
-- Frenos de Aire
-- Llantas Nuevas
-- Condición Inmaculada
-- Financiamiento Disponible
-- Precio: $41,900`,
-    images: [
-      '/Box-trucks/FREIGHTLINER M2 106 2022 (1).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2022 (2).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2022 (3).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2022 (4).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2022 (5).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2022 (6).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2022 (7).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2022 (8).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2022 (9).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2022 (10).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2022 (11).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2022 (12).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2022 (13).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2022 (14).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2022 (15).webp',
-      '/Box-trucks/FREIGHTLINER M2 106 2022 (16).webp',
-    ],
-  },
-    {
-   id: 14,
+   id: 12,
     name: 'M2 106 26 FT Refrigered',
     make: 'Freightliner',
     year: 2020,
