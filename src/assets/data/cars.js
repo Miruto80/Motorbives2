@@ -1,98 +1,6 @@
 const cars = [
   {
     id: 1,
-    name: 'ESCAPE SEL AWD',
-    make: 'Ford',
-    year: 2021,
-    type: 'Suvs',
-    downpayment: 2500,
-    financingprice: 17900,
-    cashprice: 16900,
-    mileage: 74000,
-    descriptionEn: `- Clean Title
-- 74,000 Miles
-- Luxury Rims
-- Leather Seats
-- Brand New Tires
-- Cold & Hot A/C
-- One Owner
-- Backup Camera
-- Financing Available`,
-    descriptionEs: `- Título Limpio
-- 74,000 Millas
-- Rines de Lujo
-- Asientos de Cuero
-- Llantas Nuevas
-- Aire Acondicionado Frío/Caliente
-- Un Solo Dueño
-- Cámara de Reversa
-- Financiamiento Disponible`,
-    images: [
-      '/Suvs/FORD ESCAPE SEL AWD 2021 (1).webp',
-      '/Suvs/FORD ESCAPE SEL AWD 2021 (2).webp',
-      '/Suvs/FORD ESCAPE SEL AWD 2021 (3).webp',
-      '/Suvs/FORD ESCAPE SEL AWD 2021 (4).webp',
-      '/Suvs/FORD ESCAPE SEL AWD 2021 (5).webp',
-      '/Suvs/FORD ESCAPE SEL AWD 2021 (6).webp',
-      '/Suvs/FORD ESCAPE SEL AWD 2021 (7).webp',
-      '/Suvs/FORD ESCAPE SEL AWD 2021 (8).webp',
-      '/Suvs/FORD ESCAPE SEL AWD 2021 (9).webp',
-      '/Suvs/FORD ESCAPE SEL AWD 2021 (10).webp',
-      '/Suvs/FORD ESCAPE SEL AWD 2021 (11).webp',
-      '/Suvs/FORD ESCAPE SEL AWD 2021 (12).webp',
-      '/Suvs/FORD ESCAPE SEL AWD 2021 (13).webp',
-      '/Suvs/FORD ESCAPE SEL AWD 2021 (14).webp',
-    ],
-  },
-  {
-    id: 2,
-    name: 'COMPASS 4x4 LIMITED',
-    make: 'Jeep',
-    year: 2021,
-    type: 'Suvs',
-    downpayment: 2500,
-    financingprice: 16900,
-    cashprice: 15900,
-    mileage: 96000,
-    descriptionEn: `- Clean Title
-- 96,000 Miles
-- Leather Seats
-- Luxury Rims
-- Backup Camera
-- Touchscreen Display
-- One Owner
-- Brand New Tires
-- Cold & Hot A/C
-- Financing Available`,
-    descriptionEs: `- Título Limpio
-- 96,000 Millas
-- Asientos de Cuero
-- Rines de Lujo
-- Cámara de Reversa
-- Pantalla Táctil
-- Un Solo Dueño
-- Llantas Nuevas
-- Aire Acondicionado Frío/Caliente
-- Financiamiento Disponible`,
-    images: [
-      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (1).webp',
-      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (2).webp',
-      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (3).webp',
-      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (4).webp',
-      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (5).webp',
-      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (6).webp',
-      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (7).webp',
-      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (8).webp',
-      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (9).webp',
-      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (10).webp',
-      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (11).webp',
-      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (12).webp',
-      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (13).webp',
-      '/Suvs/JEEP COMPASS 4x4 LIMITED 2021 (14).webp',
-    ],
-  },
-  {
-    id: 3,
     name: 'MALIBU LT',
     make: 'Chevrolet',
     year: 2020,
@@ -137,7 +45,7 @@ const cars = [
     ],
   },
   {
-    id: 4,
+    id: 2,
     name: 'EQUINOX AWD LT',
     make: 'Chevrolet',
     year: 2020,
@@ -187,7 +95,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-   id: 5,
+    id: 3,
     name: 'YUKON XL SLT 4x4',
     make: 'Gmc',
     year: 2020,
@@ -241,7 +149,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 6,
+    id: 4,
     name: 'SIERRA 3500 Denali 4x4',
     make: 'Gmc',
     year: 2018,
@@ -288,7 +196,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 7,
+    id: 5,
     name: 'TRÁNSIT 350 XLT',
     make: 'Ford',
     year: 2019,
@@ -336,7 +244,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-   id: 8,
+   id: 6,
     name: 'Civic Sport',
     make: 'Honda',
     year: 2024,
@@ -385,7 +293,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-   id: 9,
+   id: 7,
     name: 'Corolla SE',
     make: 'Toyota',
     year: 2022,
@@ -435,7 +343,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-   id: 10,
+   id: 8,
     name: 'Silverado Z71',
     make: 'Chevrolet',
     year: 2015,
@@ -485,7 +393,7 @@ descriptionEs: `- Título Limpio
     ],
   },
     {
-   id: 11,
+   id: 9,
     name: '268 26 FT Refrigered',
     make: 'Hino',
     year: 2020,
@@ -548,7 +456,7 @@ descriptionEs: `- Título Limpio
     ],
   },
     {
-   id: 12,
+   id: 10,
     name: 'M2 106 26 FT Refrigered',
     make: 'Freightliner',
     year: 2020,
