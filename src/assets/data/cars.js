@@ -294,56 +294,6 @@ descriptionEs: `- Título Limpio
   },
   {
    id: 7,
-    name: 'Corolla SE',
-    make: 'Toyota',
-    year: 2022,
-    type: 'Sedans',
-    downpayment: 3000,
-    financingprice: 16500,
-    cashprice: 14500,
-    mileage: 124000,
-  descriptionEn: `- Clean Title
-- 124,000 Miles
-- Luxury Rims
-- Touchscreen Display
-- Backup Camera
-- Tires in Good Condition
-- Cold & Hot A/C
-- Immaculate Condition
-- One Owner
-- Financing Available
-- Price: $16,500`,
-descriptionEs: `- Título Limpio
-- 124,000 Millas
-- Rines de Lujo
-- Pantalla Táctil
-- Cámara de Reversa
-- Llantas en Buen Estado
-- Aire Acondicionado Frío/Caliente
-- Condición Inmaculada
-- Un Solo Dueño
-- Financiamiento Disponible
-- Precio: $16,500`,
-    images: [
-      '/Sedans/TOYOTA COROLLA SE 2022 (1).webp',
-      '/Sedans/TOYOTA COROLLA SE 2022 (2).webp',
-      '/Sedans/TOYOTA COROLLA SE 2022 (3).webp',
-      '/Sedans/TOYOTA COROLLA SE 2022 (4).webp',
-      '/Sedans/TOYOTA COROLLA SE 2022 (5).webp',
-      '/Sedans/TOYOTA COROLLA SE 2022 (7).webp',
-      '/Sedans/TOYOTA COROLLA SE 2022 (6).webp',
-      '/Sedans/TOYOTA COROLLA SE 2022 (8).webp',
-      '/Sedans/TOYOTA COROLLA SE 2022 (9).webp',
-      '/Sedans/TOYOTA COROLLA SE 2022 (10).webp',
-      '/Sedans/TOYOTA COROLLA SE 2022 (11).webp',
-      '/Sedans/TOYOTA COROLLA SE 2022 (12).webp',
-      '/Sedans/TOYOTA COROLLA SE 2022 (13).webp',
-      '/Sedans/TOYOTA COROLLA SE 2022 (14).webp',
-      '/Sedans/TOYOTA COROLLA SE 2022 (15).webp',
-    ],
-  },
-  {
-   id: 8,
     name: 'Silverado Z71',
     make: 'Chevrolet',
     year: 2015,
@@ -393,7 +343,7 @@ descriptionEs: `- Título Limpio
     ],
   },
     {
-   id: 9,
+   id: 8,
     name: '268 26 FT Refrigered',
     make: 'Hino',
     year: 2020,
@@ -456,7 +406,7 @@ descriptionEs: `- Título Limpio
     ],
   },
     {
-   id: 10,
+   id: 9,
     name: 'M2 106 26 FT Refrigered',
     make: 'Freightliner',
     year: 2020,
