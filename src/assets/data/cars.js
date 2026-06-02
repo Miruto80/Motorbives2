@@ -96,60 +96,6 @@ descriptionEs: `- Título Limpio
   },
   {
     id: 3,
-    name: 'YUKON XL SLT 4x4',
-    make: 'Gmc',
-    year: 2020,
-    type: 'Suvs',
-    downpayment: 3500,
-    financingprice: 20900,
-    cashprice: 18900,
-    mileage: 143000,
-    descriptionEn: `- Clean Title
-- 143,000 Miles
-- Perfect Family SUV
-- 4x4
-- 5.3L V8 Engine
-- Leather Seats
-- 3rd Row Seating
-- Touchscreen Display
-- Backup Camera
-- Luxury Rims
-- Cold & Hot A/C
-- Immaculate Condition`,
-descriptionEs: `- Título Limpio
-- 143,000 Millas
-- SUV Perfecta para la Familia
-- 4x4
-- Motor V8 5.3L
-- Asientos de Cuero
-- 3 Filas de Asientos
-- Pantalla Táctil
-- Cámara de Reversa
-- Rines de Lujo
-- Aire Acondicionado Frío/Caliente
-- Condición Inmaculada`,
-    images: [
-      '/Suvs/GMC YUKON XL SLT 4x4 2020 (1).webp',
-      '/Suvs/GMC YUKON XL SLT 4x4 2020 (4).webp',
-      '/Suvs/GMC YUKON XL SLT 4x4 2020 (5).webp',
-      '/Suvs/GMC YUKON XL SLT 4x4 2020 (2).webp',
-      '/Suvs/GMC YUKON XL SLT 4x4 2020 (3).webp',
-      '/Suvs/GMC YUKON XL SLT 4x4 2020 (6).webp',
-      '/Suvs/GMC YUKON XL SLT 4x4 2020 (7).webp',
-      '/Suvs/GMC YUKON XL SLT 4x4 2020 (8).webp',
-      '/Suvs/GMC YUKON XL SLT 4x4 2020 (9).webp',
-      '/Suvs/GMC YUKON XL SLT 4x4 2020 (10).webp',
-      '/Suvs/GMC YUKON XL SLT 4x4 2020 (11).webp',
-      '/Suvs/GMC YUKON XL SLT 4x4 2020 (12).webp',
-      '/Suvs/GMC YUKON XL SLT 4x4 2020 (13).webp',
-      '/Suvs/GMC YUKON XL SLT 4x4 2020 (14).webp',
-      '/Suvs/GMC YUKON XL SLT 4x4 2020 (15).webp',
-      '/Suvs/GMC YUKON XL SLT 4x4 2020 (16).webp',
-      '/Suvs/GMC YUKON XL SLT 4x4 2020 (17).webp',
-    ],
-  },
-  {
-    id: 4,
     name: 'SIERRA 3500 Denali 4x4',
     make: 'Gmc',
     year: 2018,
@@ -196,7 +142,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-    id: 5,
+    id: 4,
     name: 'TRÁNSIT 350 XLT',
     make: 'Ford',
     year: 2019,
@@ -244,7 +190,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-   id: 6,
+   id: 5,
     name: 'Civic Sport',
     make: 'Honda',
     year: 2024,
@@ -293,7 +239,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-   id: 7,
+   id: 6,
     name: 'Silverado Z71',
     make: 'Chevrolet',
     year: 2015,
@@ -343,7 +289,7 @@ descriptionEs: `- Título Limpio
     ],
   },
     {
-   id: 8,
+   id: 7,
     name: '268 26 FT Refrigered',
     make: 'Hino',
     year: 2020,
@@ -406,7 +352,7 @@ descriptionEs: `- Título Limpio
     ],
   },
     {
-   id: 9,
+   id: 8,
     name: 'M2 106 26 FT Refrigered',
     make: 'Freightliner',
     year: 2020,
