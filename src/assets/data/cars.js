@@ -645,6 +645,6 @@ descriptionEs: `- Título Limpio
       '/Box-trucks/INTERNATIONAL MV 607 2021 26FT (14).webp',
     ],
   },
-];
+]; //adasdad
 
 export default cars;
