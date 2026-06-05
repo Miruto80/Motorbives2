@@ -412,6 +412,239 @@ descriptionEs: `- Título Limpio
       '/Box-trucks/FREIGHTLINER M2 106 2020 (16).webp',
     ],
   },
+    {
+   id: 9,
+    name: 'M2 106 26 FT Refrigered',
+    make: 'Hino',
+    year: 2023,
+    type: 'Box-trucks',
+    downpayment: 6000,
+    financingprice: 55900,
+    cashprice: 53900,
+    mileage: 166000,
+ descriptionEn: `- Clean Title
+- 166,000 Miles
+- Perfect for Transportation
+- Cummins 6.7L Engine
+- Allison Transmission
+- Air Ride Suspension
+- No CDL Required
+- 25,950 LBS GVW
+- 26 FT Box
+- Lift Gate
+- Air Brakes
+- Brand New Tires
+- Leather Seats
+- Cold & Hot A/C
+- One Owner
+- Financing Available
+- Price: $55,900`,
+descriptionEs: `- Título Limpio
+- 166,000 Millas
+- Perfecto para el Transporte
+- Motor Cummins 6.7L
+- Transmisión Allison
+- Suspensión de Aire (Air Ride)
+- No Requiere CDL
+- 25,950 LBS
+- Caja de 26 FT
+- Lift Gate
+- Frenos de Aire
+- Llantas Nuevas
+- Asientos de Cuero
+- Aire Acondicionado Frío/Caliente
+- Un Solo Dueño
+- Financiamiento Disponible
+- Precio: $55,900`,
+    images: [
+      '/Box-trucks/HINO 2023 IL6 26 FT (2).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (1).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (3).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (4).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (5).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (6).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (7).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (8).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (9).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (10).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (11).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (12).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (13).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (14).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (15).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (16).webp',
+      '/Box-trucks/HINO 2023 IL6 26 FT (17).webp',
+    ],
+  },
+    {
+   id: 10,
+    name: 'M2 106 26 FT',
+    make: 'Freightliner',
+    year: 2019,
+    type: 'Box-trucks',
+    downpayment: 6000,
+    financingprice: 36900,
+    cashprice: 34900,
+    mileage: 240000,
+ descriptionEn: `- Clean Title
+- 240,000 Miles
+- Perfect for Work
+- Cummins Engine
+- No CDL Required
+- 25,999 LBS GVW
+- 26 FT Box
+- Aluminum Lift Gate
+- Air Suspension
+- Air Brakes
+- Brand New Tires
+- Immaculate Condition
+- Financing Available
+- Price: $36,900`,
+descriptionEs: `- Título Limpio
+- 240,000 Millas
+- Perfecto para el Jale
+- Motor Cummins
+- No Requiere CDL
+- 25,999 LBS
+- Caja de 26 FT
+- Lift Gate de Aluminio
+- Suspensión de Aire
+- Frenos de Aire
+- Llantas Nuevas
+- Condición Inmaculada
+- Financiamiento Disponible
+- Precio: $36,900`,
+    images: [
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (1).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (2).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (3).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (4).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (5).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (6).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (7).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (8).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (9).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (10).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (11).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (12).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (13).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (14).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (15).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (16).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 (17).webp',
+    ],
+  },
+    {
+   id: 11,
+    name: '4300 26 FT',
+    make: 'International',
+    year: 2018,
+    type: 'Box-trucks',
+    downpayment: 6000,
+    financingprice: 37900,
+    cashprice: 35900,
+    mileage: 202000,
+ descriptionEn: `- Clean Title
+- 202,000 Miles
+- Like New
+- Cummins 6.7L Engine
+- Air Ride Suspension
+- Tires 90%
+- Liftgate 100% Working
+- Leather Seats
+- Cold & Hot A/C
+- Ready to Work
+- Immaculate Condition
+- Financing Available
+- Price: $37,900`,
+descriptionEs: `- Título Limpio
+- 202,000 Millas
+- Como Nuevo
+- Motor Cummins 6.7L
+- Suspensión de Aire
+- Llantas al 90%
+- Liftgate 100% Funcional
+- Asientos de Cuero
+- Aire Acondicionado Frío/Caliente
+- Listo para Trabajar
+- Condición Inmaculada
+- Financiamiento Disponible
+- Precio: $37,900`,
+    images: [
+      '/Box-trucks/INTERNATIONAL 4300 2018 26FT (1).webp',
+      '/Box-trucks/INTERNATIONAL 4300 2018 26FT (2).webp',
+      '/Box-trucks/INTERNATIONAL 4300 2018 26FT (3).webp',
+      '/Box-trucks/INTERNATIONAL 4300 2018 26FT (4).webp',
+      '/Box-trucks/INTERNATIONAL 4300 2018 26FT (5).webp',
+      '/Box-trucks/INTERNATIONAL 4300 2018 26FT (6).webp',
+      '/Box-trucks/INTERNATIONAL 4300 2018 26FT (7).webp',
+      '/Box-trucks/INTERNATIONAL 4300 2018 26FT (8).webp',
+      '/Box-trucks/INTERNATIONAL 4300 2018 26FT (9).webp',
+      '/Box-trucks/INTERNATIONAL 4300 2018 26FT (10).webp',
+      '/Box-trucks/INTERNATIONAL 4300 2018 26FT (11).webp',
+      '/Box-trucks/INTERNATIONAL 4300 2018 26FT (12).webp',
+      '/Box-trucks/INTERNATIONAL 4300 2018 26FT (13).webp',
+      '/Box-trucks/INTERNATIONAL 4300 2018 26FT (14).webp',
+      '/Box-trucks/INTERNATIONAL 4300 2018 26FT (15).webp',
+      '/Box-trucks/INTERNATIONAL 4300 2018 26FT (16).webp',
+      '/Box-trucks/INTERNATIONAL 4300 2018 26FT (17).webp',
+    ],
+  },
+    {
+   id: 12,
+    name: 'MV 607 26 FT',
+    make: 'International',
+    year: 2021,
+    type: 'Box-trucks',
+    downpayment: 6000,
+    financingprice: 50900,
+    cashprice: 48900,
+    mileage: 124000,
+ descriptionEn: `- Clean Title
+- 124,000 Miles
+- Like New
+- Cummins 6.7L Engine
+- Allison Transmission
+- Tires 90%
+- Liftgate 100% Working
+- Leather Seats
+- Cold & Hot A/C
+- Ready to Work
+- Clean Carfax
+- Immaculate Condition
+- Financing Available
+- Price: $50,900`,
+descriptionEs: `- Título Limpio
+- 124,000 Millas
+- Como Nuevo
+- Motor Cummins 6.7L
+- Transmisión Allison
+- Llantas al 90%
+- Liftgate 100% Funcional
+- Asientos de Cuero
+- Aire Acondicionado Frío/Caliente
+- Listo para Trabajar
+- Carfax Completamente Limpio
+- Condición Inmaculada
+- Financiamiento Disponible
+- Precio: $50,900`,
+    images: [
+      '/Box-trucks/INTERNATIONAL MV 607 2021 26FT (1).webp',
+      '/Box-trucks/INTERNATIONAL MV 607 2021 26FT (2).webp',
+      '/Box-trucks/INTERNATIONAL MV 607 2021 26FT (3).webp',
+      '/Box-trucks/INTERNATIONAL MV 607 2021 26FT (4).webp',
+      '/Box-trucks/INTERNATIONAL MV 607 2021 26FT (5).webp',
+      '/Box-trucks/INTERNATIONAL MV 607 2021 26FT (6).webp',
+      '/Box-trucks/INTERNATIONAL MV 607 2021 26FT (7).webp',
+      '/Box-trucks/INTERNATIONAL MV 607 2021 26FT (8).webp',
+      '/Box-trucks/INTERNATIONAL MV 607 2021 26FT (9).webp',
+      '/Box-trucks/INTERNATIONAL MV 607 2021 26FT (10).webp',
+      '/Box-trucks/INTERNATIONAL MV 607 2021 26FT (11).webp',
+      '/Box-trucks/INTERNATIONAL MV 607 2021 26FT (12).webp',
+      '/Box-trucks/INTERNATIONAL MV 607 2021 26FT (13).webp',
+      '/Box-trucks/INTERNATIONAL MV 607 2021 26FT (14).webp',
+    ],
+  },
 ];
 
 export default cars;
