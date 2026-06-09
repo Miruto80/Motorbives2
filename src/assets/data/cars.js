@@ -645,6 +645,65 @@ descriptionEs: `- Título Limpio
       '/Box-trucks/INTERNATIONAL MV 607 2021 26FT (14).webp',
     ],
   },
-]; //adasdad
+    {
+   id: 13,
+    name: 'M2 106 26 FT',
+    make: 'Freightliner',
+    year: 2019,
+    type: 'Box-trucks',
+    downpayment: 6000,
+    financingprice: 42900,
+    cashprice: 40900,
+    mileage: 180000,
+ descriptionEn: `- Clean Title
+- 180,000 Miles
+- Perfect for Work
+- Cummins Engine
+- Allison Transmission
+- No CDL Required
+- 25,999 LBS GVW
+- 26 FT Box
+- Aluminum Lift Gate
+- Air Suspension
+- Air Brakes
+- Brand New Tires
+- Immaculate Condition
+- Financing Available
+- Price: $42,900`,
+descriptionEs: `- Título Limpio
+- 180,000 Millas
+- Perfecto para el Jale
+- Motor Cummins
+- Transmisión Allison
+- No Requiere CDL
+- 25,999 LBS
+- Caja de 26 FT
+- Lift Gate de Aluminio
+- Suspensión de Aire
+- Frenos de Aire
+- Llantas Nuevas
+- Condición Inmaculada
+- Financiamiento Disponible
+- Precio: $42,900`,
+    images: [
+      '/Box-trucks/FREIGHTLINER M2 106 2019 2(10).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 2(3).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 2(2).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 2(1).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 2(4).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 2(5).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 2(6).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 2(7).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 2(8).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 2(9).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 2(11).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 2(12).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 2(13).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 2(14).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 2(15).webp',
+      '/Box-trucks/FREIGHTLINER M2 106 2019 2(16).webp',
+    ],
+  },
+];
 
 export default cars;
