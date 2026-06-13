@@ -643,7 +643,7 @@ descriptionEs: `- Título Limpio
       '/Box-trucks/INTERNATIONAL MV 607 2021 26FT (12).webp',
       '/Box-trucks/INTERNATIONAL MV 607 2021 26FT (13).webp',
       '/Box-trucks/INTERNATIONAL MV 607 2021 26FT (14).webp',
-    ],
+    ], //asdasd
   },
 ];
 
