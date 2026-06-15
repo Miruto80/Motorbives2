@@ -96,53 +96,6 @@ descriptionEs: `- Título Limpio
   },
   {
     id: 3,
-    name: 'SIERRA 3500 Denali 4x4',
-    make: 'Gmc',
-    year: 2018,
-    type: 'Trucks',
-    downpayment: 3000,
-    financingprice: 38999,
-    cashprice: 36999,
-    mileage: 138000,
-    descriptionEn: `- Clean Title
-- Heavy-Duty Truck
-- 6.6L V8 Engine
-- Allison Transmission
-- Leather Seats
-- Touchscreen Display
-- Backup Camera
-- Luxury Rims
-- Tires in Good Condition
-- Cold & Hot A/C
-- Immaculate Condition
-- Dually
-- Financing Available`,
-descriptionEs: `- Título Limpio
-- Camioneta de Trabajo Pesado
-- Motor V8 6.6L
-- Transmisión Allison
-- Asientos de Cuero
-- Pantalla Táctil
-- Cámara de Reversa
-- Rines de Lujo
-- Llantas en Buen Estado
-- Aire Acondicionado Frío/Caliente
-- Condición Inmaculada
-- Financiamiento Disponible`,
-    images: [
-      '/Trucks/GMC SIERRA 350 DENALI SLT 4x4 2018 (6).webp',
-      '/Trucks/GMC SIERRA 350 DENALI SLT 4x4 2018 (7).webp',
-      '/Trucks/GMC SIERRA 350 DENALI SLT 4x4 2018 (4).webp',
-      '/Trucks/GMC SIERRA 350 DENALI SLT 4x4 2018 (5).webp',
-      '/Trucks/GMC SIERRA 350 DENALI SLT 4x4 2018 (1).webp',
-      '/Trucks/GMC SIERRA 350 DENALI SLT 4x4 2018 (2).webp',
-      '/Trucks/GMC SIERRA 350 DENALI SLT 4x4 2018 (3).webp',
-      '/Trucks/GMC SIERRA 350 DENALI SLT 4x4 2018 (8).webp',
-      '/Trucks/GMC SIERRA 350 DENALI SLT 4x4 2018 (9).webp',
-    ],
-  },
-  {
-    id: 4,
     name: 'TRÁNSIT 350 XLT',
     make: 'Ford',
     year: 2019,
@@ -190,7 +143,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-   id: 5,
+   id: 4,
     name: 'Civic Sport',
     make: 'Honda',
     year: 2024,
@@ -239,7 +192,7 @@ descriptionEs: `- Título Limpio
     ],
   },
   {
-   id: 6,
+   id: 5,
     name: 'Silverado Z71',
     make: 'Chevrolet',
     year: 2015,
@@ -289,7 +242,7 @@ descriptionEs: `- Título Limpio
     ],
   },
     {
-   id: 7,
+   id: 6,
     name: '268 26 FT Refrigered',
     make: 'Hino',
     year: 2020,
@@ -352,7 +305,7 @@ descriptionEs: `- Título Limpio
     ],
   },
     {
-   id: 8,
+   id: 7,
     name: 'M2 106 26 FT Refrigered',
     make: 'Freightliner',
     year: 2020,
@@ -413,7 +366,7 @@ descriptionEs: `- Título Limpio
     ],
   },
     {
-   id: 9,
+   id: 8,
     name: 'M2 106 26 FT Refrigered',
     make: 'Hino',
     year: 2023,
@@ -477,7 +430,7 @@ descriptionEs: `- Título Limpio
     ],
   },
     {
-   id: 10,
+   id: 9,
     name: 'M2 106 26 FT',
     make: 'Freightliner',
     year: 2019,
@@ -535,7 +488,7 @@ descriptionEs: `- Título Limpio
     ],
   },
     {
-   id: 11,
+   id: 10,
     name: '4300 26 FT',
     make: 'International',
     year: 2018,
@@ -591,7 +544,7 @@ descriptionEs: `- Título Limpio
     ],
   },
     {
-   id: 12,
+   id: 11,
     name: 'MV 607 26 FT',
     make: 'International',
     year: 2021,
