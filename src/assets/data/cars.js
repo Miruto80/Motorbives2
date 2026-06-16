@@ -367,7 +367,7 @@ descriptionEs: `- Título Limpio
   },
     {
    id: 8,
-    name: 'M2 106 26 FT Refrigered',
+    name: '26 FT',
     make: 'Hino',
     year: 2023,
     type: 'Box-trucks',
